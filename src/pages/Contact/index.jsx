@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import HeroSection from "./components/HeroSection";
