@@ -6,8 +6,8 @@ import HeroSection from "./components/HeroSection";
 import ContactInfo from "./components/ContactInfo";
 import ContactForm from "./components/ContactForm";
 import OfficeLocations from "./components/OfficeLocations";
+import CallToAction from "../../components/Common/CallToAction";
 import FAQSection from "./components/FAQSection";
-import CallToAction from "../../components/common/CallToAction";
 
 const Contact = () => {
   const { scrollYProgress } = useScroll();
