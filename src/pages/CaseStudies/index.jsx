@@ -59,12 +59,12 @@ const CaseStudiesPage = () => {
   });
 
   return (
-    <div className="bg-black text-white overflow-hidden">
+    <div className="bg-black text-white ">
       <Cursor hoveredCard={hoveredCard} />
 
       <Header />
 
-      <HeroSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <HeroSection />
 
       {/* Main Case Studies Section */}
       <div className="py-16 px-6">
@@ -99,9 +99,7 @@ const CaseStudiesPage = () => {
               <h3 className="text-xl font-medium text-gray-300 mb-2">
                 No matching case studies
               </h3>
-              <p className="text-gray-500">
-                Try adjusting your filters or search query
-              </p>
+              <p className="text-gray-500">Try adjusting your filters</p>
             </div>
           )}
         </div>

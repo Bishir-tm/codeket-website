@@ -6,7 +6,7 @@ const processes = [
     title: "Business Analysis",
     icon: "🔍",
     description:
-      "Our AI analyzes your business requirements and converts them into technical specifications.",
+      "Our AI analyzes your business requirements and turns them into technical specifications.",
   },
   {
     title: "Architecture Design",
@@ -18,19 +18,19 @@ const processes = [
     title: "Accelerated Development",
     icon: "⚡",
     description:
-      "AI-assisted development with pre-built components accelerates coding by 300%.",
+      "AI-assisted coding with pre-built components accelerates development by 300%.",
   },
   {
     title: "Intelligent Testing",
     icon: "🧪",
     description:
-      "Automated test generation and execution with predictive issue detection.",
+      "Automated test generation and execution with predictive issue detection finds and fixes issues early.",
   },
   {
     title: "Continuous Optimization",
     icon: "📈",
     description:
-      "Real-time performance monitoring and AI-driven optimizations.",
+      "Real-time performance monitoring and AI-driven optimizations keeps your software running smoothly.",
   },
 ];
 

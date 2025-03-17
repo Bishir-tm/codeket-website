@@ -28,7 +28,7 @@ const technologies = [
       "Subscription-based platforms with continuous delivery of new features.",
   },
   {
-    name: "UI/UX Excellence",
+    name: "Exceptional UI/UX Design",
     icon: "🎨",
     color: "from-pink-500 to-rose-600",
     description:

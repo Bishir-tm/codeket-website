@@ -1,6 +1,15 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaClock,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa";
 
 const legals = [
   { name: "Privacy Policy", link: "/privacy-policy" },
@@ -9,9 +18,21 @@ const legals = [
 ];
 
 const socials = [
-  { name: "Twitter", link: "#" },
-  { name: "LinkedIn", link: "#" },
-  { name: "Instagram", link: "#" },
+  {
+    name: "Twitter",
+    link: "#",
+    icon: <FaLinkedin className="text-white text-xl" />,
+  },
+  {
+    name: "LinkedIn",
+    link: "#",
+    icon: <FaTwitter className="text-white text-xl" />,
+  },
+  {
+    name: "Instagram",
+    link: "#",
+    icon: <FaInstagram className="text-white text-xl" />,
+  },
 ];
 
 const quickLinks = [
@@ -49,75 +70,73 @@ const quickLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t mt-12 border-gray-800 flex items-center justify-around flex-col  pt-12">
-      <div className="flex w-full justify-evenly gap-12">
+    <footer className="border-t mt-12 border-gray-800 flex items-center justify-around flex-col pt-12 px-4 md:px-6 lg:px-8">
+      <div className="flex w-full flex-col md:flex-row justify-between gap-8">
         {/* Logo and info */}
-        <div className="md:col-span-1">
-          <div className="bg-gradient-to-r from-blue-600 to-violet-600 p-px rounded-xl shadow-lg shadow-blue-500/20 inline-block mb-6">
-            <div className="bg-black bg-opacity-30 backdrop-blur-sm px-6 py-3 rounded-xl">
-              <h3 className="text-xl font-mono font-medium text-white">
-                <span className="text-blue-400">&lt;</span>
-                <span className="text-white">code</span>
-                <span className="text-violet-400">ket</span>
-                <span className="text-blue-400">/&gt;</span>
-              </h3>
-            </div>
+        <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
+          <div>
+            <img
+              src="./images/logo-silver-bg.png"
+              className="w-full max-w-[300px] md:max-w-[400px] h-auto"
+            />
           </div>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-400 mb-6 text-center md:text-left">
             AI-powered software development for enterprise solutions.
           </p>
           <div className="flex space-x-4">
             {socials.map((social, i) => (
-              <Link
-                key={i}
-                to={social.link}
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <span className="sr-only">{social.name}</span>
-                <div className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center">
-                  {social.name.charAt(0).toUpperCase()}
-                </div>
-              </Link>
+              <div className="flex space-x-4">
+                <Link
+                  to={social.link}
+                  className="bg-gray-800 hover:bg-blue-700 p-3 rounded-lg transition-colors"
+                >
+                  {social.icon}
+                </Link>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Quick links */}
-        {quickLinks.map((column, index) => (
-          <div key={index} className="md:col-span-1">
-            <h4 className="text-white font-bold text-lg mb-4">
-              {column.title}
-            </h4>
-            <ul className="space-y-3">
-              {column.links.map((link, i) => (
-                <li key={i}>
-                  <Link
-                    to={link.to}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {quickLinks.map((column, index) => (
+            <div key={index}>
+              <h4 className="text-white font-bold text-lg mb-4 text-center md:text-left">
+                {column.title}
+              </h4>
+              <ul className="space-y-3">
+                {column.links.map((link, i) => (
+                  <li key={i} className="text-center md:text-left">
+                    <Link
+                      to={link.to}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="border-t w-full text-center border-gray-800 my-6 pt-8  justify-between items-center">
-        <p className="text-gray-500 text-sm my-4 ">
-          © 2025 Codeket. All rights reserved.
-        </p>
-        <div className="space-x-6 w-full">
-          {legals.map((item, i) => (
-            <Link
-              key={i}
-              to={item.link}
-              className="text-gray-500 text-center w-full hover:text-white text-sm transition-colors"
-            >
-              {item.name}
-            </Link>
-          ))}
+      <div className="border-t w-full border-gray-800 my-6 pt-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">
+            © 2025 Codeket. All rights reserved.
+          </p>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+            {legals.map((item, i) => (
+              <Link
+                key={i}
+                to={item.link}
+                className="text-gray-500 text-center hover:text-white text-sm transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

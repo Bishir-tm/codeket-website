@@ -44,7 +44,7 @@ const VisionMission = () => {
               loop
               muted
               playsInline
-              poster="/images/video-poster.jpg"
+              poster="/images/office1.jpg"
             >
               <source src="/videos/about-us.mp4" type="video/mp4" />
               Your browser does not support the video tag.

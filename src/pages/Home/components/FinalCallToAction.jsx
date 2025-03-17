@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const FinalCallToAction = () => {
   return (
@@ -31,8 +32,7 @@ const FinalCallToAction = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Ready to Transform Your <br />
-            Software Development?
+            Ready to Build Smarter, Faster, and More Scalable Solutions?
           </motion.h2>
 
           <motion.p
@@ -53,26 +53,11 @@ const FinalCallToAction = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <button className="px-10 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xl font-medium rounded-xl shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group">
-              <span>Start Your Project</span>
-              <svg
-                className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
-            </button>
-
-            <button className="px-10 py-5 bg-white/5 border border-blue-500/30 backdrop-blur-sm text-white text-xl font-medium rounded-xl hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center">
-              <span>Schedule Consultation</span>
+            <Link
+              to="/consultation"
+              className="px-10 py-5 cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xl font-medium rounded-xl shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+            >
+              <span>Get a Custom Solution</span>
               <svg
                 className="w-6 h-6 ml-2"
                 fill="none"
@@ -87,7 +72,28 @@ const FinalCallToAction = () => {
                   d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                 ></path>
               </svg>
-            </button>
+            </Link>
+
+            <Link
+              to="/services#projects"
+              className="px-10 cursor-pointer py-5 bg-white/5 border border-blue-500/30 backdrop-blur-sm text-white text-xl font-medium rounded-xl hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center"
+            >
+              <span>Explore SaaS Solutions</span>
+              <svg
+                className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

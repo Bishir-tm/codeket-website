@@ -24,8 +24,6 @@ const Home = () => {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   const heroRef = useRef(null);
-  const canvasRef = useRef(null);
-  const sectionRefs = useRef([]);
 
   // Mouse movement effect
   useEffect(() => {
@@ -73,10 +71,12 @@ const Home = () => {
   return (
     <div
       ref={heroRef}
-      className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-black via-slate-900 to-indigo-950"
+      className="relative w-full min-h-screen bg-gradient-to-b from-black via-slate-900 to-indigo-950"
     >
-      <Header />
-      <div className="container relative mx-auto z-30 min-h-screen flex flex-col">
+      <div className="sticky top-0 z-[1000]">
+        <Header />
+      </div>
+      <div className="container  px-6 relative mx-auto z-30 min-h-screen flex flex-col">
         <HeroSection mousePosition={mousePosition} isLoaded={isLoaded} />
         <CodeShowcase codeSnippets={codeSnippets} />
         <ProjectShowcase projectShowcase={projectShowcase} />

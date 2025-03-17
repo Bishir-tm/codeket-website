@@ -1,15 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const HeroSection = ({ y }) => {
+const HeroSection = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
-      <motion.div
-        style={{ y }}
-        className="absolute inset-0 bg-[url('/images/about-hero.jpg')] bg-cover bg-center opacity-50"
-      ></motion.div>
+    <div className="relative h-[65vh] flex items-center content-center  justify-center overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
+      {/* Background gradient animation */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute -top-[30%] -left-[10%] w-[80%] h-[80%] bg-blue-600 rounded-full filter blur-[120px] opacity-20 animate-blob"></div>
+        <div className="absolute top-[20%] -right-[10%] w-[70%] h-[70%] bg-purple-600 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-[10%] left-[20%] w-[60%] h-[60%] bg-teal-600 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -17,8 +20,10 @@ const HeroSection = ({ y }) => {
         transition={{ duration: 0.8 }}
         className="relative z-10 text-center px-6"
       >
-        <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-          About CodeKet
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 bg-clip-text text-transparent">
+            About CodeKet
+          </span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mt-6 max-w-3xl mx-auto">
           We are a team of innovators, creators, and problem-solvers dedicated

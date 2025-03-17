@@ -135,7 +135,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-black text-white overflow-hidden">
+    <div className="bg-black text-white ">
       <Header />
       <HeroSection y={y} />
       <div className="max-w-7xl mx-auto px-6 py-20">

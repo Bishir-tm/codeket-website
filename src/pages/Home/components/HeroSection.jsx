@@ -52,10 +52,9 @@ const Hero = ({ mousePosition, isLoaded }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          Transform your business challenges into elegant software solutions
-          with our cutting-edge AI technology that delivers enterprise software
-          and SaaS platforms 3x faster, with unprecedented quality and
-          precision.
+          Turn business challenges into seamless software solutions with our
+          advanced AI-driven technology. We build enterprise software and SaaS
+          platforms 3x faster, ensuring top-tier quality and precision.
         </motion.p>
 
         {/* Technology mini cards */}
@@ -119,7 +118,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
           transition={{ delay: 1.2, duration: 0.6 }}
         >
           <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group">
-            <span>Start a Project</span>
+            <span>Get Started</span>
             <svg
               className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -139,7 +138,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
             className="px-8 py-4 bg-white/5 border border-blue-500/30 text-white font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center"
             onClick={() => setIsDemoModalOpen(true)}
           >
-            <span>Watch Demo</span>
+            <span>See Codeket in Action</span>
             <svg
               className="w-5 h-5 ml-2"
               fill="none"

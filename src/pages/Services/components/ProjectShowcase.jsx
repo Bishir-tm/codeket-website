@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     title: "AI-Powered Inventory System",
-    client: "Global Retail Chain",
+    client: "SAAS",
     description:
       "Revolutionizing inventory management with predictive AI and real-time analytics.",
     technologies: ["React", "Node.js", "TensorFlow", "AWS"],
@@ -16,24 +16,11 @@ const projects = [
       "12% overall revenue growth",
       "$4.2M in annual savings",
     ],
+    image: "./images/inventory.png",
   },
   {
     id: 2,
-    title: "Financial Services Platform",
-    client: "International Banking Corporation",
-    description:
-      "Secure, scalable platform enabling next-generation financial services and transactions.",
-    technologies: ["Angular", "Java Spring", "Kubernetes", "MongoDB"],
-    results: [
-      "99.999% uptime reliability",
-      "3.2 million active users",
-      "42% reduction in transaction costs",
-      "PCI-DSS Level 1 compliance maintained",
-    ],
-  },
-  {
-    id: 3,
-    title: "Healthcare Data Platform",
+    title: "Healthcare Information Management Platform",
     client: "National Healthcare Provider",
     description:
       "HIPAA-compliant patient data management with AI-assisted diagnostics.",
@@ -44,12 +31,43 @@ const projects = [
       "1.2M patient records securely managed",
       "Seamless integration with 15 existing systems",
     ],
+    image: "./images/health.png",
+  },
+  {
+    id: 3,
+    title: "VTU & Wallet System",
+    client: "Nigerian VTU Platform",
+    description:
+      "A seamless virtual top-up system with an integrated wallet for mobile and data purchases.",
+    technologies: ["MERN Stack", "Redux Toolkit", "DaisyUI", "Hero Icons"],
+    results: [
+      "Instant airtime and data purchases",
+      "Secure wallet transactions with history tracking",
+      "API integration with major telecom providers",
+      "User-friendly dashboard for balance management",
+    ],
+    image: "./images/vtu-app.png",
+  },
+  {
+    id: 4,
+    title: "School Management System",
+    client: "Nigerian Educational Institutions",
+    description:
+      "A comprehensive platform for managing student records, attendance, and finances.",
+    technologies: ["MERN Stack", "Redux Toolkit", "DaisyUI"],
+    results: [
+      "Efficient student and staff record management",
+      "Automated attendance tracking",
+      "Seamless fee management and payment processing",
+      "Role-based access control for security",
+    ],
+    image: "./images/school.png",
   },
 ];
 
 const ProjectShowcase = () => {
   return (
-    <div className="py-24 px-6">
+    <div className="py-24 px-6" id="projects">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,7 +95,7 @@ const ProjectShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 items-center ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
@@ -116,13 +134,15 @@ const ProjectShowcase = () => {
               </div>
 
               <div
-                className={`bg-gray-800 rounded-2xl overflow-hidden aspect-video flex items-center justify-center ${
+                className={` rounded-2xl border p-3 overflow-hidden aspect-video flex items-center justify-center ${
                   index % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
-                <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                  <p className="text-gray-400">Project Image</p>
-                </div>
+                <img
+                  src={project.image}
+                  alt=""
+                  className="rounded-2xl w-full h-full"
+                />
               </div>
             </motion.div>
           ))}

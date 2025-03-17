@@ -14,14 +14,13 @@ import CallToAction from "../../components/Common/CallToAction";
 
 const About = () => {
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
-    <div className="bg-black text-white overflow-hidden">
+    <div className="bg-black text-white ">
       <Header />
-      <HeroSection y={y} />
+      <HeroSection />
       <VisionMission />
       <CoreValues />
       <Team />
@@ -30,7 +29,7 @@ const About = () => {
         activeTestimonial={activeTestimonial}
         setActiveTestimonial={setActiveTestimonial}
       />
-      <Stats />s
+      <Stats />
       <OfficeLocations />
       <CallToAction />
       <Footer />

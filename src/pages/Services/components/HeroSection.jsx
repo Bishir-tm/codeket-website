@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-[65vh] flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
@@ -13,31 +13,6 @@ const HeroSection = () => {
         <div className="absolute -top-[30%] -left-[10%] w-[80%] h-[80%] bg-blue-600 rounded-full filter blur-[120px] opacity-20 animate-blob"></div>
         <div className="absolute top-[20%] -right-[10%] w-[70%] h-[70%] bg-purple-600 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-[10%] left-[20%] w-[60%] h-[60%] bg-teal-600 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
-
-      {/* Code-like patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-[10%] left-[5%] text-xs md:text-sm font-mono text-blue-500 opacity-30">
-          &lt;div className="services"&gt;
-          <br />
-          &nbsp;&nbsp;&lt;h1&gt;Enterprise Solutions&lt;/h1&gt;
-          <br />
-          &nbsp;&nbsp;&lt;p&gt;Transforming businesses through
-          technology&lt;/p&gt;
-          <br />
-          &lt;/div&gt;
-        </div>
-        <div className="absolute bottom-[15%] right-[5%] text-xs md:text-sm font-mono text-purple-500 opacity-30">
-          function optimizeBusiness() &#123;
-          <br />
-          &nbsp;&nbsp;const innovation = implement(cloud_solutions);
-          <br />
-          &nbsp;&nbsp;const efficiency = automate(processes);
-          <br />
-          &nbsp;&nbsp;return success;
-          <br />
-          &#125;
-        </div>
       </div>
 
       {/* Content */}

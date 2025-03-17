@@ -43,18 +43,12 @@ const ContactInfo = () => {
           <h3 className="text-xl font-semibold mb-1">Call Us</h3>
           <p className="text-gray-300 mb-2">Main Office:</p>
           <a
-            href="tel:+14155551234"
+            href="tel:+2349068149540"
             className="text-blue-400 hover:text-blue-300 transition-colors"
           >
-            +1 (415) 555-1234
+            +(234) 9068-149-540
           </a>
-          <p className="text-gray-300 mt-2 mb-2">Support Hotline (24/7):</p>
-          <a
-            href="tel:+18005551234"
-            className="text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            +1 (800) 555-1234
-          </a>
+          <p className="text-gray-300 mt-2 mb-2">Support Hotline (24/7)</p>
         </div>
       </div>
 

@@ -567,20 +567,6 @@ const CaseStudiesPage = () => {
               Explore how we've helped industry leaders solve complex challenges
               and achieve transformative results.
             </p>
-
-            {/* Search bar */}
-            <div className="max-w-2xl mx-auto relative">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search case studies..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-5 py-4 pl-12 bg-gray-900/70 backdrop-blur border border-gray-700 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <HiOutlineSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -731,9 +717,7 @@ const CaseStudiesPage = () => {
               <h3 className="text-xl font-medium text-gray-300 mb-2">
                 No matching case studies
               </h3>
-              <p className="text-gray-500">
-                Try adjusting your filters or search query
-              </p>
+              <p className="text-gray-500">Try adjusting your filters</p>
             </div>
           )}
         </div>

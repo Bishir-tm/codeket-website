@@ -5,7 +5,7 @@ import { HiOutlineGlobe, HiOutlineChip } from "react-icons/hi";
 
 const ContactSection = () => {
   return (
-    <div id="contact" className="py-24 px-6 bg-gray-900">
+    <div id="contact-form" className="py-24 px-6 bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -23,41 +23,6 @@ const ContactSection = () => {
               Ready to discuss your enterprise needs? Fill out the form, and our
               team will get back to you within 24 hours.
             </p>
-
-            <div className="space-y-6 mb-10">
-              <div className="flex items-start">
-                <div className="bg-gray-800 p-3 rounded-full mr-4">
-                  <HiOutlineGlobe className="text-blue-500 w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-1">Headquarters</h3>
-                  <p className="text-gray-300">
-                    Lagos, Nigeria • London, UK • Dubai, UAE
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="bg-gray-800 p-3 rounded-full mr-4">
-                  <HiOutlineChip className="text-purple-500 w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-1">
-                    Technology Partners
-                  </h3>
-                  <p className="text-gray-300">
-                    AWS • Google Cloud • Microsoft Azure • IBM
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Our Global Presence</h3>
-              <div className="bg-gray-800 rounded-2xl h-64 flex items-center justify-center">
-                <p className="text-gray-400">World Map with Location Markers</p>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
@@ -116,6 +81,7 @@ const ContactSection = () => {
                     <option>Enterprise Software Development</option>
                     <option>Inventory Management System</option>
                     <option>Mobile App Development</option>
+                    <option>AI Automation</option>
                     <option>AI-Driven Cloud Solutions</option>
                     <option>Data Analytics & BI</option>
                     <option>Cybersecurity Services</option>

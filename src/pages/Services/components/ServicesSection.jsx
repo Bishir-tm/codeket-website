@@ -52,11 +52,13 @@ const services = [
       "Internal Tools & Dashboards",
       "API Development & Integration",
     ],
-    caseStudy: {
-      client: "Global Logistics Corporation",
-      challenge: "Outdated systems causing operational delays",
-      solution: "Custom logistics management platform with real-time tracking",
-      result: "42% increase in operational efficiency, saving $1.2M annually",
+    useCase: {
+      scenario: "Logistics Operations Management",
+      challenge: "Outdated systems causing operational delays and data silos",
+      solution:
+        "Custom logistics management platform with real-time tracking and system integration",
+      potentialOutcome:
+        "Up to 40% increase in operational efficiency with potential annual savings of $1M+",
       image: "/images/case-studies/logistics.jpg",
     },
   },
@@ -75,11 +77,14 @@ const services = [
       "Supplier Management Portal",
       "Multi-location Support",
     ],
-    caseStudy: {
-      client: "RetailMax Chain",
-      challenge: "Inventory discrepancies costing millions",
-      solution: "Implemented AI inventory forecasting and management",
-      result: "Reduced stockouts by 78% and increased inventory turn by 24%",
+    useCase: {
+      scenario: "Retail Inventory Optimization",
+      challenge:
+        "Inventory discrepancies leading to stockouts and overstock situations",
+      solution:
+        "AI inventory forecasting and management system with multi-location support",
+      potentialOutcome:
+        "Potential to reduce stockouts by 70-80% and increase inventory turns by 20-25%",
       image: "/images/case-studies/retail.jpg",
     },
   },
@@ -98,11 +103,13 @@ const services = [
       "Mobile UX/UI Design",
       "App Store Optimization",
     ],
-    caseStudy: {
-      client: "HealthTrack",
-      challenge: "Patients struggling to manage health data",
-      solution: "Patient-centered mobile app with wearable integration",
-      result: "125,000+ downloads with 4.8/5 rating and 32% improved outcomes",
+    useCase: {
+      scenario: "Healthcare Patient Engagement",
+      challenge: "Patients struggling to manage health data and appointments",
+      solution:
+        "Patient-centered mobile app with wearable integration and intuitive interface",
+      potentialOutcome:
+        "Typically achieves 100,000+ downloads with 4.5+ star ratings and improved patient outcomes",
       image: "/images/case-studies/mobile.jpg",
     },
   },
@@ -121,11 +128,14 @@ const services = [
       "Serverless Architecture",
       "AI Resource Management",
     ],
-    caseStudy: {
-      client: "FinTech Innovations",
-      challenge: "Scaling issues during high-transaction periods",
-      solution: "AI-driven elastic cloud architecture with predictive scaling",
-      result: "99.999% uptime with 45% reduced cloud costs",
+    useCase: {
+      scenario: "Financial Services Transaction Processing",
+      challenge:
+        "Scaling issues during high-transaction periods causing slowdowns",
+      solution:
+        "AI-driven elastic cloud architecture with predictive scaling capabilities",
+      potentialOutcome:
+        "Can achieve 99.99% uptime with up to 45% reduction in cloud costs",
       image: "/images/case-studies/cloud.jpg",
     },
   },
@@ -144,11 +154,13 @@ const services = [
       "Data Warehouse Design",
       "Real-time Analytics Pipelines",
     ],
-    caseStudy: {
-      client: "Global Manufacturing Corp",
-      challenge: "Inability to predict maintenance needs",
-      solution: "Predictive maintenance analytics with IoT integration",
-      result: "Reduced downtime by 63% and maintenance costs by 42%",
+    useCase: {
+      scenario: "Manufacturing Equipment Management",
+      challenge: "Reactive maintenance leading to costly downtime and repairs",
+      solution:
+        "Predictive maintenance analytics system with IoT sensor integration",
+      potentialOutcome:
+        "Typically reduces downtime by 60-70% and maintenance costs by up to 40%",
       image: "/images/case-studies/analytics.jpg",
     },
   },
@@ -167,11 +179,14 @@ const services = [
       "Compliance Assessment",
       "Security Training & Awareness",
     ],
-    caseStudy: {
-      client: "Financial Services Provider",
-      challenge: "Increasing threats to customer financial data",
-      solution: "End-to-end security overhaul with AI threat detection",
-      result: "Zero breaches for 36+ months and rapid threat response",
+    useCase: {
+      scenario: "Financial Data Protection",
+      challenge:
+        "Increasing sophistication of threats to sensitive financial data",
+      solution:
+        "End-to-end security architecture with AI-powered threat detection",
+      potentialOutcome:
+        "Can significantly reduce breach risk with improved threat response times",
       image: "/images/case-studies/security.jpg",
     },
   },
@@ -190,11 +205,14 @@ const services = [
       "Document Processing Automation",
       "Business Process Modeling",
     ],
-    caseStudy: {
-      client: "Insurance Services Inc",
-      challenge: "Manual claims processing causing delays",
-      solution: "Automated claims processing with ML document analysis",
-      result: "Processing time reduced from 7 days to 12 minutes on average",
+    useCase: {
+      scenario: "Insurance Claims Processing",
+      challenge:
+        "Manual claims handling causing delays and customer dissatisfaction",
+      solution:
+        "Automated claims processing with machine learning document analysis",
+      potentialOutcome:
+        "Can reduce processing times from days to minutes and improve accuracy",
       image: "/images/case-studies/automation.jpg",
     },
   },
@@ -213,11 +231,14 @@ const services = [
       "Computer Vision Solutions",
       "Recommendation Systems",
     ],
-    caseStudy: {
-      client: "AgriTech Innovations",
-      challenge: "Inefficient crop management and yield prediction",
-      solution: "ML-powered precision agriculture platform",
-      result: "21% increase in crop yields with 30% reduced resource usage",
+    useCase: {
+      scenario: "Precision Agriculture",
+      challenge:
+        "Inefficient crop management leading to resource waste and suboptimal yields",
+      solution:
+        "ML-powered precision agriculture platform with satellite imagery analysis",
+      potentialOutcome:
+        "Potential 20%+ increase in crop yields with 25-30% reduced resource usage",
       image: "/images/case-studies/ai.jpg",
     },
   },
@@ -236,12 +257,13 @@ const services = [
       "Container Orchestration",
       "Monitoring & Alerting",
     ],
-    caseStudy: {
-      client: "SaaS Platform Provider",
-      challenge: "Release delays and quality issues",
-      solution: "Comprehensive DevOps transformation",
-      result:
-        "Release frequency increased 10x with 78% fewer production issues",
+    useCase: {
+      scenario: "SaaS Product Development",
+      challenge:
+        "Release delays and quality issues hampering market competitiveness",
+      solution: "Comprehensive DevOps transformation with automated testing",
+      potentialOutcome:
+        "Can increase release frequency up to 10x with significant reduction in production issues",
       image: "/images/case-studies/devops.jpg",
     },
   },
@@ -260,12 +282,13 @@ const services = [
       "Implementation Roadmap",
       "Change Management",
     ],
-    caseStudy: {
-      client: "Regional Healthcare Network",
-      challenge: "Fragmented digital ecosystem across 12 facilities",
-      solution: "Comprehensive digital transformation strategy and execution",
-      result:
-        "Unified patient experience with $4.2M annual operational savings",
+    useCase: {
+      scenario: "Healthcare Network Digitalization",
+      challenge: "Fragmented digital experience across multiple facilities",
+      solution:
+        "Comprehensive digital transformation strategy with phased implementation",
+      potentialOutcome:
+        "Potential to create unified patient experience with millions in operational savings",
       image: "/images/case-studies/consulting.jpg",
     },
   },
@@ -284,11 +307,14 @@ const services = [
       "API Gateway Development",
       "API Security & Authentication",
     ],
-    caseStudy: {
-      client: "Fintech Startup",
-      challenge: "Legacy systems blocking integration with partners",
-      solution: "Modern API layer with advanced security protocols",
-      result: "Partnered with 25+ new platforms, increasing revenue by 140%",
+    useCase: {
+      scenario: "Fintech Platform Integration",
+      challenge:
+        "Legacy systems preventing integration with modern platforms and partners",
+      solution:
+        "Modern API layer with comprehensive security and authentication",
+      potentialOutcome:
+        "Enables seamless integration with multiple platforms, potentially increasing revenue streams",
       image: "/images/case-studies/api.jpg",
     },
   },
@@ -307,11 +333,14 @@ const services = [
       "Technology Feasibility Analysis",
       "Prototype Development",
     ],
-    caseStudy: {
-      client: "Global Media Corporation",
-      challenge: "Declining engagement in traditional channels",
-      solution: "Innovation workshops leading to new digital products",
-      result: "Three new revenue streams generating $9.5M in first year",
+    useCase: {
+      scenario: "Media Company Transformation",
+      challenge:
+        "Declining engagement in traditional channels and content formats",
+      solution:
+        "Innovation workshops leading to new digital product concepts and strategies",
+      potentialOutcome:
+        "Can lead to multiple new revenue streams and increased digital audience engagement",
       image: "/images/case-studies/workshop.jpg",
     },
   },
@@ -406,7 +435,7 @@ const ServicesSection = () => {
                     className={`text-${service.accentColor}-500 flex items-center font-semibold hover:underline mt-auto`}
                     onClick={() => setActiveProject(service)}
                   >
-                    View Case Study
+                    View Use Case
                     <HiOutlineArrowRight className="ml-2" />
                   </button>
                 </div>
@@ -416,7 +445,7 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      {/* Case Study Modal */}
+      {/* Use Case Modal */}
       <AnimatePresence>
         {activeProject && (
           <motion.div
@@ -463,30 +492,32 @@ const ServicesSection = () => {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-xl font-semibold mb-2">Client</h4>
+                    <h4 className="text-xl font-semibold mb-2">Scenario</h4>
                     <p className="text-gray-300">
-                      {activeProject?.caseStudy?.client}
+                      {activeProject?.useCase?.scenario}
                     </p>
                   </div>
 
                   <div className="mb-6">
                     <h4 className="text-xl font-semibold mb-2">Challenge</h4>
                     <p className="text-gray-300">
-                      {activeProject?.caseStudy?.challenge}
+                      {activeProject?.useCase?.challenge}
                     </p>
                   </div>
 
                   <div className="mb-6">
                     <h4 className="text-xl font-semibold mb-2">Solution</h4>
                     <p className="text-gray-300">
-                      {activeProject?.caseStudy?.solution}
+                      {activeProject?.useCase?.solution}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-semibold mb-2">Results</h4>
+                    <h4 className="text-xl font-semibold mb-2">
+                      Potential Outcome
+                    </h4>
                     <p className="text-gray-300">
-                      {activeProject?.caseStudy?.result}
+                      {activeProject?.useCase?.potentialOutcome}
                     </p>
                   </div>
                 </div>

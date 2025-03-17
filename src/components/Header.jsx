@@ -9,25 +9,15 @@ const Header = () => {
   };
 
   return (
-    <header className="z-50 bg-opacity-20 backdrop-filter backdrop-blur-xl bg-gradient-to-r from-purple-800 to-blue-600 shadow-lg">
+    <header className="sticky top-0 z-[1000] bg-gradient-to-r from-purple-800/40 to-blue-600/40 backdrop-filter backdrop-blur-lg shadow-lg before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] before:bg-[size:10px_10px] before:pointer-events-none">
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-              />
-            </svg>
-            <span className="text-xl font-semibold text-white">DevCraft</span>
+            <img
+              src="./images/logo-white.png"
+              alt="codeket-logo"
+              className="w-[130px] h-auto"
+            />
           </Link>
         </div>
 
@@ -95,7 +85,7 @@ const Header = () => {
       <div
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } md:hidden bg-opacity-70 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-purple-700 to-blue-500 py-4 px-6`}
+        } md:hidden relative bg-gradient-to-r from-purple-700/80 to-blue-500/80 backdrop-filter backdrop-blur-lg py-4 px-6`}
       >
         <Link
           to="/"
@@ -134,25 +124,6 @@ const Header = () => {
           Get Quote
         </Link>
       </div>
-
-      <style jsx>{`
-        header::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 1px
-          );
-          background-size: 10px 10px;
-          pointer-events: none;
-          z-index: -1;
-        }
-      `}</style>
     </header>
   );
 };

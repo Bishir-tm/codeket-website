@@ -18,7 +18,7 @@ const ServicePage = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <div className="bg-black text-white overflow-hidden">
+    <div className="bg-black text-white ">
       <CustomCursor hoveredCard={hoveredCard} />
       <Header />
       <HeroSection />
