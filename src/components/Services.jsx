@@ -560,7 +560,7 @@ const ServicePage = () => {
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <div className="flex flex-col items-center">
-            <p className="text-gray-400 mb-2">Scroll to discover</p>
+            <p className="text-gray-400 mb-2">Scroll down to discover &darr; </p>
             <div className="w-8 h-12 rounded-full border-2 border-white flex justify-center">
               <motion.div
                 animate={{

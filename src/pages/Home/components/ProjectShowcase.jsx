@@ -1,31 +1,47 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Project showcase data
 const projectShowcase = [
   {
-    title: "Global Banking Platform",
+    title: "Enterprise Software Development",
     description:
-      "AI-driven banking system serving 5M+ customers across 12 countries",
+      "Custom enterprise-grade software solutions designed to automate processes, integrate systems, and scale with your business growth.",
     icon: "🏦",
-    stats: { development: "4 months", users: "5M+", satisfaction: "98%" },
-    tech: ["React", "Node.js", "TensorFlow", "AWS", "PostgreSQL"],
+    items: [
+      "Custom Web Applications",
+      "Legacy System Modernization",
+      "Internal Tools & Dashboards",
+      "API Development & Integration",
+    ],
     color: "from-blue-600 to-indigo-700",
   },
   {
-    title: "Smart City Infrastructure",
-    description: "IoT platform for managing urban infrastructure and services",
+    title: "Mobile App Development",
+    description:
+      "Native and cross-platform mobile applications with stunning UIs, seamless performance, and robust backend integration.",
     icon: "🏙️",
-    stats: { development: "6 months", devices: "50K+", efficiency: "+42%" },
-    tech: ["Python", "React", "TensorFlow", "Azure", "MongoDB"],
+    items: [
+      "iOS & Android Development",
+      "React Native Solutions",
+      "Mobile UX/UI Design",
+      "App Store Optimization",
+    ],
+
     color: "from-emerald-600 to-green-700",
   },
   {
-    title: "Healthcare Analytics Suite",
-    description: "Predictive analytics platform for healthcare providers",
+    title: "Business Process Automation",
+    description:
+      "Streamline operations with intelligent automation that eliminates repetitive tasks and optimizes complex business processes.",
     icon: "🏥",
-    stats: { development: "5 months", hospitals: "120+", accuracy: "99.2%" },
-    tech: ["React", "Python", "AWS", "PostgreSQL", "Docker"],
+    items: [
+      "Robotic Process Automation (RPA)",
+      "Workflow Optimization",
+      "Document Processing Automation",
+      "Business Process Modeling",
+    ],
     color: "from-red-600 to-pink-700",
   },
 ];
@@ -35,13 +51,13 @@ const ProjectShowcase = () => {
     <div className="py-24">
       <div className="text-center mb-16">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4"
+          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4 h-[100%]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Success Stories
+          Some of the Things We Do
         </motion.h2>
         <motion.p
           className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto"
@@ -86,62 +102,23 @@ const ProjectShowcase = () => {
               </h3>
               <p className="text-gray-300 mb-6">{project.description}</p>
 
-              {/* Stats grid */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {Object.entries(project.stats).map(([key, value], i) => (
-                  <div
-                    key={i}
-                    className="text-center p-2 bg-white/5 rounded-lg"
-                  >
-                    <div className="text-blue-400 font-mono font-bold">
-                      {value}
-                    </div>
-                    <div className="text-xs text-gray-400 capitalize">
-                      {key}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Tech stack */}
+              {/* items */}
               <div className="flex flex-wrap gap-2 mt-2">
-                {project.tech.map((tech, i) => (
+                {project.items.map((item, i) => (
                   <span
                     key={i}
                     className="px-2 py-1 text-xs rounded-full bg-gray-800 text-gray-300"
                   >
-                    {tech}
+                    {item}
                   </span>
                 ))}
               </div>
-            </div>
-
-            {/* Card footer with CTA */}
-            <div className="p-4 border-t border-gray-800 flex justify-between items-center">
-              <span className="text-sm text-gray-400">Case Study</span>
-              <button className="text-blue-400 hover:text-blue-300 transition-colors text-sm flex items-center">
-                View details
-                <svg
-                  className="w-4 h-4 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </button>
             </div>
           </motion.div>
         ))}
       </div>
       {/* CTA Button */}
-      <div className="text-center mt-12">
+      <div className=" text-center mt-12">
         <motion.button
           className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -149,21 +126,23 @@ const ProjectShowcase = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <span>View All Case Studies</span>
-          <svg
-            className="w-5 h-5 ml-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            ></path>
-          </svg>
+          <Link to={"/services"} className="flex w-full">
+            <span>View All Services</span>
+            <svg
+              className="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+          </Link>
         </motion.button>
       </div>
     </div>

@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    value: "250+",
+    value: "35+",
     label: "Projects Delivered",
     gradient: "from-blue-500 to-cyan-400",
   },
   {
-    value: "12+",
-    label: "Years Experience",
+    value: "8+",
+    label: "Years of Industry Experience",
     gradient: "from-purple-500 to-pink-400",
   },
   {
@@ -19,8 +19,8 @@ const stats = [
     gradient: "from-teal-500 to-green-400",
   },
   {
-    value: "$450M+",
-    label: "Client Revenue Generated",
+    value: "100%",
+    label: "Client Satisfaction",
     gradient: "from-amber-500 to-yellow-400",
   },
 ];

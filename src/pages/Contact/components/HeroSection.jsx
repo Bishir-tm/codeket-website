@@ -1,9 +1,10 @@
 import React from "react";
+import { FaArrowAltCircleDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const HeroSection = ({ y }) => {
   return (
-    <div className="relative h-[65vh] flex items-center justify-center overflow-hidden">
+    <div className="relative h-screen -top-10 flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
@@ -36,7 +37,7 @@ const HeroSection = ({ y }) => {
           </a>
           <a
             href="#locations"
-            className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 shadow-lg"
+            className="px-8 py-4 mb-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 shadow-lg"
           >
             Visit Our Offices
           </a>
@@ -51,7 +52,7 @@ const HeroSection = ({ y }) => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
         <div className="flex flex-col items-center">
-          <p className="text-gray-400 mb-2">Scroll to discover</p>
+          <p className="text-gray-400 mb-2">Scroll down to discover</p>
           <div className="w-8 h-12 rounded-full border-2 border-white flex justify-center">
             <motion.div
               animate={{
@@ -61,8 +62,9 @@ const HeroSection = ({ y }) => {
                 repeat: Infinity,
                 duration: 1.5,
               }}
-              className="w-2 h-2 bg-white rounded-full mt-2"
-            />
+            >
+              <FaArrowAltCircleDown className="w-10 h-10" />
+            </motion.div>
           </div>
         </div>
       </motion.div>

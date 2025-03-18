@@ -59,7 +59,7 @@ const services = [
         "Custom logistics management platform with real-time tracking and system integration",
       potentialOutcome:
         "Up to 40% increase in operational efficiency with potential annual savings of $1M+",
-      image: "/images/case-studies/logistics.jpg",
+      image: "/images/enterprise-software.jpg",
     },
   },
   {
@@ -85,7 +85,7 @@ const services = [
         "AI inventory forecasting and management system with multi-location support",
       potentialOutcome:
         "Potential to reduce stockouts by 70-80% and increase inventory turns by 20-25%",
-      image: "/images/case-studies/retail.jpg",
+      image: "/images/inventory-dev.jpg",
     },
   },
   {
@@ -110,7 +110,7 @@ const services = [
         "Patient-centered mobile app with wearable integration and intuitive interface",
       potentialOutcome:
         "Typically achieves 100,000+ downloads with 4.5+ star ratings and improved patient outcomes",
-      image: "/images/case-studies/mobile.jpg",
+      image: "/images/mobile-dev.jpg",
     },
   },
   {
@@ -136,7 +136,7 @@ const services = [
         "AI-driven elastic cloud architecture with predictive scaling capabilities",
       potentialOutcome:
         "Can achieve 99.99% uptime with up to 45% reduction in cloud costs",
-      image: "/images/case-studies/cloud.jpg",
+      image: "/images/cloud-dev.jpg",
     },
   },
   {
@@ -161,7 +161,7 @@ const services = [
         "Predictive maintenance analytics system with IoT sensor integration",
       potentialOutcome:
         "Typically reduces downtime by 60-70% and maintenance costs by up to 40%",
-      image: "/images/case-studies/analytics.jpg",
+      image: "/images/business-intel.jpg",
     },
   },
   {
@@ -187,7 +187,7 @@ const services = [
         "End-to-end security architecture with AI-powered threat detection",
       potentialOutcome:
         "Can significantly reduce breach risk with improved threat response times",
-      image: "/images/case-studies/security.jpg",
+      image: "/images/cybersecurity.jpg",
     },
   },
   {
@@ -213,7 +213,7 @@ const services = [
         "Automated claims processing with machine learning document analysis",
       potentialOutcome:
         "Can reduce processing times from days to minutes and improve accuracy",
-      image: "/images/case-studies/automation.jpg",
+      image: "/images/process-automation.jpg",
     },
   },
   {
@@ -239,57 +239,7 @@ const services = [
         "ML-powered precision agriculture platform with satellite imagery analysis",
       potentialOutcome:
         "Potential 20%+ increase in crop yields with 25-30% reduced resource usage",
-      image: "/images/case-studies/ai.jpg",
-    },
-  },
-  {
-    id: 9,
-    title: "DevOps & Continuous Integration",
-    category: "automation",
-    icon: <FaServer className="text-emerald-500" />,
-    bgColor: "from-emerald-500/20 to-green-500/20",
-    accentColor: "emerald",
-    description:
-      "Accelerate your development cycle with streamlined CI/CD pipelines, infrastructure as code, and automated testing.",
-    features: [
-      "CI/CD Pipeline Implementation",
-      "Infrastructure as Code",
-      "Container Orchestration",
-      "Monitoring & Alerting",
-    ],
-    useCase: {
-      scenario: "SaaS Product Development",
-      challenge:
-        "Release delays and quality issues hampering market competitiveness",
-      solution: "Comprehensive DevOps transformation with automated testing",
-      potentialOutcome:
-        "Can increase release frequency up to 10x with significant reduction in production issues",
-      image: "/images/case-studies/devops.jpg",
-    },
-  },
-  {
-    id: 10,
-    title: "Digital Transformation Consulting",
-    category: "consulting",
-    icon: <FaRocket className="text-orange-500" />,
-    bgColor: "from-orange-500/20 to-amber-500/20",
-    accentColor: "orange",
-    description:
-      "Strategic guidance to navigate your organization's digital journey, from roadmap development to implementation and beyond.",
-    features: [
-      "Digital Strategy Development",
-      "Technology Stack Assessment",
-      "Implementation Roadmap",
-      "Change Management",
-    ],
-    useCase: {
-      scenario: "Healthcare Network Digitalization",
-      challenge: "Fragmented digital experience across multiple facilities",
-      solution:
-        "Comprehensive digital transformation strategy with phased implementation",
-      potentialOutcome:
-        "Potential to create unified patient experience with millions in operational savings",
-      image: "/images/case-studies/consulting.jpg",
+      image: "/images/ai.jpg",
     },
   },
   {
@@ -315,11 +265,37 @@ const services = [
         "Modern API layer with comprehensive security and authentication",
       potentialOutcome:
         "Enables seamless integration with multiple platforms, potentially increasing revenue streams",
-      image: "/images/case-studies/api.jpg",
+      image: "/images/api-dev.jpg",
     },
   },
   {
-    id: 12,
+    id: 10,
+    title: "Digital Transformation Consulting",
+    category: "consulting",
+    icon: <FaRocket className="text-orange-500" />,
+    bgColor: "from-orange-500/20 to-amber-500/20",
+    accentColor: "orange",
+    description:
+      "Strategic guidance to navigate your organization's digital journey, from roadmap development to implementation and beyond.",
+    features: [
+      "Digital Strategy Development",
+      "Technology Stack Assessment",
+      "Implementation Roadmap",
+      "Change Management",
+    ],
+    useCase: {
+      scenario: "Healthcare Network Digitalization",
+      challenge: "Fragmented digital experience across multiple facilities",
+      solution:
+        "Comprehensive digital transformation strategy with phased implementation",
+      potentialOutcome:
+        "Potential to create unified patient experience with millions in operational savings",
+      image: "/images/consultancy.jpg",
+    },
+  },
+
+  {
+    id: 11,
     title: "Technology Innovation Workshops",
     category: "consulting",
     icon: <HiOutlineLightBulb className="text-yellow-500" />,
@@ -341,7 +317,7 @@ const services = [
         "Innovation workshops leading to new digital product concepts and strategies",
       potentialOutcome:
         "Can lead to multiple new revenue streams and increased digital audience engagement",
-      image: "/images/case-studies/workshop.jpg",
+      image: "/images/workshop.jpg",
     },
   },
 ];
@@ -522,9 +498,13 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="bg-gray-800 flex items-center justify-center">
-                  <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                    <p className="text-gray-400">Case Study Image</p>
+                <div className="bg-gray-800  flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <img
+                      src={activeProject?.useCase?.image}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>

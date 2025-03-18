@@ -1,6 +1,7 @@
 // components/ProjectShowcase.js
 import React from "react";
 import { motion } from "framer-motion";
+import Gif from "../../../components/Common/Gif";
 
 const projects = [
   {
@@ -16,7 +17,8 @@ const projects = [
       "12% overall revenue growth",
       "$4.2M in annual savings",
     ],
-    image: "./images/inventory.png",
+    gifSrc: "./images/ims.gif",
+    staticSrc: "./images/1i.png",
   },
   {
     id: 2,
@@ -31,7 +33,8 @@ const projects = [
       "1.2M patient records securely managed",
       "Seamless integration with 15 existing systems",
     ],
-    image: "./images/health.png",
+    gifSrc: "./images/hms.gif",
+    staticSrc: "./images/1m.png",
   },
   {
     id: 3,
@@ -46,7 +49,8 @@ const projects = [
       "API integration with major telecom providers",
       "User-friendly dashboard for balance management",
     ],
-    image: "./images/vtu-app.png",
+    gifSrc: "./images/vtu.gif",
+    staticSrc: "./images/1v.png",
   },
   {
     id: 4,
@@ -61,7 +65,8 @@ const projects = [
       "Seamless fee management and payment processing",
       "Role-based access control for security",
     ],
-    image: "./images/school.png",
+    gifSrc: "./images/sms.gif",
+    staticSrc: "./images/1l.png",
   },
 ];
 
@@ -134,14 +139,15 @@ const ProjectShowcase = () => {
               </div>
 
               <div
-                className={` rounded-2xl border p-3 overflow-hidden aspect-video flex items-center justify-center ${
+                className={`  overflow-hidden aspect-video flex items-center justify-center ${
                   index % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
-                <img
-                  src={project.image}
-                  alt=""
-                  className="rounded-2xl w-full h-full"
+                <Gif
+                  gifSrc={project.gifSrc}
+                  staticSrc={project.staticSrc}
+                  alt="Funny GIF"
+                  className="rounded-2xl w-full h-full" // Adjust size with Tailwind or CSS
                 />
               </div>
             </motion.div>

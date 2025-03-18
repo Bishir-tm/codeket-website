@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import CustomCursor from "../../components/Common/CustomCursor";
 import CallToAction from "../../components/Common/CallToAction";
 import HeroSection from "./components/HeroSection";
 import StatsSection from "./components/Stats";
@@ -19,7 +18,6 @@ const ServicePage = () => {
 
   return (
     <div className="bg-black text-white ">
-      <CustomCursor hoveredCard={hoveredCard} />
       <Header />
       <HeroSection />
       <StatsSection />

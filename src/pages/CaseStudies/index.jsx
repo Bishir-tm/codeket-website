@@ -7,7 +7,6 @@ import {
 } from "framer-motion";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Cursor from "./../../components/Common/CustomCursor";
 import HeroSection from "./components/HeroSection";
 import Filters from "./components/Filters";
 import CaseStudyCard from "./components/CaseStudyCard";
@@ -29,20 +28,6 @@ const CaseStudiesPage = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [activeCaseStudy, setActiveCaseStudy] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const cursorRef = useRef(null);
-
-  // Track mouse position
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX}px`;
-        cursorRef.current.style.top = `${e.clientY}px`;
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   // Filter case studies
   const filteredCaseStudies = caseStudies.filter((study) => {
@@ -60,8 +45,6 @@ const CaseStudiesPage = () => {
 
   return (
     <div className="bg-black text-white ">
-      <Cursor hoveredCard={hoveredCard} />
-
       <Header />
 
       <HeroSection />

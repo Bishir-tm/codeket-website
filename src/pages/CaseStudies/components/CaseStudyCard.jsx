@@ -24,7 +24,7 @@ const CaseStudyCard = ({
       <div className="bg-gray-900 rounded-2xl h-full flex flex-col overflow-hidden">
         <div className="h-48 bg-gray-800 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-gray-400">Case Study Image</p>
+            <img src={caseStudy.image} alt="" className="h-full w-full" />
           </div>
           <div className="absolute top-4 left-4 bg-black/70 rounded-full p-2">
             <div className="text-2xl">{caseStudy.icon}</div>
