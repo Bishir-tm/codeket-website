@@ -85,7 +85,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             {socials.map((social, i) => (
-              <div className="flex space-x-4">
+              <div key={i} className="flex space-x-4">
                 <Link
                   to={social.link}
                   className="bg-gray-800 hover:bg-blue-700 p-3 rounded-lg transition-colors"

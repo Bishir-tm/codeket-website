@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { motion } from "framer-motion";
+import scrollToSection from "../../../utils/scrollToSection";
 
 const HeroSection = () => {
   return (
@@ -41,18 +42,18 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-10 flex items-center justify-center"
         >
-          <Link
-            to="#services"
+          <button
+            onClick={() => scrollToSection("services")}
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mr-4"
           >
             Explore Services
-          </Link>
-          <Link
-            to="#contact"
+          </button>
+          <button
+            onClick={() => scrollToSection("contact-form")}
             className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
           >
             Get in Touch
-          </Link>
+          </button>
         </motion.div>
       </div>
 

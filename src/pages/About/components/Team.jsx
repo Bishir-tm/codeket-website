@@ -45,18 +45,21 @@ const Team = () => {
                 <p className="text-gray-300 mt-4">{member.bio}</p>
                 <div className="flex space-x-4 mt-6">
                   <a
+                    target="_blank"
                     href={member.social.linkedin}
                     className="text-gray-400 hover:text-blue-500 transition-colors"
                   >
                     <FaLinkedin className="w-6 h-6" />
                   </a>
                   <a
+                    target="_blank"
                     href={member.social.twitter}
                     className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     <FaTwitter className="w-6 h-6" />
                   </a>
                   <a
+                    target="_blank"
                     href={member.social.github}
                     className="text-gray-400 hover:text-gray-300 transition-colors"
                   >
@@ -76,6 +79,7 @@ const Team = () => {
           className="text-center mt-16"
         >
           <a
+            target="_blank"
             href="/careers"
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
           >

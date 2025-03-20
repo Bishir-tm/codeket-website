@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { motion } from "framer-motion";
+import scrollToSection from "../../../utils/scrollToSection";
 
 const HeroSection = () => {
   return (
@@ -37,12 +38,12 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-10"
         >
-          <a
-            href="#our-story"
+          <button
+            onClick={() => scrollToSection("our-story")}
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
           >
             Discover Our Story
-          </a>
+          </button>
         </motion.div>
       </motion.div>
 
