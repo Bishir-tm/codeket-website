@@ -18,19 +18,12 @@ const ContactInfo = () => {
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-1">Email Us</h3>
-          <p className="text-gray-300 mb-2">For general inquiries:</p>
-          <a
-            href="mailto:info@codeket.com"
-            className="text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            info@codeket.com
-          </a>
-          <p className="text-gray-300 mt-2 mb-2">For support:</p>
+
           <a
             href="mailto:support@codeket.com"
             className="text-blue-400 hover:text-blue-300 transition-colors"
           >
-            support@codeket.com
+            contact@codeket.com
           </a>
         </div>
       </div>
@@ -76,22 +69,10 @@ const ContactInfo = () => {
             <FaLinkedin className="text-white text-xl" />
           </a>
           <a
-            href="https://twitter.com/codeket"
+            href="https://twitter.com/codeketofficial"
             className="bg-gray-800 hover:bg-blue-400 p-3 rounded-lg transition-colors"
           >
             <FaTwitter className="text-white text-xl" />
-          </a>
-          <a
-            href="https://github.com/codeket"
-            className="bg-gray-800 hover:bg-gray-600 p-3 rounded-lg transition-colors"
-          >
-            <FaGithub className="text-white text-xl" />
-          </a>
-          <a
-            href="https://instagram.com/codeket"
-            className="bg-gray-800 hover:bg-pink-600 p-3 rounded-lg transition-colors"
-          >
-            <FaInstagram className="text-white text-xl" />
           </a>
         </div>
       </div>

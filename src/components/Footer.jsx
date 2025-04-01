@@ -19,19 +19,14 @@ const legals = [
 
 const socials = [
   {
-    name: "Twitter",
-    link: "#",
+    name: "LinkedIn",
+    link: "https://linkedin.com/company/codeket",
     icon: <FaLinkedin className="text-white text-xl" />,
   },
   {
-    name: "LinkedIn",
-    link: "#",
+    name: "Twitter/X",
+    link: "https://x.com/codeketofficial",
     icon: <FaTwitter className="text-white text-xl" />,
-  },
-  {
-    name: "Instagram",
-    link: "#",
-    icon: <FaInstagram className="text-white text-xl" />,
   },
 ];
 
@@ -86,12 +81,13 @@ const Footer = () => {
           <div className="flex space-x-4">
             {socials.map((social, i) => (
               <div key={i} className="flex space-x-4">
-                <Link
-                  to={social.link}
+                <a
+                  href={social.link}
+                  target="_blank"
                   className="bg-gray-800 hover:bg-blue-700 p-3 rounded-lg transition-colors"
                 >
                   {social.icon}
-                </Link>
+                </a>
               </div>
             ))}
           </div>

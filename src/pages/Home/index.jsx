@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import technologies from "../../utils/technologies";
-import features from "../../utils/features";
 import Header from "../../components/Header";
 import HeroSection from "./components/HeroSection";
 import CodeShowcase from "./components/CodeShowcase";
@@ -78,7 +76,6 @@ const Home = () => {
       </div>
       <div className="container  px-6 relative mx-auto z-30 min-h-screen flex flex-col">
         <HeroSection mousePosition={mousePosition} isLoaded={isLoaded} />
-        <CodeShowcase codeSnippets={codeSnippets} />
         <ProjectShowcase projectShowcase={projectShowcase} />
         <Testimonials testimonials={testimonials} />
         <IntegrationPartners />
