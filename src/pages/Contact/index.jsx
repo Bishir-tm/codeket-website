@@ -149,7 +149,7 @@ const Contact = () => {
             formStatus={formStatus}
           />
         </div>
-        <OfficeLocations locations={locations} />
+        {/* <OfficeLocations locations={locations} /> */}
         <FAQSection faqs={faqs} />
         <CallToAction />
       </div>

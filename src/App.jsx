@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import CaseStudies from "./pages/CaseStudies";
 import Consultation from "./pages/Consultation";
+import Pricing from "./pages/Pricing";
 import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/Common/ScrollToTop";
@@ -16,30 +17,30 @@ import "./App.css";
 
 function App() {
   return (
-    
-      <Router>
-        <div className="relative">
-          <ScrollToTop />
-          <Routes>
-            {/* Pages */}
-            <Route path="/" element={<Home />} />
-            <Route path="/hms" element={<HMStest />} />
-            <Route path="/lms" element={<LMStest />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/consultation" element={<Consultation />} />
+    <Router>
+      <div className="relative">
+        <ScrollToTop />
+        <Routes>
+          {/* Pages */}
+          <Route path="/" element={<Home />} />
+          <Route path="/hms" element={<HMStest />} />
+          <Route path="/lms" element={<LMStest />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/consultation" element={<Consultation />} />
+          <Route path="/pricing" element={<Pricing />} />
 
-            {/* Legal Pages */}
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          {/* Legal Pages */}
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-            {/* 404 Page */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </Router>
+          {/* 404 Page */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

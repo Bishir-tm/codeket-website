@@ -12,7 +12,7 @@ import Filters from "./components/Filters";
 import CaseStudyCard from "./components/CaseStudyCard";
 import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonials";
-import CallToAction from "../../components/Common/CallToAction";
+import CallToAction from "./components/CallToAction.jsx";
 import CaseStudyModal from "./components/CaseStudyModal";
 import {
   caseStudies,

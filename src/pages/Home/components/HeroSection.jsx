@@ -2,9 +2,19 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import features from "../../../utils/features";
 import technologies from "../../../utils/technologies";
+import { Link } from "react-router-dom";
 
 const Hero = ({ mousePosition, isLoaded }) => {
   const [activeFeature, setActiveFeature] = useState(0);
+
+  // Add auto-carousel functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((current) => (current + 1) % features.length);
+    }, 3000); // Change feature every 5 seconds
+
+    return () => clearInterval(interval); // Clean up on unmount
+  }, []);
 
   return (
     <div className="flex-1 grid md:grid-cols-2 items-center gap-8 py-12 px-6">
@@ -72,10 +82,6 @@ const Hero = ({ mousePosition, isLoaded }) => {
                 scale: 1.05,
                 backgroundColor: "rgba(255,255,255,0.1)",
               }}
-              onClick={() => {
-                setActiveTech(tech);
-                setShowModal(true);
-              }}
             >
               <span className="text-lg">{tech.icon}</span>
               <span className="text-white text-sm">{tech.name}</span>
@@ -117,7 +123,10 @@ const Hero = ({ mousePosition, isLoaded }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6 }}
         >
-          <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+          <Link
+            to="consultation"
+            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+          >
             <span>Get Started</span>
             <svg
               className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
@@ -133,11 +142,8 @@ const Hero = ({ mousePosition, isLoaded }) => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               ></path>
             </svg>
-          </button>
-          <button
-            className="px-8 py-4 bg-white/5 border border-blue-500/30 text-white font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center"
-            onClick={() => setIsDemoModalOpen(true)}
-          >
+          </Link>
+          {/* <button className="px-8 py-4 bg-white/5 border border-blue-500/30 text-white font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center">
             <span>See Codeket in Action</span>
             <svg
               className="w-5 h-5 ml-2"
@@ -159,7 +165,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
                 d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               ></path>
             </svg>
-          </button>
+          </button> */}
         </motion.div>
 
         {/* Clients section */}

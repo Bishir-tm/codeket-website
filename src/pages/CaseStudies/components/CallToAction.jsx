@@ -38,12 +38,6 @@ const CallToAction = () => {
           >
             Contact Us
           </Link>
-          <Link
-            to="/case-studies"
-            className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors duration-300 shadow-lg"
-          >
-            View Case Studies
-          </Link>
         </motion.div>
       </div>
     </div>

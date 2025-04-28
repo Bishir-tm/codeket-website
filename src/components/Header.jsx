@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-[1000] bg-gradient-to-r from-purple-800/40 to-blue-600/40 backdrop-filter backdrop-blur-lg shadow-lg before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] before:bg-[size:10px_10px] before:pointer-events-none">
+    <header className="sticky top-0 z-[999] bg-gradient-to-r from-purple-800/40 to-blue-600/40 backdrop-filter backdrop-blur-lg shadow-lg before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] before:bg-[size:10px_10px] before:pointer-events-none">
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center space-x-2">
@@ -53,7 +53,7 @@ const Header = () => {
             Contact Us
           </Link>
           <Link
-            to="/quote"
+            to="/pricing"
             className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full transition duration-300"
           >
             Get Quote

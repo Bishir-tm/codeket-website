@@ -42,38 +42,6 @@ const NotFoundPage = () => {
           you back on track.
         </motion.p>
 
-        {/* Search Bar */}
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="w-full max-w-md mb-8"
-        >
-          <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-2">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="flex-1 bg-transparent outline-none text-white placeholder-gray-400 px-3 py-2"
-            />
-            <button className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg hover:opacity-90 transition-opacity">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </motion.div>
-
         {/* Back to Home Button */}
         <motion.button
           initial={{ y: -20, opacity: 0 }}

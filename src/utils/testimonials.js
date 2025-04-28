@@ -1,11 +1,11 @@
 export const testimonials = [
   {
-    name: "David Lee",
-    position: "CTO, TechNova Inc.",
+    name: "Dan Maliki",
+    position: "CEO, Channel Teleommunications Ltd.",
     company: "Enterprise One",
-    image: "/images/testimonials/david.jpg",
+    image: "/images/testimonials/danmaliki.jpg",
     quote:
-      "CodeKet transformed our development process. Their solutions cut our deployment time by 70% and significantly improved our product quality.",
+      "CodeKet transformed our development process. Their solutions cut our time by 70% and significantly improved our product quality.",
   },
   {
     name: "Emily Rodriguez",
