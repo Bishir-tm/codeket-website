@@ -11,7 +11,7 @@ import {
 
 const ContactInfo = () => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8" id="contact-info">
       <div className="flex items-start space-x-4">
         <div className="bg-blue-500 p-3 rounded-lg">
           <FaEnvelope className="text-white text-xl" />

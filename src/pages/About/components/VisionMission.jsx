@@ -35,8 +35,6 @@ const VisionMission = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-500 rounded-full opacity-20 blur-3xl"></div>
             <video
               ref={videoRef}
               className="w-full h-auto rounded-xl shadow-2xl border border-gray-800"
@@ -44,7 +42,7 @@ const VisionMission = () => {
               loop
               muted
               playsInline
-              poster="/images/office1.jpg"
+              poster="/images/office2.jpg"
             >
               <source src="/videos/about-us.mp4" type="video/mp4" />
               Your browser does not support the video tag.

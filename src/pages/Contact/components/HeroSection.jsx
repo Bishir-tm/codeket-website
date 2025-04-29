@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 const HeroSection = ({ y }) => {
   return (
     <div className="relative h-screen -top-10 flex items-center justify-center overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-
       {/* Background gradient animation */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute -top-[30%] -left-[10%] w-[80%] h-[80%] bg-blue-600 rounded-full filter blur-[120px] opacity-20 animate-blob"></div>
@@ -30,16 +27,10 @@ const HeroSection = ({ y }) => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="#contact-form"
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
+            href="#contact-info"
+            className="px-8 py-4 mb-3 bg-gradient-to-r border-0 from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:bg-white/10"
           >
             Get in Touch
-          </a>
-          <a
-            href="#locations"
-            className="px-8 py-4 mb-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 shadow-lg"
-          >
-            Visit Our Offices
           </a>
         </div>
       </motion.div>

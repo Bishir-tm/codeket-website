@@ -1,5 +1,4 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   FaEnvelope,
@@ -65,73 +64,77 @@ const quickLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t mt-12 border-gray-800 flex items-center justify-around flex-col pt-12 px-4 md:px-6 lg:px-8">
+    <footer className="border-t mt-12 border-gray-800 flex flex-col pt-12 px-4 md:px-6 lg:px-8">
       <div className="flex w-full flex-col md:flex-row justify-between gap-8">
         {/* Logo and info */}
-        <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
+        <div className="flex flex-col items-start mb-8 md:mb-0">
           <div>
             <img
               src="./images/logo-silver-bg.png"
-              className="w-full max-w-[300px] md:max-w-[400px] h-auto"
+              className="w-full max-w-[250px] md:max-w-[300px] h-auto"
+              alt="Codeket Logo"
             />
           </div>
-          <p className="text-gray-400 mb-6 text-center md:text-left">
+          <p className="text-gray-400 mb-6 text-left max-w-md">
             AI-powered software development for enterprise solutions.
           </p>
           <div className="flex space-x-4">
             {socials.map((social, i) => (
-              <div key={i} className="flex space-x-4">
-                <a
-                  href={social.link}
-                  target="_blank"
-                  className="bg-gray-800 hover:bg-blue-700 p-3 rounded-lg transition-colors"
-                >
-                  {social.icon}
-                </a>
-              </div>
+              <a
+                key={i}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 hover:bg-blue-700 p-3 rounded-lg transition-colors"
+                aria-label={social.name}
+              >
+                {social.icon}
+              </a>
             ))}
           </div>
         </div>
 
-        {/* Quick links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {quickLinks.map((column, index) => (
-            <div key={index}>
-              <h4 className="text-white font-bold text-lg mb-4 text-center md:text-left">
-                {column.title}
-              </h4>
-              <ul className="space-y-3">
-                {column.links.map((link, i) => (
-                  <li key={i} className="text-center md:text-left">
-                    <Link
-                      to={link.to}
-                      className="text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        {/* Quick links section - Forcing 2 columns with custom styling */}
+        <div className="w-full md:w-auto">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8">
+            {quickLinks.map((column, index) => (
+              <div key={index} className="min-w-[120px]">
+                <h4 className="text-white font-bold text-lg mb-4 text-left">
+                  {column.title}
+                </h4>
+                <ul className="space-y-3">
+                  {column.links.map((link, i) => (
+                    <li key={i}>
+                      <Link
+                        to={link.to}
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="border-t w-full border-gray-800 my-6 pt-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            © 2025 Codeket. All rights reserved.
-          </p>
+      <div className="border-t w-full border-gray-800 my-6 pt-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
             {legals.map((item, i) => (
               <Link
                 key={i}
                 to={item.link}
-                className="text-gray-500 text-center hover:text-white text-sm transition-colors"
+                className="text-gray-500 hover:text-white text-sm transition-colors"
               >
                 {item.name}
               </Link>
             ))}
+            <p className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} Codeket. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

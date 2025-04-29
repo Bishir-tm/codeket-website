@@ -21,7 +21,10 @@ const ContactForm = ({
   ];
 
   return (
-    <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800 shadow-xl relative overflow-hidden">
+    <div
+      className="bg-gray-900 rounded-2xl p-8 border border-gray-800 shadow-xl relative overflow-hidden"
+      id="contact-form"
+    >
       <div className="absolute -top-12 -right-12 w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-purple-500 rounded-full opacity-20 blur-3xl"></div>
 

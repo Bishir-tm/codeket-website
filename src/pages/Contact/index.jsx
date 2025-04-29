@@ -138,7 +138,7 @@ const Contact = () => {
     <div className="bg-black text-white ">
       <Header />
       <HeroSection y={y} />
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-6 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
           <ContactInfo />
           <ContactForm
