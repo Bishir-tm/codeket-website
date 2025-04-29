@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaCode, FaUserClock, FaHandshake } from "react-icons/fa";
 
 // Guarantee Section
 const Guarantee = () => {
@@ -15,35 +15,51 @@ const Guarantee = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Our 30-Day Money-Back Guarantee
+              The Codeket Guarantee
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We're confident you'll love our platform. If you're not completely
-              satisfied within the first 30 days, we'll refund your payment in
-              full—no questions asked.
+              We're committed to excellence in every project we deliver. Our
+              promise to you includes quality code, timely delivery, and ongoing
+              support to ensure your complete satisfaction.
             </p>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="text-green-400 mt-1 mr-3">
-                  <FaCheck />
+                  <FaCode />
                 </div>
-                <p className="text-gray-300">
-                  No complicated cancellation process
-                </p>
+                <div>
+                  <p className="text-white font-medium">Quality Assurance</p>
+                  <p className="text-gray-300">
+                    Rigorous testing before deployment ensures your software
+                    works flawlessly
+                  </p>
+                </div>
               </div>
               <div className="flex items-start">
                 <div className="text-green-400 mt-1 mr-3">
-                  <FaCheck />
+                  <FaUserClock />
                 </div>
-                <p className="text-gray-300">Full refund, no hidden fees</p>
+                <div>
+                  <p className="text-white font-medium">Timely Delivery</p>
+                  <p className="text-gray-300">
+                    We respect your timelines and deliver on schedule, every
+                    time
+                  </p>
+                </div>
               </div>
               <div className="flex items-start">
                 <div className="text-green-400 mt-1 mr-3">
-                  <FaCheck />
+                  <FaHandshake />
                 </div>
-                <p className="text-gray-300">
-                  Friendly support every step of the way
-                </p>
+                <div>
+                  <p className="text-white font-medium">
+                    30-Day Support Promise
+                  </p>
+                  <p className="text-gray-300">
+                    Free support and bug fixes for 30 days after project
+                    completion
+                  </p>
+                </div>
               </div>
             </div>
             <motion.a
@@ -51,7 +67,7 @@ const Guarantee = () => {
               href="#pricing-plans"
               className="inline-block mt-10 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
             >
-              Choose Your Plan
+              Choose Your Solution
             </motion.a>
           </motion.div>
 
@@ -77,21 +93,11 @@ const Guarantee = () => {
                   strokeWidth="16"
                 />
                 <path
-                  d="M256 404C339.479 404 408 335.479 408 252C408 168.521 339.479 100 256 100C172.521 100 104 168.521 104 252C104 335.479 172.521 404 256 404Z"
-                  fill="url(#paint1_radial)"
-                  fillOpacity="0.2"
-                />
-                <path
-                  d="M224 296L288 232"
+                  d="M175 256L225 306L345 186"
                   stroke="url(#paint2_linear)"
                   strokeWidth="24"
                   strokeLinecap="round"
-                />
-                <path
-                  d="M224 232L288 296"
-                  stroke="url(#paint3_linear)"
-                  strokeWidth="24"
-                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <defs>
                   <linearGradient
@@ -105,34 +111,12 @@ const Guarantee = () => {
                     <stop stopColor="#3B82F6" />
                     <stop offset="1" stopColor="#8B5CF6" />
                   </linearGradient>
-                  <radialGradient
-                    id="paint1_radial"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(256 252) rotate(90) scale(152)"
-                  >
-                    <stop stopColor="#3B82F6" />
-                    <stop offset="1" stopColor="#8B5CF6" />
-                  </radialGradient>
                   <linearGradient
                     id="paint2_linear"
-                    x1="224"
-                    y1="296"
-                    x2="288"
-                    y2="232"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#3B82F6" />
-                    <stop offset="1" stopColor="#8B5CF6" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint3_linear"
-                    x1="224"
-                    y1="232"
-                    x2="288"
-                    y2="296"
+                    x1="175"
+                    y1="256"
+                    x2="345"
+                    y2="186"
                     gradientUnits="userSpaceOnUse"
                   >
                     <stop stopColor="#3B82F6" />
@@ -140,6 +124,23 @@ const Guarantee = () => {
                   </linearGradient>
                 </defs>
               </svg>
+
+              <div className="absolute -bottom-8 right-0 bg-gray-800 rounded-xl border border-gray-700 p-6 shadow-xl max-w-sm">
+                <div className="flex items-start mb-4">
+                  <div className="bg-green-500/20 p-2 rounded-full mr-4">
+                    <FaCheck className="text-green-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">
+                      Satisfaction Guarantee
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      If you're not completely satisfied with our deliverables,
+                      we'll work with you until you are.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

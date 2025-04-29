@@ -35,10 +35,6 @@ const quickLinks = [
     links: [
       { name: "AI Development", to: "/services#services" },
       { name: "Enterprise SaaS", to: "/services#services" },
-      {
-        name: "Digital Transformation",
-        to: "/services#digital-transformation",
-      },
       { name: "Cloud Solutions", to: "/services#services" },
     ],
   },
@@ -46,7 +42,7 @@ const quickLinks = [
     title: "Company",
     links: [
       { name: "About Us", to: "/about" },
-      { name: "Careers", to: "#" },
+      { name: "Services", to: "/services" },
       { name: "Blog", to: "#" },
       { name: "Contact", to: "/contact" },
     ],
@@ -54,7 +50,6 @@ const quickLinks = [
   {
     title: "Resources",
     links: [
-      { name: "Documentation", to: "#" },
       { name: "Case Studies", to: "/case-studies" },
       { name: "Help Center", to: "#" },
       { name: "Partners", to: "#" },
@@ -64,7 +59,7 @@ const quickLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t mt-12 border-gray-800 flex flex-col pt-12 px-4 md:px-6 lg:px-8">
+    <footer className="bg-black border-t mt-12 border-gray-800 flex flex-col pt-12 px-4 md:px-6 lg:px-8">
       <div className="flex w-full flex-col md:flex-row justify-between gap-8">
         {/* Logo and info */}
         <div className="flex flex-col items-start mb-8 md:mb-0">
@@ -74,10 +69,10 @@ const Footer = () => {
               className="w-full max-w-[250px] md:max-w-[300px] h-auto"
               alt="Codeket Logo"
             />
+            <p className="text-gray-400 mb-6 mx-0 px-0  max-w-md text-center">
+              AI-powered software development for enterprise solutions.
+            </p>
           </div>
-          <p className="text-gray-400 mb-6 text-left max-w-md">
-            AI-powered software development for enterprise solutions.
-          </p>
           <div className="flex space-x-4">
             {socials.map((social, i) => (
               <a
@@ -95,8 +90,8 @@ const Footer = () => {
         </div>
 
         {/* Quick links section - Forcing 2 columns with custom styling */}
-        <div className="w-full md:w-auto">
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8">
+        <div className="w-full ">
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8">
             {quickLinks.map((column, index) => (
               <div key={index} className="min-w-[120px]">
                 <h4 className="text-white font-bold text-lg mb-4 text-left">
@@ -122,21 +117,21 @@ const Footer = () => {
 
       <div className="border-t w-full border-gray-800 my-6 pt-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 w-full justify-center">
             {legals.map((item, i) => (
               <Link
                 key={i}
                 to={item.link}
-                className="text-gray-500 hover:text-white text-sm transition-colors"
+                className="text-gray-500 hover:text-white border-b text-sm transition-colors"
               >
                 {item.name}
               </Link>
             ))}
-            <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Codeket. All rights reserved.
-            </p>
           </div>
         </div>
+        <p className="text-gray-500 my-12 text-sm text-center">
+          © {new Date().getFullYear()} Codeket. All rights reserved.
+        </p>
       </div>
     </footer>
   );

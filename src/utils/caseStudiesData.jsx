@@ -34,7 +34,7 @@ export const services = [
 // Case studies data
 export const caseStudies = [
   {
-    id: 3,
+    id: 1,
     title: "Healthcare Management System & AI Diagnostics",
     industry: "healthcare",
     services: ["development", "cloud", "analytics"],
@@ -87,7 +87,7 @@ export const caseStudies = [
     ],
   },
   {
-    id: 9,
+    id: 2,
     title: "Seamless VTU Platform for Digital Transactions",
     industry: "technology",
     services: ["development", "automation", "cloud"],
@@ -126,7 +126,8 @@ export const caseStudies = [
     testimonial: {
       quote:
         "Codeket's VTU system transformed our platform with real-time transactions and high uptime. Our users love the reliability and speed!",
-      author: "CEO, Channel Data",
+      author: "Dan Maliki",
+      title: "CEO, Channel Telecommunications and Consultancy Services",
     },
     results: [
       "Processed over 1 million successful transactions within the first year",
@@ -136,11 +137,11 @@ export const caseStudies = [
     ],
   },
   {
-    id: 10,
-    title: "AI-Powered Inventory Management System",
+    id: 3,
+    title: "Inventory Management System",
     industry: "retail",
     services: ["development", "automation", "analytics"],
-    clientName: "Supermart Inventory Hub",
+    clientName: "Zamani Provision Store",
     clientDescription:
       "An advanced inventory solution for supermarkets and warehouses, ensuring optimal stock levels and reduced losses.",
     challengeTitle: "Stock Management & Loss Reduction",
@@ -149,7 +150,7 @@ export const caseStudies = [
     icon: <FaLayerGroup className="text-purple-500" />,
     bgColor: "from-purple-500/20 to-pink-500/20",
     accentColor: "purple",
-    link: "http://channeldata.com.ng",
+    link: "/#",
     image: "/images/1i.png",
     logo: "/images/clients/supermart-logo.svg",
     stats: [
@@ -174,8 +175,9 @@ export const caseStudies = [
     ],
     testimonial: {
       quote:
-        "Codeket’s inventory system revolutionized our stock tracking. Now, we have complete visibility with AI-powered insights.",
-      author: "Inventory Manager, Supermart",
+        "Codeket’s inventory system revolutionized our stock tracking. Now, we have complete visibility of our warehouse and sales.",
+      author: "Bishir Zamani",
+      title: "Inventory Manager, Zamani Provision Store",
     },
     results: [
       "Achieved 98% stock accuracy, reducing losses significantly",
@@ -185,11 +187,11 @@ export const caseStudies = [
     ],
   },
   {
-    id: 11,
+    id: 4,
     title: "Smart School Management System",
     industry: "education",
     services: ["development", "cloud", "automation"],
-    clientName: "Edutech Academy",
+    clientName: "Kindered Academy",
     clientDescription:
       "A digital platform designed to automate administrative tasks, attendance tracking, and fee management for schools.",
     challengeTitle: "Administrative Bottlenecks & Student Tracking",
@@ -198,7 +200,7 @@ export const caseStudies = [
     icon: <FaLaptopCode className="text-teal-500" />,
     bgColor: "from-teal-500/20 to-cyan-500/20",
     accentColor: "teal",
-    link: "http://channeldata.com.ng",
+    link: "/#",
     image: "/images/1l.png",
     logo: "/images/clients/edutech-logo.svg",
     stats: [
@@ -224,7 +226,8 @@ export const caseStudies = [
     testimonial: {
       quote:
         "Codeket's school management system has been a game-changer. Our processes are now streamlined, and student management is effortless.",
-      author: "Principal, Edutech Academy",
+      author: "Mohammed Gafai",
+      title: "Proprietor, Kindered Academy",
     },
     results: [
       "Reduced administrative workload by 85% through automation",

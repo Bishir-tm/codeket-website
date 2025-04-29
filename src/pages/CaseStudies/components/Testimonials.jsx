@@ -26,7 +26,7 @@ const Testimonials = ({ caseStudies }) => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[2, 3, 5].map((id) => {
+          {[3, 1, 3].map((id) => {
             const caseStudy = caseStudies.find((c) => c.id === id);
             if (!caseStudy) return null;
 

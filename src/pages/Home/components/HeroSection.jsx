@@ -17,13 +17,8 @@ const Hero = ({ mousePosition, isLoaded }) => {
   }, []);
 
   return (
-    <div className="flex-1 grid md:grid-cols-2 items-center gap-8 py-12 px-6">
+    <div className="flex-1 grid md:grid-cols-2 items-center">
       {/* Background gradient animation */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute -top-[30%] -left-[10%] w-[80%] h-[80%] bg-blue-800 rounded-full filter blur-[120px] opacity-20 animate-blob"></div>
-        <div className="absolute top-[20%] -right-[10%] w-[70%] h-[70%] bg-purple-800 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-[10%] left-[20%] w-[60%] h-[60%] bg-teal-800 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
 
       {/* Left Column - Main Content */}
       <div

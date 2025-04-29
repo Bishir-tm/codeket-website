@@ -12,21 +12,9 @@ const FinalCallToAction = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        {/* Background decoration */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
-
-          {/* Animated circles */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/20 animate-pulse"></div>
-          <div
-            className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-indigo-500/20 animate-pulse"
-            style={{ animationDelay: "500ms" }}
-          ></div>
-        </div>
-
         <div className="relative z-10">
           <motion.h2
-            className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 mb-6 leading-tight"
+            className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-gray-100 to-purple-300 mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

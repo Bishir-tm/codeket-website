@@ -21,7 +21,7 @@ const Testimonials = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Client Testimonials
+          Client Testimonialsaa
         </motion.h2>
         <motion.p
           className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto"

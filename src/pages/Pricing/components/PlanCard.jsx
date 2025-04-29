@@ -1,9 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { FaCheck, FaTimes, FaArrowRight } from "react-icons/fa";
 
 const PlanCard = ({ plan, isAnnual, isPopular, setSelectedPlan }) => {
   const price = isAnnual ? plan.annualPrice : plan.monthlyPrice;
+  const formatPrice = (price) => {
+    if (price >= 1000) {
+      return `${(price / 1000).toLocaleString(undefined, {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 1,
+      })}k`;
+    }
+    return price.toLocaleString();
+  };
 
   return (
     <motion.div
@@ -32,31 +41,34 @@ const PlanCard = ({ plan, isAnnual, isPopular, setSelectedPlan }) => {
 
         <div className="mb-8">
           <div className="flex items-end">
-            <span className="text-4xl font-bold">${price}</span>
+            <span className="text-sm text-gray-400 mr-2">Starting at</span>
+            <span className="text-4xl font-bold">${formatPrice(price)}</span>
             <span className="text-gray-400 ml-2">
-              /{isAnnual ? "year" : "month"}
+              {plan.id.includes("custom") ? "" : isAnnual ? "/year" : "/month"}
             </span>
           </div>
-          {isAnnual && (
+          {isAnnual && !plan.id.includes("custom") && (
             <div className="text-green-400 text-sm mt-1">
-              Save ${plan.monthlyPrice * 12 - plan.annualPrice} annually
+              Save $
+              {(plan.monthlyPrice * 12 - plan.annualPrice).toLocaleString()}{" "}
+              annually
             </div>
           )}
         </div>
 
         <button
           onClick={() => setSelectedPlan(plan)}
-          className={`w-full py-3 px-6 rounded-lg font-medium mb-8 transition-all duration-300 ${
+          className={`w-full py-3 px-6 rounded-lg font-medium mb-8 transition-all duration-300 flex items-center justify-center ${
             isPopular
               ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/30"
               : "bg-white/10 text-white hover:bg-white/20"
           }`}
         >
-          Choose Plan
+          Get Started <FaArrowRight className="ml-2" />
         </button>
 
         <div className="space-y-3">
-          <p className="font-medium text-white mb-2">Features:</p>
+          <p className="font-medium text-white mb-2">What's included:</p>
           {plan.features.map((feature, idx) => (
             <div key={idx} className="flex items-start">
               <div className="text-green-400 mt-1 mr-3">

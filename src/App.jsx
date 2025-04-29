@@ -12,6 +12,7 @@ import Consultation from "./pages/Consultation";
 import Pricing from "./pages/Pricing";
 import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import CookiePolicy from "./components/CookiePolicy";
 import ScrollToTop from "./components/Common/ScrollToTop";
 import "./App.css";
 
@@ -35,6 +36,7 @@ function App() {
           {/* Legal Pages */}
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
 
           {/* 404 Page */}
           <Route path="*" element={<NotFound />} />
