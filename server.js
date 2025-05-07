@@ -104,7 +104,7 @@ app.post("/api/send-email", async (req, res) => {
 
 // Serve React app for all routes (except API routes)
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
 // Start server
