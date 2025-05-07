@@ -1,7 +1,7 @@
 export const teamMembers = [
   {
-    name: "John Doe",
-    role: "CEO & Founder",
+    name: "Bishir TM",
+    role: "Chief Executive Officer & Founder",
     image: "/images/team/bishir-tm.png",
     bio: "Visionary leader with 10+ years of experience in tech innovation.",
     social: {
@@ -11,10 +11,20 @@ export const teamMembers = [
     },
   },
   {
+    name: "Abdulrahman Tijjani",
+    role: " Chief Operating Officer (COO)",
+    image: "/images/team/abdulrahman.jpeg",
+    bio: "Leadership expert specializing in Operations and Team Management.",
+    social: {
+      linkedin: "https://linkedin.com/in/abdulrahman-tm",
+      twitter: "https://twitter.com/man_teejay_",
+    },
+  },
+  {
     name: "Comfort Essien",
-    role: "COO",
+    role: "Technical Director",
     image: "/images/team/comfort-essien.png",
-    bio: "Tech wizard specializing in Operations and Team Management.",
+    bio: "Creative genius with a passion for user-centric design.",
     social: {
       linkedin: "https://linkedin.com/in/comfort",
       twitter: "https://twitter.com",
@@ -22,20 +32,9 @@ export const teamMembers = [
     },
   },
   {
-    name: "Alex Johnson",
-    role: "Lead Designer",
-    image: "/images/team/alex.jpg",
-    bio: "Creative genius with a passion for user-centric design.",
-    social: {
-      linkedin: "https://linkedin.com",
-      twitter: "https://twitter.com",
-      github: "https://github.com",
-    },
-  },
-  {
-    name: "Sarah Williams",
+    name: "Tobi Akinwande",
     role: "Product Manager",
-    image: "/images/team/sarah.jpg",
+    image: "/images/team/tobi.jpg",
     bio: "Strategic thinker who bridges the gap between tech and business needs.",
     social: {
       linkedin: "https://linkedin.com",
@@ -44,9 +43,9 @@ export const teamMembers = [
     },
   },
   {
-    name: "Michael Chen",
-    role: "Lead Developer",
-    image: "/images/team/michael.jpg",
+    name: "Sarah Olayemi",
+    role: "Lead Developer/Engineer",
+    image: "/images/team/sarah.jpg",
     bio: "Coding master with deep expertise in scalable architecture and cutting-edge frameworks.",
     social: {
       linkedin: "https://linkedin.com",
@@ -57,7 +56,7 @@ export const teamMembers = [
   {
     name: "Priya Sharma",
     role: "AI Specialist",
-    image: "/images/team/priya.jpg",
+    image: "/images/team/nafisat.jpg",
     bio: "Pioneering researcher in machine learning algorithms and neural networks.",
     social: {
       linkedin: "https://linkedin.com",

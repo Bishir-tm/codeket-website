@@ -45,7 +45,7 @@ const quickLinks = [
       { name: "Case Studies", to: "/case-studies" },
       { name: "Help Center", to: "/contact" },
       { name: "Pricing", to: "/pricing" },
-    ],
+    ],  
   },
 ];
 
