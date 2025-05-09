@@ -14,7 +14,7 @@ const PORT = 5000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "./frontend/dist"))); // Serve static files from the React build
+app.use(express.static(path.join(__dirname, 'frontend/dist')));
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -103,8 +103,8 @@ app.post("/api/send-email", async (req, res) => {
 });
 
 // Serve React app for all routes (except API routes)
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/dist/index.html'));
 });
 
 // Start server

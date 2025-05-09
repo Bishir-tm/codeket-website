@@ -1,0 +1,14 @@
+/./
+    .env
+    .gitignore
+    deploy.sh
+    file_list.txt
+    list_directories.py
+    package-lock.json
+    package.json
+    server.js
+    /frontend/
+	dist 
+	app.jsx
+	main.jsx
+	package.json

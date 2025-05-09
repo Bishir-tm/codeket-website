@@ -9,7 +9,6 @@ import Team from "./components/Team";
 import Timeline from "./components/Timeline";
 import Testimonials from "./components/Testimonials";
 import Stats from "./components/Stats";
-import OfficeLocations from "./components/OfficeLocations";
 import CallToAction from "../../components/Common/CallToAction";
 
 const About = () => {
@@ -30,7 +29,6 @@ const About = () => {
         setActiveTestimonial={setActiveTestimonial}
       />
       <Stats />
-      <OfficeLocations />
       <CallToAction />
       <Footer />
     </div>

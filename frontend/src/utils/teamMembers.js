@@ -23,7 +23,7 @@ export const teamMembers = [
   {
     name: "Comfort Essien",
     role: "Technical Director",
-    image: "/images/team/comfort-essien.png",
+    image: "/images/team/comfort.jpg",
     bio: "Creative genius with a passion for user-centric design.",
     social: {
       linkedin: "https://linkedin.com/in/comfort",
@@ -54,7 +54,7 @@ export const teamMembers = [
     },
   },
   {
-    name: "Priya Sharma",
+    name: "Nafisat Abubakar",
     role: "AI Specialist",
     image: "/images/team/nafisat.jpg",
     bio: "Pioneering researcher in machine learning algorithms and neural networks.",

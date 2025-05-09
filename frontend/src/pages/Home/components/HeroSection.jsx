@@ -172,7 +172,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
 
         {/* Clients section */}
         <motion.div
-          className="pt-8"
+          className="pt-8 mb-10 lg:mb-0  "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.6 }}
@@ -182,9 +182,9 @@ const Hero = ({ mousePosition, isLoaded }) => {
           </p>
           <div className="flex flex-wrap gap-6 items-center">
             {[
-              "Enterprise One",
-              "TechGlobal",
-              "InnovateCorp",
+              "Channel Telecoms",
+              "Global Systems Ltd",
+              "Smart Analytics Inc.",
               "LeadingEdge",
             ].map((client, i) => (
               <div
