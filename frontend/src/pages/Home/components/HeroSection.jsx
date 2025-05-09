@@ -91,33 +91,6 @@ const Hero = ({ mousePosition, isLoaded }) => {
           ))}
         </motion.div>
 
-        {/* Key Metrics */}
-        <motion.div
-          className="grid grid-cols-3 gap-3"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.6 }}
-        >
-          {[
-            { value: "3x", label: "Faster Delivery", icon: "⚡" },
-            { value: "40%", label: "Cost Reduction", icon: "💰" },
-            { value: "99.9%", label: "Quality Rating", icon: "✅" },
-          ].map((metric, i) => (
-            <div
-              key={i}
-              className="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20 rounded-lg p-3 text-center"
-            >
-              <div className="text-2xl font-bold text-white">
-                {metric.value}
-              </div>
-              <div className="text-xs text-blue-300 flex items-center justify-center">
-                <span className="mr-1">{metric.icon}</span>
-                {metric.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-
         {/* CTA Area */}
         <motion.div
           className="flex flex-col sm:flex-row gap-4 pt-4"
@@ -204,9 +177,9 @@ const Hero = ({ mousePosition, isLoaded }) => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-        className="relative"
+        className=" h-full w-full object-cover xl:relative xl:  top-32"
       >
-        <div className="bg-black/30 backdrop-blur-xl rounded-xl border border-blue-500/20 overflow-hidden shadow-2xl relative">
+        <div className="bg-black/30 backdrop-blur-xl rounded-xl border border-blue-500/20 overflow-hidden shadow-2xl relative w-full ">
           {/* Glowing corner accents */}
           <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-blue-500 rounded-tl-xl"></div>
           <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-indigo-500 rounded-tr-xl"></div>
@@ -214,7 +187,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
           <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-purple-500 rounded-br-xl"></div>
 
           {/* Feature Tabs */}
-          <div className="grid grid-cols-4 gap-1 p-1">
+          <div className="grid grid-cols-4 gap-1 p-1 border-b-2 border-blue-600 ">
             {features.map((feature, index) => (
               <button
                 key={index}
@@ -234,7 +207,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
           </div>
 
           {/* Feature content */}
-          <div className="p-6 h-36 relative">
+          <div className="p-6 h-36 relative text-center ">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -244,70 +217,25 @@ const Hero = ({ mousePosition, isLoaded }) => {
                   y: activeFeature === index ? 0 : 20,
                 }}
                 transition={{ duration: 0.3 }}
-                className={`absolute inset-0 px-6 ${
+                className={`absolute flex flex-col items-center  inset-0 px-6 ${
                   activeFeature === index
                     ? "pointer-events-auto"
                     : "pointer-events-none"
-                }`}
+                } text-center`}
               >
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 flex items-center">
-                  <span className="mr-2">{feature.icon}</span>
+                <h1 className="text2xl md:text-4xl font-bold text-white mb-2 tesxt-center">
+                  <div className="mr-2 text-center">{feature.icon}</div>
                   {feature.title}
-                </h3>
-                <p className="text-gray-300">{feature.description}</p>
+                </h1>
+                <p className="text-gray-300 text-center">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
-          </div>
-
-          {/* Animated 3D visualizer */}
-          <div className="p-4 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 h-56 relative overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              {/* Animated rings */}
-              <div className="absolute w-64 h-64 border border-blue-500/30 rounded-full animate-ping-slow opacity-20"></div>
-              <div
-                className="absolute w-48 h-48 border border-indigo-500/30 rounded-full animate-ping-slow opacity-40"
-                style={{ animationDelay: "300ms" }}
-              ></div>
-              <div
-                className="absolute w-32 h-32 border border-cyan-500/30 rounded-full animate-ping-slow opacity-60"
-                style={{ animationDelay: "600ms" }}
-              ></div>
-
-              {/* Central icon with 3D effect */}
-              <motion.div
-                className="relative bg-gradient-to-br from-blue-600 to-indigo-600 p-5 rounded-xl shadow-lg shadow-blue-500/20 z-10"
-                whileHover={{ scale: 1.1 }}
-                style={{
-                  transformStyle: "preserve-3d",
-                  transform: `translateZ(10px) rotateX(${
-                    mousePosition.y * 20
-                  }deg) rotateY(${mousePosition.x * -20}deg)`,
-                }}
-              >
-                <span className="text-4xl">{features[activeFeature].icon}</span>
-              </motion.div>
-            </div>
-
-            {/* Animated dots */}
-            {[...Array(30)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 bg-blue-400 rounded-full animate-float"
-                style={{
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animationDuration: `${3 + Math.random() * 4}s`,
-                  animationDelay: `${Math.random() * 5}s`,
-                }}
-              ></div>
-            ))}
-
-            {/* Radial gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-radial from-transparent to-black/30"></div>
           </div>
 
           {/* Feature stats */}
-          <div className="grid grid-cols-3 gap-px bg-blue-900/20">
+          {/* <div className="grid grid-cols-3 gap-px bg-blue-900/20">
             {[
               { label: "Efficiency", value: "+75%", icon: "⚡" },
               { label: "Accuracy", value: "99.9%", icon: "🎯" },
@@ -321,30 +249,33 @@ const Hero = ({ mousePosition, isLoaded }) => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
-
-        {/* Floating badges */}
+        {/* Key Metrics */}
         <motion.div
-          className="absolute -top-4 -right-4 bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-2 rounded-lg shadow-lg"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 1.5, type: "spring" }}
+          className="grid grid-cols-3 gap-3"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
         >
-          <span className="text-white font-bold flex items-center">
-            <span className="mr-1">🔥</span> New Gen AI
-          </span>
-        </motion.div>
-
-        <motion.div
-          className="absolute -bottom-4 -left-4 bg-gradient-to-r from-emerald-500 to-green-600 px-4 py-2 rounded-lg shadow-lg"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 1.8, type: "spring" }}
-        >
-          <span className="text-white font-bold flex items-center">
-            <span className="mr-1">🚀</span> 3x Faster
-          </span>
+          {[
+            { value: "3x", label: "Faster Delivery", icon: "⚡" },
+            { value: "40%", label: "Cost Reduction", icon: "💰" },
+            { value: "99.9%", label: "Quality Rating", icon: "✅" },
+          ].map((metric, i) => (
+            <div
+              key={i}
+              className="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20 rounded-lg p-3 text-center"
+            >
+              <div className="text-2xl font-bold text-white">
+                {metric.value}
+              </div>
+              <div className="text-xs text-blue-300 flex items-center justify-center">
+                <span className="mr-1">{metric.icon}</span>
+                {metric.label}
+              </div>
+            </div>
+          ))}
         </motion.div>
       </motion.div>
     </div>

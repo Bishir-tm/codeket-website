@@ -123,6 +123,12 @@ const Header = () => {
           Services
         </Link>
         <Link
+          to="/pricing"
+          className="text-gray-200 hover:text-white transition duration-300"
+        >
+          Pricing
+        </Link>
+        <Link
           to="/case-studies"
           className="block py-2 text-gray-200 hover:text-white transition duration-300"
         >
@@ -141,8 +147,8 @@ const Header = () => {
           Contact
         </Link>
         <Link
-          to="/quote"
-          className="block py-2 text-center bg-blue-500 hover:bg-blue-600 text-white rounded-full transition duration-300"
+          to="/pricing"
+          className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full transition duration-300"
         >
           Get Quote
         </Link>
