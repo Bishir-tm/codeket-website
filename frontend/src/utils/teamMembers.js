@@ -23,7 +23,7 @@ export const teamMembers = [
   {
     name: "Comfort Essien",
     role: "Technical Director",
-    image: "/images/team/comfort.jpg",
+    image: "/images/team/comfort.png",
     bio: "Creative genius with a passion for user-centric design.",
     social: {
       linkedin: "https://linkedin.com/in/comfort",
