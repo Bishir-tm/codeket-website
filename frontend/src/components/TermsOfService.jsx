@@ -257,7 +257,6 @@ const TermsOfService = () => {
             remedies for failure to meet such standards.
           </p>
         </section>
-
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">6. PAYMENT TERMS</h2>
           <p className="mb-4">
@@ -295,12 +294,174 @@ const TermsOfService = () => {
         </section>
 
         <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">7. REFUND POLICY</h2>
+
+          <h3 className="text-xl font-semibold mb-2">7.1 General Policy</h3>
+          <p className="mb-4">
+            Except as expressly provided in this section, all fees paid are
+            non-refundable. Refunds, when available, will be processed using the
+            same payment method used for the original purchase within 30 days of
+            approval.
+          </p>
+
+          <h3 className="text-xl font-semibold mb-2">
+            7.2 Subscription Services Refunds
+          </h3>
+          <p className="mb-4">For subscription-based Services:</p>
+          <ul className="list-disc pl-8">
+            <li className="mb-2">
+              <strong>Trial Period:</strong> If we offer a free trial period,
+              you may cancel at any time during the trial without charge.
+            </li>
+            <li className="mb-2">
+              <strong>Monthly Subscriptions:</strong> You may cancel your
+              monthly subscription at any time. Cancellation will take effect at
+              the end of your current billing cycle, and no refund will be
+              provided for the current billing period.
+            </li>
+            <li className="mb-2">
+              <strong>Annual Subscriptions:</strong> For annual subscriptions,
+              you may request a pro-rated refund within 30 days of initial
+              purchase or renewal if you have used less than 25% of the service
+              features during that period.
+            </li>
+            <li className="mb-2">
+              <strong>Service Failure:</strong> If our Services experience
+              significant downtime (more than 48 consecutive hours) not due to
+              scheduled maintenance, you may be eligible for a pro-rated refund
+              or service credit for the affected period.
+            </li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mb-2">
+            7.3 Custom Development Services Refunds
+          </h3>
+          <p className="mb-4">For custom development projects:</p>
+          <ul className="list-disc pl-8">
+            <li className="mb-2">
+              <strong>Pre-Development Phase:</strong> Full refund available if
+              you cancel before development work begins and no deliverables have
+              been provided.
+            </li>
+            <li className="mb-2">
+              <strong>During Development:</strong> Refunds will be calculated
+              based on work completed and milestones achieved as outlined in the
+              SOW. You will be charged for work completed to date.
+            </li>
+            <li className="mb-2">
+              <strong>Post-Delivery:</strong> No refunds available once final
+              deliverables have been accepted and delivered, except in cases of
+              material breach of the agreed specifications.
+            </li>
+            <li className="mb-2">
+              <strong>Milestone-Based Projects:</strong> Payments for completed
+              and accepted milestones are non-refundable.
+            </li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mb-2">
+            7.4 Cloud Services and SaaS Refunds
+          </h3>
+          <p className="mb-4">For cloud and SaaS offerings:</p>
+          <ul className="list-disc pl-8">
+            <li className="mb-2">
+              <strong>Usage-Based Services:</strong> No refunds for consumed
+              resources or usage-based charges.
+            </li>
+            <li className="mb-2">
+              <strong>Service Level Agreement (SLA) Breaches:</strong> Service
+              credits may be provided as specified in applicable SLAs rather
+              than cash refunds.
+            </li>
+            <li className="mb-2">
+              <strong>Data Storage Services:</strong> No refunds for data
+              storage charges once data has been stored, regardless of
+              subsequent deletion.
+            </li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mb-2">7.5 Refund Exclusions</h3>
+          <p className="mb-4">
+            Refunds will not be provided in the following circumstances:
+          </p>
+          <ul className="list-disc pl-8">
+            <li className="mb-2">
+              Termination or suspension due to violation of these Terms;
+            </li>
+            <li className="mb-2">
+              Services that have been fully delivered and accepted;
+            </li>
+            <li className="mb-2">
+              Changes in your business needs or requirements;
+            </li>
+            <li className="mb-2">
+              Failure to use purchased Services or access your Account;
+            </li>
+            <li className="mb-2">
+              Third-party costs or services arranged through but not provided
+              directly by Codeket;
+            </li>
+            <li className="mb-2">
+              Setup fees, onboarding fees, or other one-time charges after
+              services have been initiated;
+            </li>
+            <li className="mb-2">
+              Discounted or promotional pricing arrangements.
+            </li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mb-2">
+            7.6 Refund Request Process
+          </h3>
+          <p className="mb-4">To request a refund:</p>
+          <ul className="list-disc pl-8">
+            <li className="mb-2">
+              Submit a written request to billing@codeket.com within the
+              applicable refund period;
+            </li>
+            <li className="mb-2">
+              Include your account information, order details, and reason for
+              the refund request;
+            </li>
+            <li className="mb-2">
+              Provide any supporting documentation if required;
+            </li>
+            <li className="mb-2">
+              Allow up to 10 business days for us to review and respond to your
+              request;
+            </li>
+            <li className="mb-2">
+              If approved, refunds will be processed within 30 days.
+            </li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mb-2">
+            7.7 Service Credits vs. Cash Refunds
+          </h3>
+          <p className="mb-4">
+            At our discretion, we may offer service credits instead of cash
+            refunds. Service credits can be applied to future purchases and are
+            valid for 12 months from the date of issuance. Service credits are
+            non-transferable and have no cash value.
+          </p>
+
+          <h3 className="text-xl font-semibold mb-2">
+            7.8 Chargeback and Dispute Resolution
+          </h3>
+          <p className="mb-4">
+            Before initiating a chargeback with your payment provider, please
+            contact us directly to resolve any billing disputes. Initiating a
+            chargeback may result in immediate suspension of your Services and
+            Account pending resolution of the dispute.
+          </p>
+        </section>
+        <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            7. INTELLECTUAL PROPERTY RIGHTS
+            8. INTELLECTUAL PROPERTY RIGHTS
           </h2>
 
           <h3 className="text-xl font-semibold mb-2">
-            7.1 Our Intellectual Property
+            8.1 Our Intellectual Property
           </h3>
           <p className="mb-4">
             The Services, including their entire contents, features, and
@@ -312,7 +473,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            7.2 License to Use the Services
+            8.2 License to Use the Services
           </h3>
           <p className="mb-4">
             Subject to these Terms, we grant you a limited, non-exclusive,
@@ -322,7 +483,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            7.3 License Restrictions
+            8.3 License Restrictions
           </h3>
           <p className="mb-4">You shall not:</p>
           <ul className="list-disc pl-8">
@@ -357,7 +518,7 @@ const TermsOfService = () => {
             </li>
           </ul>
 
-          <h3 className="text-xl font-semibold mb-2">7.4 Client Content</h3>
+          <h3 className="text-xl font-semibold mb-2">8.4 Client Content</h3>
           <p className="mb-4">
             You retain all right, title, and interest in and to any content,
             data, information, or materials you provide to us or upload to the
@@ -367,7 +528,7 @@ const TermsOfService = () => {
             the purpose of providing the Services to you.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">7.5 Feedback</h3>
+          <h3 className="text-xl font-semibold mb-2">8.5 Feedback</h3>
           <p className="mb-4">
             If you provide us with any feedback, suggestions, or ideas regarding
             the Services ("Feedback"), you hereby assign to us all rights in the
@@ -376,7 +537,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            7.6 Custom Development Deliverables
+            8.6 Custom Development Deliverables
           </h3>
           <p className="mb-4">
             Unless otherwise specified in a SOW or other written agreement:
@@ -399,7 +560,7 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            8. CLIENT RESPONSIBILITIES
+            9. CLIENT RESPONSIBILITIES
           </h2>
           <p className="mb-4">You are responsible for:</p>
           <ul className="list-disc pl-8">
@@ -438,7 +599,7 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            9. PROHIBITED ACTIVITIES
+            10. PROHIBITED ACTIVITIES
           </h2>
           <p className="mb-4">You agree not to use the Services to:</p>
           <ul className="list-disc pl-8">
@@ -484,7 +645,7 @@ const TermsOfService = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">10. CONFIDENTIALITY</h2>
+          <h2 className="text-2xl font-semibold mb-4">11. CONFIDENTIALITY</h2>
           <p className="mb-4">
             "Confidential Information" means any non-public information
             disclosed by one party to the other, whether orally, in writing, or
@@ -530,7 +691,7 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            11. DATA PRIVACY AND SECURITY
+            12. DATA PRIVACY AND SECURITY
           </h2>
           <p className="mb-4">
             We collect and process personal data in accordance with our Privacy
@@ -554,17 +715,17 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            12. TERM AND TERMINATION
+            13. TERM AND TERMINATION
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">12.1 Term</h3>
+          <h3 className="text-xl font-semibold mb-2">13.1 Term</h3>
           <p className="mb-4">
             These Terms will remain in effect until terminated by either you or
             us as set forth herein.
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            12.2 Termination by You
+            13.2 Termination by You
           </h3>
           <p className="mb-4">
             You may terminate these Terms at any time by discontinuing use of
@@ -573,7 +734,7 @@ const TermsOfService = () => {
             your Order.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">12.3 Termination by Us</h3>
+          <h3 className="text-xl font-semibold mb-2">13.3 Termination by Us</h3>
           <p className="mb-4">
             We may terminate or suspend your access to the Services immediately,
             without prior notice or liability, for any reason, including,
@@ -583,7 +744,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            12.4 Effect of Termination
+            13.4 Effect of Termination
           </h3>
           <p className="mb-4">Upon termination:</p>
           <ul className="list-disc pl-8">
@@ -608,7 +769,7 @@ const TermsOfService = () => {
           </ul>
 
           <h3 className="text-xl font-semibold mb-2">
-            12.5 Transition Assistance
+            13.5 Transition Assistance
           </h3>
           <p className="mb-4">
             Upon request and for an additional fee, we may provide reasonable
@@ -619,10 +780,10 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            13. WARRANTY AND DISCLAIMERS
+            14. WARRANTY AND DISCLAIMERS
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">13.1 Service Warranty</h3>
+          <h3 className="text-xl font-semibold mb-2">14.1 Service Warranty</h3>
           <p className="mb-4">
             We warrant that the Services will materially conform to the
             documentation or specifications set forth in the applicable Order
@@ -633,7 +794,7 @@ const TermsOfService = () => {
             prepaid, unused fees for the non-conforming Services.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">13.2 Mutual Warranties</h3>
+          <h3 className="text-xl font-semibold mb-2">14.2 Mutual Warranties</h3>
           <p className="mb-4">Each party represents and warrants that:</p>
           <ul className="list-disc pl-8">
             <li className="mb-2">
@@ -650,7 +811,7 @@ const TermsOfService = () => {
           </ul>
 
           <h3 className="text-xl font-semibold mb-2">
-            13.3 Disclaimer of Warranties
+            14.3 Disclaimer of Warranties
           </h3>
           <p className="mb-4">
             EXCEPT AS EXPRESSLY PROVIDED HEREIN, THE SERVICES ARE PROVIDED "AS
@@ -673,7 +834,7 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            14. LIMITATION OF LIABILITY
+            15. LIMITATION OF LIABILITY
           </h2>
           <p className="mb-4">
             TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
@@ -705,10 +866,10 @@ const TermsOfService = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">15. INDEMNIFICATION</h2>
+          <h2 className="text-2xl font-semibold mb-4">16. INDEMNIFICATION</h2>
 
           <h3 className="text-xl font-semibold mb-2">
-            15.1 Indemnification by You
+            16.1 Indemnification by You
           </h3>
           <p className="mb-4">
             You agree to indemnify, defend, and hold harmless Codeket, its
@@ -732,7 +893,7 @@ const TermsOfService = () => {
           </ul>
 
           <h3 className="text-xl font-semibold mb-2">
-            15.2 Indemnification by Us
+            16.2 Indemnification by Us
           </h3>
           <p className="mb-4">
             We will indemnify, defend, and hold you harmless from and against
@@ -752,7 +913,7 @@ const TermsOfService = () => {
             </li>
           </ul>
 
-          <h3 className="text-xl font-semibold mb-2">15.3 Exclusions</h3>
+          <h3 className="text-xl font-semibold mb-2">16.3 Exclusions</h3>
           <p className="mb-4">
             Our indemnification obligations do not apply to claims arising from:
           </p>
@@ -769,7 +930,7 @@ const TermsOfService = () => {
             <li className="mb-2">Client Content.</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mb-2">15.4 Remedies</h3>
+          <h3 className="text-xl font-semibold mb-2">16.4 Remedies</h3>
           <p className="mb-4">
             If the Services become, or in our opinion are likely to become, the
             subject of an infringement claim, we may, at our option and expense:
@@ -799,10 +960,10 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            16. DISPUTE RESOLUTION
+            17. DISPUTE RESOLUTION
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">16.1 Governing Law</h3>
+          <h3 className="text-xl font-semibold mb-2">17.1 Governing Law</h3>
           <p className="mb-4">
             These Terms shall be governed by and construed in accordance with
             the laws of [JURISDICTION], without regard to its conflict of law
@@ -810,7 +971,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            16.2 Informal Dispute Resolution
+            17.2 Informal Dispute Resolution
           </h3>
           <p className="mb-4">
             Before filing a claim against each other, the parties agree to
@@ -820,7 +981,7 @@ const TermsOfService = () => {
             notification, either party may pursue legal action as appropriate.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">16.3 Arbitration</h3>
+          <h3 className="text-xl font-semibold mb-2">17.3 Arbitration</h3>
           <p className="mb-4">
             Any dispute arising from or relating to these Terms or the Services
             that cannot be resolved through informal negotiation shall be
@@ -833,7 +994,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            16.4 Class Action Waiver
+            17.4 Class Action Waiver
           </h3>
           <p className="mb-4">
             TO THE EXTENT PERMITTED BY LAW, ALL CLAIMS MUST BE BROUGHT IN A
@@ -843,7 +1004,7 @@ const TermsOfService = () => {
             PERSON'S CLAIMS OR ENGAGE IN ANY CLASS ARBITRATION.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">16.5 Exceptions</h3>
+          <h3 className="text-xl font-semibold mb-2">17.5 Exceptions</h3>
           <p className="mb-4">
             Notwithstanding the foregoing, either party may seek injunctive or
             other equitable relief in any court of competent jurisdiction to
@@ -855,10 +1016,10 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            17. GENERAL PROVISIONS
+            18. GENERAL PROVISIONS
           </h2>
 
-          <h3 className="text-xl font-semibold mb-2">17.1 Entire Agreement</h3>
+          <h3 className="text-xl font-semibold mb-2">18.1 Entire Agreement</h3>
           <p className="mb-4">
             These Terms, together with the Privacy Policy and any Orders or
             SOWs, constitute the entire agreement between you and us regarding
@@ -866,7 +1027,7 @@ const TermsOfService = () => {
             whether written or oral.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.2 Severability</h3>
+          <h3 className="text-xl font-semibold mb-2">18.2 Severability</h3>
           <p className="mb-4">
             If any provision of these Terms is found to be unenforceable or
             invalid, that provision will be limited or eliminated to the minimum
@@ -874,7 +1035,7 @@ const TermsOfService = () => {
             force and effect and enforceable.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.3 Waiver</h3>
+          <h3 className="text-xl font-semibold mb-2">18.3 Waiver</h3>
           <p className="mb-4">
             Our failure to enforce any right or provision of these Terms will
             not be considered a waiver of those rights. The waiver of any such
@@ -882,7 +1043,7 @@ const TermsOfService = () => {
             by a duly authorized representative of Codeket.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.4 Assignment</h3>
+          <h3 className="text-xl font-semibold mb-2">18.4 Assignment</h3>
           <p className="mb-4">
             You may not assign or transfer these Terms, by operation of law or
             otherwise, without our prior written consent. Any attempt to assign
@@ -892,7 +1053,7 @@ const TermsOfService = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-2">
-            17.5 Relationship of the Parties
+            18.5 Relationship of the Parties
           </h3>
           <p className="mb-4">
             Nothing in these Terms shall be construed as creating a partnership,
@@ -901,7 +1062,7 @@ const TermsOfService = () => {
             respect.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.6 Force Majeure</h3>
+          <h3 className="text-xl font-semibold mb-2">18.6 Force Majeure</h3>
           <p className="mb-4">
             Neither party shall be liable for any failure or delay in
             performance under these Terms due to causes beyond its reasonable
@@ -910,7 +1071,7 @@ const TermsOfService = () => {
             earthquake, or other natural disasters, strikes or labor shortages.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.7 Notices</h3>
+          <h3 className="text-xl font-semibold mb-2">18.7 Notices</h3>
           <p className="mb-4">
             Any notices or other communications provided by us under these Terms
             will be given by posting to the Services or by email to the address
@@ -918,7 +1079,7 @@ const TermsOfService = () => {
             will be deemed the date on which such notice is transmitted.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.8 Export Control</h3>
+          <h3 className="text-xl font-semibold mb-2">18.8 Export Control</h3>
           <p className="mb-4">
             You agree to comply with all applicable import, re-import, export,
             and re-export control laws and regulations, including the Export
@@ -927,7 +1088,7 @@ const TermsOfService = () => {
             Treasury Department's Office of Foreign Assets Control.
           </p>
 
-          <h3 className="text-xl font-semibold mb-2">17.9 Headings</h3>
+          <h3 className="text-xl font-semibold mb-2">18.9 Headings</h3>
           <p className="mb-4">
             The section titles in these Terms are for convenience only and have
             no legal or contractual effect.
@@ -936,7 +1097,7 @@ const TermsOfService = () => {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">
-            18. CONTACT INFORMATION
+            19. CONTACT INFORMATION
           </h2>
           <p className="mb-4">
             If you have any questions about these Terms, please contact us at:
