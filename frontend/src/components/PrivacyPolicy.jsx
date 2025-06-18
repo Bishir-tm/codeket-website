@@ -71,12 +71,16 @@ const PrivacyPolicy = () => {
         <section className="mb-6">
           <h2 className="text-xl font-semibold">1. INTRODUCTION</h2>
           <p className="text-white mt-2">
-            Codeket ("we," "our," or "us") respects your privacy and is
-            committed to protecting your personal data. This Privacy Policy
-            explains how we collect, use, disclose, and safeguard your
-            information when you interact with our services, including our
-            website, software solutions, SaaS products, cloud services, and
-            AI-powered applications.
+            This Privacy Policy is provided by <strong>Codeket Ltd</strong>{" "}
+            (“Codeket”, “we”, “our”, or “us”), a company registered in Nigeria.
+            Codeket respects your privacy and is committed to protecting your
+            personal data.
+          </p>
+          <p className="text-white mt-2">
+            This Privacy Policy explains how we collect, use, disclose, and
+            safeguard your information when you interact with our services,
+            including our website, software solutions, SaaS products, cloud
+            services, and AI-powered applications.
           </p>
           <p className="text-white mt-2">
             By accessing or using our Services, you acknowledge that you have
@@ -262,6 +266,18 @@ const PrivacyPolicy = () => {
             <li>Restrict processing</li>
             <li>Object to data use</li>
             <li>Withdraw consent</li>
+          </ul>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold">10. CONTACT US</h2>
+          <p className="text-white mt-2">
+            If you have any questions about this privacy policy, please contact
+            us at:
+          </p>
+          <ul className="list-disc pl-6 mt-2 text-white">
+            <li>Email: legal@codeket.com</li>
+            <li>Address: No. 46, Hassan Usman Rd. Katsina, Nigeria. 820101.</li>
+            <li>Phone: +234 9068 149 540</li>
           </ul>
         </section>
       </div>

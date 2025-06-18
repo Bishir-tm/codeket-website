@@ -71,11 +71,11 @@ const CookiePolicy = () => {
         <section className="mb-6">
           <h2 className="text-xl font-semibold">1. INTRODUCTION</h2>
           <p className="text-white mt-2">
-            Codeket ("we," "our," or "us") uses cookies and similar technologies
-            on our website, software solutions, SaaS products, cloud services,
-            and AI-powered applications. This Cookie Policy explains how we use
-            these technologies, what types of cookies we use, and your rights to
-            control our use of them.
+            <strong>Codeket Ltd</strong> ("Codeket," "we," "our," or "us") uses
+            cookies and similar technologies on our website, software solutions,
+            SaaS products, cloud services, and AI-powered applications. This
+            Cookie Policy explains how we use these technologies, what types of
+            cookies we use, and your rights to control our use of them.
           </p>
           <p className="text-white mt-2">
             By continuing to browse or use our Services, you agree to our use of
@@ -254,12 +254,9 @@ const CookiePolicy = () => {
             Policy, please contact us at:
           </p>
           <ul className="list-disc pl-6 mt-2 text-white">
-            <li>Email: privacy@codeket.com</li>
-            <li>
-              Address: Codeket Headquarters, 123 Tech Avenue, San Francisco, CA
-              94105
-            </li>
-            <li>Phone: (555) 123-4567</li>
+            <li>Email: legal@codeket.com</li>
+            <li>Address: No. 46, Hassan Usman Rd. Katsina, Nigeria. 820101.</li>
+            <li>Phone: +234 9068 149 540</li>
           </ul>
         </section>
       </div>

@@ -52,7 +52,7 @@ const TermsOfService = () => {
         >
           <div className="flex flex-col items-center">
             <p className="text-gray-400 mb-2">Scroll to read</p>
-            <div className="w-8 h-12 rounded-fullq border-2 border-white flex justify-center">
+            <div className="w-8 h-12 rounded-full border-2 border-white flex justify-center">
               <motion.div
                 animate={{
                   y: [0, 12, 0],
@@ -71,12 +71,13 @@ const TermsOfService = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">1. INTRODUCTION</h2>
           <p className="mb-4">
-            Welcome to Codeket. These Terms of Service ("Terms") govern your
-            access to and use of Codeket's website, software, applications,
-            products, and services (collectively, the "Services"). These Terms
-            constitute a legally binding agreement between you, whether
-            personally or on behalf of an entity ("you") and Codeket ("Company,"
-            "we," "us," or "our").
+            Welcome to <strong>Codeket Ltd</strong>. These Terms of Service
+            ("Terms") govern your access to and use of Codeket's website,
+            software, applications, products, and services (collectively, the
+            "Services"). These Terms constitute a legally binding agreement
+            between you, whether personally or on behalf of an entity ("you")
+            and <strong>Codeket Ltd</strong> ("Codeket," "Company," "we," "us,"
+            or "our").
           </p>
           <p className="mb-4">
             By accessing or using our Services, you agree to be bound by these
@@ -1102,22 +1103,12 @@ const TermsOfService = () => {
           <p className="mb-4">
             If you have any questions about these Terms, please contact us at:
           </p>
-          <div className=" p-4 rounded-2xl">
-            <p>
-              <strong>Codeket</strong>
-              <br />
-              No. 46, Hassan Usman Road, Katsina Nigeria
-              <br />
-              Email: legal@codeket.com
-              <br />
-              Phone: +234 968 149 540
-            </p>
-          </div>
+          <ul className="list-disc pl-6 mt-2 text-white">
+            <li>Email: legal@codeket.com</li>
+            <li>Address: No. 46, Hassan Usman Rd. Katsina, Nigeria. 820101.</li>
+            <li>Phone: +234 9068 149 540</li>
+          </ul>
         </section>
-
-        <footer className="text-center py-4 border-t">
-          <p>© 2025 Codeket. All rights reserved.</p>
-        </footer>
       </div>
       <Footer />
     </div>
