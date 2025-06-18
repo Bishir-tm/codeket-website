@@ -40,13 +40,12 @@ const PlanCard = ({ plan, isPopular, setSelectedPlan }) => {
 
         <div className="mb-8">
           <div className="flex items-end">
-            <span className="text-sm text-gray-400 mr-2">Starting at</span>
             <span className="text-4xl font-bold">
               ${formatPrice(plan.price)}
             </span>
           </div>
           <div className="text-gray-400 text-sm mt-1">
-            One-time project cost
+            One-time cost per project
           </div>
         </div>
 
