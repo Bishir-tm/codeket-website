@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   FaCode,
   FaRobot,
@@ -9,7 +10,7 @@ import {
 } from "react-icons/fa";
 import PlanCard from "./PlanCard";
 
-const PricingPlans = () => {
+const PricingPlans = ({ setSelectedPlan }) => {
   const [serviceType, setServiceType] = useState("development");
 
   const developmentPlans = [
@@ -18,7 +19,8 @@ const PricingPlans = () => {
       name: "Starter",
       description: "Core functionality for startups and small businesses",
       price: 8999,
-      icon: <FaCode className="text-2xl" />,
+      icon: <FaCode className="text-2xl text-blue-400" />,
+      iconBg: "bg-blue-900/30",
       features: [
         "Full-stack development",
         "Responsive design",
@@ -39,7 +41,8 @@ const PricingPlans = () => {
       name: "Growth",
       description: "Comprehensive solution for scaling businesses",
       price: 19999,
-      icon: <FaChartLine className="text-2xl" />,
+      icon: <FaChartLine className="text-2xl text-purple-400" />,
+      iconBg: "bg-purple-900/30",
       features: [
         "Everything in Starter",
         "Multiple platform deployment",
@@ -61,7 +64,8 @@ const PricingPlans = () => {
       name: "Enterprise",
       description: "Tailored solutions for large-scale business needs",
       price: 39999,
-      icon: <FaRegLightbulb className="text-2xl" />,
+      icon: <FaRegLightbulb className="text-2xl text-teal-400" />,
+      iconBg: "bg-teal-900/30",
       features: [
         "Everything in Growth",
         "Microservices architecture",
@@ -84,7 +88,8 @@ const PricingPlans = () => {
       name: "Basic App",
       description: "Essential mobile app development for single platform",
       price: 12999,
-      icon: <FaMobile className="text-2xl" />,
+      icon: <FaMobile className="text-2xl text-blue-400" />,
+      iconBg: "bg-blue-900/30",
       features: [
         "Single platform (Android or iOS)",
         "User authentication",
@@ -105,7 +110,8 @@ const PricingPlans = () => {
       name: "Premium App",
       description: "Cross-platform app with advanced features",
       price: 24999,
-      icon: <FaMobile className="text-2xl" />,
+      icon: <FaMobile className="text-2xl text-purple-400" />,
+      iconBg: "bg-purple-900/30",
       features: [
         "Cross-platform (Android & iOS)",
         "Advanced user interface",
@@ -124,7 +130,8 @@ const PricingPlans = () => {
       name: "Enterprise App",
       description: "Full-featured app solution with custom integrations",
       price: 45999,
-      icon: <FaMobile className="text-2xl" />,
+      icon: <FaMobile className="text-2xl text-teal-400" />,
+      iconBg: "bg-teal-900/30",
       features: [
         "Everything in Premium App",
         "AI-powered features",
@@ -147,7 +154,8 @@ const PricingPlans = () => {
       name: "AI Starter",
       description: "Basic AI integration for existing applications",
       price: 14999,
-      icon: <FaRobot className="text-2xl" />,
+      icon: <FaRobot className="text-2xl text-blue-400" />,
+      iconBg: "bg-blue-900/30",
       features: [
         "AI model integration",
         "Basic data processing",
@@ -168,7 +176,8 @@ const PricingPlans = () => {
       name: "AI Advanced",
       description: "Enhanced AI capabilities for business optimization",
       price: 29999,
-      icon: <FaRobot className="text-2xl" />,
+      icon: <FaRobot className="text-2xl text-purple-400" />,
+      iconBg: "bg-purple-900/30",
       features: [
         "Advanced AI implementation",
         "Multiple AI model integration",
@@ -190,7 +199,8 @@ const PricingPlans = () => {
       name: "AI Premium",
       description: "Custom AI solution with specialized model development",
       price: 59999,
-      icon: <FaRobot className="text-2xl" />,
+      icon: <FaRobot className="text-2xl text-teal-400" />,
+      iconBg: "bg-teal-900/30",
       features: [
         "Custom AI model development",
         "Large-scale data processing",
@@ -213,7 +223,8 @@ const PricingPlans = () => {
       name: "Security Basic",
       description: "Essential security assessment and implementation",
       price: 9999,
-      icon: <FaShieldAlt className="text-2xl" />,
+      icon: <FaShieldAlt className="text-2xl text-blue-400" />,
+      iconBg: "bg-blue-900/30",
       features: [
         "Security assessment",
         "Vulnerability scanning",
@@ -234,7 +245,8 @@ const PricingPlans = () => {
       name: "Security Advanced",
       description: "Comprehensive security solution for sensitive applications",
       price: 19999,
-      icon: <FaShieldAlt className="text-2xl" />,
+      icon: <FaShieldAlt className="text-2xl text-purple-400" />,
+      iconBg: "bg-purple-900/30",
       features: [
         "Everything in Security Basic",
         "Advanced penetration testing",
@@ -256,7 +268,8 @@ const PricingPlans = () => {
       name: "Security Premium",
       description: "Enterprise-grade security with continuous protection",
       price: 34999,
-      icon: <FaShieldAlt className="text-2xl" />,
+      icon: <FaShieldAlt className="text-2xl text-teal-400" />,
+      iconBg: "bg-teal-900/30",
       features: [
         "Everything in Security Advanced",
         "Custom security architecture",
@@ -283,86 +296,147 @@ const PricingPlans = () => {
       : securityPlans;
 
   return (
-    <div id="pricing-plans" className="container mx-auto py-16">
-      <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Flexible Pricing, Unmatched Value</h2>
-          <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-            Choose the plan that best fits your business needs. All our solutions are designed for scalability and performance.
+    <div id="pricing-plans" className="py-24 px-6 bg-neutral">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            African Excellence, Global Delivery
+          </h2>
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
+            Leverage our talented African development teams to build your
+            software at competitive rates without compromising on quality or
+            communication.
           </p>
+        </motion.div>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <button
+            onClick={() => setServiceType("development")}
+            className={`px-6 py-3 rounded-full transition-all ${
+              serviceType === "development"
+                ? "bg-gradient-to-r from-primary to-accent text-base-content"
+                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+            }`}
+          >
+            <span className="flex items-center">
+              <FaCode className="mr-2" /> Custom Development
+            </span>
+          </button>
+          <button
+            onClick={() => setServiceType("mobile")}
+            className={`px-6 py-3 rounded-full transition-all ${
+              serviceType === "mobile"
+                ? "bg-gradient-to-r from-primary to-accent text-base-content"
+                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+            }`}
+          >
+            <span className="flex items-center">
+              <FaMobile className="mr-2" /> Mobile Apps
+            </span>
+          </button>
+          <button
+            onClick={() => setServiceType("ai")}
+            className={`px-6 py-3 rounded-full transition-all ${
+              serviceType === "ai"
+                ? "bg-gradient-to-r from-primary to-accent text-base-content"
+                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+            }`}
+          >
+            <span className="flex items-center">
+              <FaRobot className="mr-2" /> AI Solutions
+            </span>
+          </button>
+          <button
+            onClick={() => setServiceType("security")}
+            className={`px-6 py-3 rounded-full transition-all ${
+              serviceType === "security"
+                ? "bg-gradient-to-r from-primary to-accent text-base-content"
+                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+            }`}
+          >
+            <span className="flex items-center">
+              <FaShieldAlt className="mr-2" /> Security Services
+            </span>
+          </button>
         </div>
 
-      <div role="tablist" className="tabs tabs-boxed mb-12 justify-center">
-        <a
-          role="tab"
-          className={`tab ${serviceType === "development" ? "tab-active" : ""}`}
-          onClick={() => setServiceType("development")}
-        >
-          <span className="flex items-center">
-            <FaCode className="mr-2" /> Custom Development
-          </span>
-        </a>
-        <a
-          role="tab"
-          className={`tab ${serviceType === "mobile" ? "tab-active" : ""}`}
-          onClick={() => setServiceType("mobile")}
-        >
-          <span className="flex items-center">
-            <FaMobile className="mr-2" /> Mobile Apps
-          </span>
-        </a>
-        <a
-          role="tab"
-          className={`tab ${serviceType === "ai" ? "tab-active" : ""}`}
-          onClick={() => setServiceType("ai")}
-        >
-          <span className="flex items-center">
-            <FaRobot className="mr-2" /> AI Solutions
-          </span>
-        </a>
-        <a
-          role="tab"
-          className={`tab ${serviceType === "security" ? "tab-active" : ""}`}
-          onClick={() => setServiceType("security")}
-        >
-          <span className="flex items-center">
-            <FaShieldAlt className="mr-2" /> Security Services
-          </span>
-        </a>
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {activePlans.map((plan, index) => (
+            <PlanCard
+              key={plan.id}
+              plan={plan}
+              isPopular={index === 1}
+              setSelectedPlan={setSelectedPlan}
+            />
+          ))}
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {activePlans.map((plan, index) => (
-          <PlanCard
-            key={plan.id}
-            plan={plan}
-            isPopular={index === 1}
-          />
-        ))}
-      </div>
-
-      <div className="hero bg-base-100 rounded-box shadow-xl mt-16">
-        <div className="hero-content text-center">
-          <div className="max-w-2xl">
-            <h3 className="text-3xl font-bold mb-4">
-              Looking for a Tailored Solution?
-            </h3>
-            <p className="text-lg mb-6 text-base-content/80">
-              Our pricing is flexible and designed to align with your project's unique requirements. Contact us for a personalized quote.
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <a href="#custom-quote" className="btn btn-primary btn-lg">
-                Get a Custom Quote
-              </a>
-              <a href="/contact" className="btn btn-outline btn-lg">
-                Schedule a Free Consultation
-              </a>
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center bg-gradient-to-r from-primary/40 to-accent/40 p-8 rounded-2xl border border-primary/30"
+        >
+          <h3 className="text-2xl font-bold mb-4">
+            Looking for a Custom Solution?
+          </h3>
+          <p className="text-base-content/80 mb-6 max-w-2xl mx-auto">
+            Our pricing is flexible based on your project requirements. Our
+            Africa-based development teams offer significant cost advantages
+            without compromising on quality or communication.
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a
+              href="#free-consultation"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+            >
+              Schedule Free Consultation
+            </a>
+            <a
+              href="#custom-quote"
+              className="inline-block px-8 py-4 bg-base-100/10 border border-base-content/20 backdrop-blur-sm text-base-content font-semibold rounded-full hover:bg-base-100/20 transition-all duration-300"
+            >
+              Get Custom Quote
+            </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-16">
-        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center"
+        >
+          <div className="bg-neutral-focus/50 border border-neutral p-6 rounded-xl">
+            <h3 className="text-xl font-bold mb-2">US-Aligned Hours</h3>
+            <p className="text-base-content/70">
+              Our teams work in overlapping hours with US time zones to ensure
+              smooth communication
+            </p>
+          </div>
+          <div className="bg-neutral-focus/50 border border-neutral p-6 rounded-xl">
+            <h3 className="text-xl font-bold mb-2">Fixed-Price Projects</h3>
+            <p className="text-base-content/70">
+              Know exactly what you're paying upfront with our detailed project
+              scopes and fixed pricing
+            </p>
+          </div>
+          <div className="bg-neutral-focus/50 border border-neutral p-6 rounded-xl">
+            <h3 className="text-xl font-bold mb-2">Agile Development</h3>
+            <p className="text-base-content/70">
+              Weekly sprints and demos with flexible priorities to adapt to your
+              changing business needs
+            </p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

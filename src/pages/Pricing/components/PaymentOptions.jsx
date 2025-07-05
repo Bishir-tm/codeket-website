@@ -5,7 +5,7 @@ import { FaArrowRight, FaShieldAlt, FaCreditCard } from "react-icons/fa";
 const PaymentOptions = () => {
   const paymentMethods = [
     {
-      icon: <FaCreditCard className="text-3xl text-blue-400" />,
+      icon: <FaCreditCard className="text-3xl text-primary" />,
       title: "Credit Card",
       description: "Secure payments via Stripe",
       brands: [
@@ -18,7 +18,7 @@ const PaymentOptions = () => {
     {
       icon: (
         <svg
-          className="w-10 h-10 text-blue-400"
+          className="w-10 h-10 text-primary"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -32,7 +32,7 @@ const PaymentOptions = () => {
     {
       icon: (
         <svg
-          className="w-8 h-8 text-blue-400"
+          className="w-8 h-8 text-primary"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
           fill="currentColor"
@@ -47,7 +47,7 @@ const PaymentOptions = () => {
     {
       icon: (
         <svg
-          className="w-8 h-8 text-blue-400"
+          className="w-8 h-8 text-primary"
           viewBox="0 0 512 512"
           fill="currentColor"
         >
@@ -61,7 +61,7 @@ const PaymentOptions = () => {
   ];
 
   return (
-    <div className="py-24 px-6 bg-base-200">
+    <div className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,30 +86,28 @@ const PaymentOptions = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="card bg-base-100 shadow-xl hover:border-primary transition-all duration-300"
+              className="bg-neutral-focus rounded-xl p-8 border border-neutral hover:border-primary transition-all duration-300"
             >
-              <div className="card-body items-center">
-                <div className="mb-6 flex justify-center">{method.icon}</div>
-                <h3 className="card-title text-2xl mb-3">
-                  {method.title}
-                </h3>
-                <p className="text-base-content/70 text-center mb-4">
-                  {method.description}
-                </p>
+              <div className="mb-6 flex justify-center">{method.icon}</div>
+              <h3 className="text-2xl font-bold text-center mb-3">
+                {method.title}
+              </h3>
+              <p className="text-base-content/80 text-center mb-4">
+                {method.description}
+              </p>
 
-                {method.brands.length > 0 && (
-                  <div className="flex justify-center gap-3 mt-6">
-                    {method.brands.map((brand, idx) => (
-                      <img
-                        key={idx}
-                        src={brand}
-                        alt="Payment method"
-                        className="h-8"
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
+              {method.brands.length > 0 && (
+                <div className="flex justify-center gap-3 mt-6">
+                  {method.brands.map((brand, idx) => (
+                    <img
+                      key={idx}
+                      src={brand}
+                      alt="Payment method"
+                      className="h-8"
+                    />
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -119,13 +117,13 @@ const PaymentOptions = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 card bg-base-100 shadow-xl p-6 flex flex-col md:flex-row items-center justify-between"
+          className="mt-16 p-6 bg-neutral-focus rounded-xl border border-neutral flex flex-col md:flex-row items-center justify-between"
         >
           <div className="flex items-center mb-6 md:mb-0">
             <div className="p-3 bg-primary/20 rounded-full mr-4">
               <FaShieldAlt className="text-2xl text-primary" />
             </div>
-            <p className="text-base-content/70 font-medium">
+            <p className="text-base-content/80 font-medium">
               All payments are securely processed and protected by
               industry-standard encryption.
             </p>
@@ -133,7 +131,7 @@ const PaymentOptions = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             href="/security"
-            className="btn btn-ghost text-primary hover:text-primary-focus transition-colors"
+            className="flex items-center text-primary hover:text-primary-focus transition-colors"
           >
             <span className="mr-2">Learn more about our security</span>
             <FaArrowRight />

@@ -22,9 +22,14 @@ const ContactForm = () => {
   const [formErrors, setFormErrors] = React.useState({});
 
   const serviceOptions = [
-    "Inventory Management System",
-    "School Management System",
-    "360° Virtual Tours",
+    "Custom Software Development",
+    "AI & Machine Learning",
+    "Cloud Infrastructure",
+    "Mobile App Development",
+    "UI/UX Design",
+    "DevOps & Automation",
+    "Cybersecurity",
+    "Blockchain Solutions",
   ];
 
   const handleInputChange = (e) => {

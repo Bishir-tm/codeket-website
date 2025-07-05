@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
-    <div className="py-24 px-6 bg-gradient-to-r from-blue-900 to-purple-900">
+    <div className="py-24 px-6 bg-gradient-to-r from-primary to-accent">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -20,9 +20,9 @@ const CallToAction = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
+          className="text-xl text-base-content/80 mb-12 max-w-3xl mx-auto"
         >
-          Join the hundreds of organizations that have partnered with CodeKet to
+          Join the hundreds of organizations that have partnered with Codeket to
           drive innovation and achieve remarkable results.
         </motion.p>
         <motion.div
@@ -34,7 +34,7 @@ const CallToAction = () => {
         >
           <Link
             to="/contact"
-            className="px-8 py-4 bg-white text-blue-900 font-bold rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-lg"
+            className="px-8 py-4 bg-base-100 text-primary font-bold rounded-full hover:bg-base-200 transition-colors duration-300 shadow-lg"
           >
             Contact Us
           </Link>

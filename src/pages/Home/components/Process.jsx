@@ -1,53 +1,100 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const processes = [
   {
-    title: "Discovery & Strategic Alignment",
+    title: "Business Analysis",
     icon: "🔍",
     description:
-      "We begin by deeply understanding your unique business objectives, challenges, and vision to craft a software solution that perfectly aligns with your strategic goals.",
+      "Our AI analyzes your business requirements and turns them into technical specifications.",
   },
   {
-    title: "Intuitive Design & Agile Development",
+    title: "Architecture Design",
     icon: "🏗️",
     description:
-      "Our expert team designs and develops user-centric software with a focus on intuitive interfaces and robust functionality, ensuring a seamless experience and effective problem-solving.",
+      "Intelligent systems design the optimal architecture considering scalability, performance, and security.",
   },
   {
-    title: "Rapid Deployment & Seamless Onboarding",
+    title: "Accelerated Development",
     icon: "⚡",
     description:
-      "Experience swift deployment of your custom software, followed by comprehensive onboarding and training to ensure your team is fully equipped and operational in record time.",
+      "AI-assisted coding with pre-built components accelerates development by 300%.",
   },
   {
-    title: "Continuous Support & Evolutionary Growth",
+    title: "Intelligent Testing",
+    icon: "🧪",
+    description:
+      "Automated test generation and execution with predictive issue detection finds and fixes issues early.",
+  },
+  {
+    title: "Continuous Optimization",
     icon: "📈",
     description:
-      "We provide dedicated, human-centric support and continuously evolve your software, adapting to new challenges and opportunities to ensure long-term success and sustained growth.",
+      "Real-time performance monitoring and AI-driven optimizations keeps your software running smoothly.",
   },
 ];
 
 const Process = () => {
   return (
-    <div className="container mx-auto py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Our Streamlined Development Process</h2>
-        <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-          From initial concept to ongoing support, our agile methodology ensures transparency, efficiency, and exceptional results.
-        </p>
+    <div className="py-24">
+      <div className="text-center mb-16">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Our AI-Powered Process
+        </motion.h2>
+        <motion.p
+          className="text-base-content/80 text-lg md:text-xl max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Here's how we transform your business challenges into powerful
+          software solutions 3x faster.
+        </motion.p>
       </div>
 
-      <ul className="steps steps-vertical lg:steps-horizontal w-full">
+      {/* Process timeline */}
+      <div className="max-w-4xl mx-auto">
         {processes.map((step, index) => (
-          <li key={index} className="step step-primary">
-            <div className="text-center p-4">
-              <div className="text-5xl mb-2">{step.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-base-content/70">{step.description}</p>
+          <motion.div
+            key={index}
+            className="flex relative pb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            {/* Timeline connector */}
+            {index < 4 && (
+              <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
+                <div className="h-full w-0.5 bg-gradient-to-b from-primary to-accent pointer-events-none"></div>
+              </div>
+            )}
+
+            {/* Timeline node */}
+            <div className="relative z-10 flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg">
+              <span className="text-xl">{step.icon}</span>
             </div>
-          </li>
+
+            {/* Content */}
+            <div className="ml-6">
+              <h3 className="flex text-2xl font-bold text-base-content mb-2">
+                {step.title}
+                <span className="ml-2 text-base-content/70 font-mono">
+                  0{index + 1}
+                </span>
+              </h3>
+              <p className="text-base-content/80">{step.description}</p>
+            </div>
+          </motion.div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

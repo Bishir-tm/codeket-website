@@ -1,55 +1,71 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { testimonials } from "../../../utils/testimonials";
 
-const Testimonials = () => {
+const Testimonials = ({ activeTestimonial, setActiveTestimonial }) => {
   return (
-    <div className="container mx-auto py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Hear From Our Satisfied Clients</h2>
-        <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-          Our success is measured by the success of our clients. Read what they have to say about partnering with Codeket.
-        </p>
-      </div>
+    <div className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center mb-16"
+        >
+          What Our Clients Say
+        </motion.h2>
 
-      <div className="carousel w-full">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            id={`item${index + 1}`}
-            className="carousel-item w-full flex justify-center"
-          >
-            <div className="card w-3/4 bg-base-100 shadow-xl image-full">
-              <figure>
-                <img
-                  src={`https://picsum.photos/id/${200 + index}/800/400`}
-                  alt="Testimonial Background"
-                />
-              </figure>
-              <div className="card-body items-center text-center">
-                <p className="text-xl italic mb-4 text-white">
-                  "{testimonial.quote}"
-                </p>
-                <div className="avatar">
-                  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="relative">
+          <div className="overflow-hidden">
+            <div className="flex flex-col space-y-6">
+              <motion.div
+                key={activeTestimonial}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-neutral-focus rounded-xl p-8 border border-neutral relative"
+              >
+                <FaQuoteLeft className="absolute top-8 left-8 text-3xl text-primary opacity-30" />
+                <FaQuoteRight className="absolute bottom-8 right-8 text-3xl text-accent opacity-30" />
+
+                <div className="flex flex-col md:flex-row md:items-center">
+                  <div className="md:w-1/4 flex justify-center mb-6 md:mb-0">
                     <img
-                      src={testimonial.image || `https://i.pravatar.cc/150?img=${index + 1}`}
-                      alt="Avatar"
+                      src={testimonials[activeTestimonial].image}
+                      alt={testimonials[activeTestimonial].name}
+                      className="w-24 h-24 rounded-full object-cover border-4 border-neutral"
                     />
                   </div>
+                  <div className="md:w-3/4 md:pl-8">
+                    <p className="text-xl text-base-content/80 italic mb-6">
+                      "{testimonials[activeTestimonial].quote}"
+                    </p>
+                    <h4 className="text-xl font-bold">
+                      {testimonials[activeTestimonial].name}
+                    </h4>
+                    <p className="text-primary">
+                      {testimonials[activeTestimonial].position}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="card-title mt-4 text-white">{testimonial.name}</h4>
-                <p className="text-sm text-white/80">{testimonial.position}</p>
-              </div>
+              </motion.div>
             </div>
           </div>
-        ))}
-      </div>
-      <div className="flex justify-center w-full py-2 gap-2">
-        {testimonials.map((_, index) => (
-          <a href={`#item${index + 1}`} className="btn btn-xs">
-            {index + 1}
-          </a>
-        ))}
+
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTestimonial(index)}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                  activeTestimonial === index ? "bg-primary" : "bg-neutral-focus"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

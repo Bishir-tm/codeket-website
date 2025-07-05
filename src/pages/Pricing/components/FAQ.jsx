@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
 
 const FAQ = () => {
+  const [openQuestion, setOpenQuestion] = useState(null);
+
   const questions = [
     {
       id: 1,
@@ -41,27 +45,71 @@ const FAQ = () => {
     },
   ];
 
-  return (
-    <div className="container mx-auto py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-        <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-          Find quick answers to the most common questions about our pricing, services, and how we work.
-        </p>
-      </div>
+  const toggleQuestion = (id) => {
+    if (openQuestion === id) {
+      setOpenQuestion(null);
+    } else {
+      setOpenQuestion(id);
+    }
+  };
 
-      <div className="join join-vertical w-full">
-        {questions.map((qa) => (
-          <div key={qa.id} className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" id={`accordion-${qa.id}`} />
-            <div className="collapse-title text-xl font-medium">
-              {qa.question}
-            </div>
-            <div className="collapse-content">
-              <p>{qa.answer}</p>
-            </div>
-          </div>
-        ))}
+  return (
+    <div className="py-24 px-6">
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
+            Find answers to common questions about our pricing and plans.
+          </p>
+        </motion.div>
+
+        <div className="space-y-4">
+          {questions.map((qa) => (
+            <motion.div
+              key={qa.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: qa.id * 0.1 }}
+              viewport={{ once: true }}
+              className="border border-neutral-focus rounded-xl overflow-hidden"
+            >
+              <button
+                onClick={() => toggleQuestion(qa.id)}
+                className="w-full px-6 py-4 flex items-center justify-between bg-neutral hover:bg-neutral-focus transition-colors duration-300 text-left"
+              >
+                <h3 className="text-lg font-medium">{qa.question}</h3>
+                <motion.div
+                  animate={{ rotate: openQuestion === qa.id ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaChevronDown />
+                </motion.div>
+              </button>
+
+              <motion.div
+                initial={false}
+                animate={{
+                  height: openQuestion === qa.id ? "auto" : 0,
+                  opacity: openQuestion === qa.id ? 1 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 py-4 bg-neutral/20">
+                  <p className="text-base-content/80">{qa.answer}</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

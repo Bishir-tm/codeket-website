@@ -8,7 +8,7 @@ const CodeShowcase = ({ codeSnippets }) => {
     <div className="py-24">
       <div className="text-center mb-12">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-4"
+          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -17,7 +17,7 @@ const CodeShowcase = ({ codeSnippets }) => {
           Advanced Code Framework
         </motion.h2>
         <motion.p
-          className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto"
+          className="text-base-content/80 text-lg md:text-xl max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,8 +37,8 @@ const CodeShowcase = ({ codeSnippets }) => {
               key={index}
               className={`w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
                 activeSnippet === index
-                  ? `bg-gradient-to-r ${snippet.color} text-white`
-                  : "bg-white/5 hover:bg-white/10 text-gray-300"
+                  ? `bg-gradient-to-r ${snippet.color} text-base-content`
+                  : "bg-base-100/5 hover:bg-base-100/10 text-base-content/80"
               }`}
               onClick={() => setActiveSnippet(index)}
               initial={{ opacity: 0, x: -20 }}
@@ -61,7 +61,7 @@ const CodeShowcase = ({ codeSnippets }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className={`relative bg-black rounded-xl border border-gray-800 shadow-xl overflow-hidden`}
+              className={`relative bg-neutral rounded-xl border border-neutral-focus shadow-xl overflow-hidden`}
             >
               {/* Code header */}
               <div
@@ -71,24 +71,24 @@ const CodeShowcase = ({ codeSnippets }) => {
                   <span className="text-lg mr-2">
                     {codeSnippets[activeSnippet].icon}
                   </span>
-                  <span className="font-medium text-white">
+                  <span className="font-medium text-base-content">
                     {codeSnippets[activeSnippet].language}
                   </span>
                 </div>
                 <div className="flex space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-error"></div>
+                  <div className="w-3 h-3 rounded-full bg-warning"></div>
+                  <div className="w-3 h-3 rounded-full bg-success"></div>
                 </div>
               </div>
 
               {/* Code content */}
-              <pre className="p-6 text-sm md:text-base font-mono text-gray-300 overflow-x-auto">
+              <pre className="p-6 text-sm md:text-base font-mono text-base-content/80 overflow-x-auto">
                 <code>{codeSnippets[activeSnippet].code}</code>
               </pre>
 
               {/* Floating copy button */}
-              <button className="absolute top-14 right-4 bg-gray-800/80 backdrop-blur-sm p-2 rounded text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              <button className="absolute top-14 right-4 bg-neutral/80 backdrop-blur-sm p-2 rounded text-base-content/80 hover:text-base-content hover:bg-neutral-focus transition-colors">
                 <svg
                   className="w-5 h-5"
                   fill="none"

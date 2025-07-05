@@ -5,7 +5,7 @@ import { HiOutlineUser } from "react-icons/hi";
 
 const Testimonials = ({ caseStudies }) => {
   return (
-    <div className="py-20 px-6 bg-black">
+    <div className="py-20 px-6 bg-base-100">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -15,11 +15,11 @@ const Testimonials = ({ caseStudies }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               What Our Clients Say
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-base-content/70 max-w-3xl mx-auto">
             Hear directly from the leaders who trusted us with their
             transformative projects.
           </p>
@@ -37,22 +37,22 @@ const Testimonials = ({ caseStudies }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-gray-900 border border-gray-800 rounded-2xl p-8"
+                className="bg-neutral border border-neutral-focus rounded-2xl p-8"
               >
                 <div className="flex items-center mb-6">
-                  <div className="bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                    <HiOutlineUser className="text-2xl text-gray-400" />
+                  <div className="bg-neutral-focus w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <HiOutlineUser className="text-2xl text-base-content/70" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-white">
+                    <h4 className="font-medium text-base-content">
                       {caseStudy.testimonial.author}
                     </h4>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-base-content/70">
                       {caseStudy.testimonial.title}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-300 italic">
+                <p className="text-base-content/80 italic">
                   "{caseStudy.testimonial.quote}"
                 </p>
               </motion.div>

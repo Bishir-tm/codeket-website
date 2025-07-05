@@ -1,46 +1,62 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { timeline } from "../../../utils/timeline";
 
 const Timeline = () => {
   return (
-    <div className="container mx-auto py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Our Journey Through Innovation</h2>
-        <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-          Explore the key milestones and achievements that have shaped Codeket into a leader in custom software development.
-        </p>
-      </div>
+    <div className="py-24 px-6 bg-neutral">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center mb-16"
+        >
+          Our Journey
+        </motion.h2>
 
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-        {timeline.map((item, index) => (
-          <li key={index}>
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
+        <div className="relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary to-accent"></div>
+
+          <div className="space-y-20">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col md:flex-row items-center"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div
-              className={`timeline-${
-                index % 2 === 0 ? "start md:text-end" : "end"
-              } mb-10`}
-            >
-              <time className="font-mono italic text-primary">{item.year}</time>
-              <div className="text-lg font-black">{item.event}</div>
-              <p className="text-base-content/70">{item.description}</p>
-            </div>
-            {index < timeline.length - 1 && <hr />}
-          </li>
-        ))}
-      </ul>
+                <div
+                  className={`md:w-1/2 ${
+                    index % 2 === 0
+                      ? "md:text-right md:pr-16"
+                      : "md:order-2 md:pl-16"
+                  }`}
+                >
+                  <div
+                    className={`bg-neutral-focus rounded-xl p-6 border border-neutral ${
+                      index % 2 === 0 ? "ml-auto" : ""
+                    }`}
+                  >
+                    <h3 className="text-2xl font-bold mb-1 text-primary">
+                      {item.year}
+                    </h3>
+                    <h4 className="text-xl font-bold mb-3">{item.event}</h4>
+                    <p className="text-base-content/80">{item.description}</p>
+                  </div>
+                </div>
+
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-xl font-bold border-4 border-neutral">
+                  {index + 1}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

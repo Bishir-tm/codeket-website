@@ -21,8 +21,8 @@ const CaseStudyCard = ({
       onMouseLeave={() => setHoveredCard(null)}
       className={`bg-gradient-to-br ${caseStudy.bgColor} p-1 rounded-2xl h-full`}
     >
-      <div className="bg-gray-900 rounded-2xl h-full flex flex-col overflow-hidden">
-        <div className="h-48 bg-gray-800 relative overflow-hidden">
+      <div className="bg-neutral rounded-2xl h-full flex flex-col overflow-hidden">
+        <div className="h-48 bg-neutral-focus relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
             <img src={caseStudy.image} alt="" className="h-full w-full" />
           </div>
@@ -33,7 +33,7 @@ const CaseStudyCard = ({
 
         <div className="p-6 flex flex-col flex-grow">
           <div className="mb-4">
-            <span className="inline-block px-3 py-1 bg-gray-800 rounded-full text-gray-300 text-xs mb-2">
+            <span className="inline-block px-3 py-1 bg-neutral-focus rounded-full text-base-content/80 text-xs mb-2">
               {caseStudy.industry}
             </span>
             <h3 className="text-xl font-bold mb-2">{caseStudy.title}</h3>
@@ -44,27 +44,27 @@ const CaseStudyCard = ({
             {caseStudy.stats.slice(0, 2).map((stat, index) => (
               <div
                 key={index}
-                className="bg-gray-800 rounded-lg p-3 text-center"
+                className="bg-neutral-focus rounded-lg p-3 text-center"
               >
                 <div
-                  className={`text-lg font-bold text-${caseStudy.accentColor}-500 mb-1`}
+                  className={`text-lg font-bold text-${caseStudy.accentColor} mb-1`}
                 >
                   {stat.value}
                 </div>
-                <div className="text-xs text-gray-400">{stat.label}</div>
+                <div className="text-xs text-base-content/70">{stat.label}</div>
               </div>
             ))}
           </div>
 
           <div className="flex-grow">
-            <p className="text-gray-300 text-sm line-clamp-3 mb-4">
+            <p className="text-base-content/80 text-sm line-clamp-3 mb-4">
               {caseStudy.challengeDescription.substring(0, 120)}...
             </p>
           </div>
 
           <motion.button
             onClick={() => setActiveCaseStudy(caseStudy)}
-            className={`mt-auto w-full py-3 px-4 rounded-lg bg-${caseStudy.accentColor}-900/30 hover:bg-${caseStudy.accentColor}-800/50 border border-${caseStudy.accentColor}-500/30 text-${caseStudy.accentColor}-400 font-medium transition-all duration-300 flex items-center justify-center`}
+            className={`mt-auto w-full py-3 px-4 rounded-lg bg-${caseStudy.accentColor}/30 hover:bg-${caseStudy.accentColor}/50 border border-${caseStudy.accentColor}/30 text-${caseStudy.accentColor} font-medium transition-all duration-300 flex items-center justify-center`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

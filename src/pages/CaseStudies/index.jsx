@@ -42,7 +42,7 @@ const CaseStudiesPage = () => {
   });
 
   return (
-    <div className="bg-black text-white ">
+    <div className="bg-base-100 text-base-content ">
       <HeroSection />
 
       {/* Main Case Studies Section */}
@@ -74,11 +74,11 @@ const CaseStudiesPage = () => {
             </div>
           ) : (
             <div className="text-center py-20">
-              <HiOutlineQuestionMarkCircle className="mx-auto text-5xl text-gray-500 mb-4" />
-              <h3 className="text-xl font-medium text-gray-300 mb-2">
+              <HiOutlineQuestionMarkCircle className="mx-auto text-5xl text-base-content/70 mb-4" />
+              <h3 className="text-xl font-medium text-base-content/80 mb-2">
                 No matching case studies
               </h3>
-              <p className="text-gray-500">Try adjusting your filters</p>
+              <p className="text-base-content/70">Try adjusting your filters</p>
             </div>
           )}
         </div>

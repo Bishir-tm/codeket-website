@@ -1,33 +1,44 @@
 import React, { useState } from "react";
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaCheck, FaTimes, FaChevronDown } from "react-icons/fa";
 
 // Feature Comparison Table
 const ComparisonTable = () => {
+  const [expandedSection, setExpandedSection] = useState("core");
+
+  const toggleSection = (section) => {
+    if (expandedSection === section) {
+      setExpandedSection(null);
+    } else {
+      setExpandedSection(section);
+    }
+  };
+
   const featureSections = [
     {
       id: "core",
       name: "Core Features",
       features: [
         {
-          name: "AI-powered project generation",
+          name: "AI-powered projects",
           starter: true,
           professional: true,
           enterprise: true,
         },
         {
-          name: "Dedicated team members",
+          name: "Team members",
           starter: "Up to 5",
           professional: "Up to 20",
           enterprise: "Unlimited",
         },
         {
-          name: "Advanced analytics dashboard",
+          name: "Analytics dashboard",
           starter: "Basic",
-          professional: "Comprehensive",
-          enterprise: "Customizable Enterprise-grade",
+          professional: "Advanced",
+          enterprise: "Enterprise",
         },
         {
-          name: "Guaranteed uptime SLA",
+          name: "Uptime guarantee",
           starter: "99.5%",
           professional: "99.9%",
           enterprise: "99.99%",
@@ -39,22 +50,28 @@ const ComparisonTable = () => {
       name: "Support & Services",
       features: [
         {
-          name: "Customer support level",
-          starter: "Standard Email",
-          professional: "Priority Email & Chat",
-          enterprise: "24/7 Dedicated Account Manager",
+          name: "Customer support",
+          starter: "Standard",
+          professional: "Priority",
+          enterprise: "24/7 Premium",
         },
         {
-          name: "Onboarding and setup assistance",
+          name: "Onboarding session",
           starter: false,
-          professional: "2 hours guided",
-          enterprise: "8 hours comprehensive",
+          professional: "2 hours",
+          enterprise: "8 hours",
         },
         {
-          name: "Regular training sessions",
+          name: "Dedicated account manager",
           starter: false,
-          professional: "Monthly webinars",
-          enterprise: "Weekly personalized",
+          professional: false,
+          enterprise: true,
+        },
+        {
+          name: "Training sessions",
+          starter: false,
+          professional: "Monthly",
+          enterprise: "Weekly",
         },
       ],
     },
@@ -63,127 +80,183 @@ const ComparisonTable = () => {
       name: "Security & Compliance",
       features: [
         {
-          name: "Data encryption (in-transit & at-rest)",
+          name: "Data encryption",
           starter: true,
           professional: true,
           enterprise: true,
         },
         {
-          name: "Single Sign-On (SSO) integration",
+          name: "Single sign-on (SSO)",
           starter: false,
           professional: true,
           enterprise: true,
         },
         {
-          name: "Role-based access control (RBAC)",
+          name: "Role-based access",
           starter: "Basic",
           professional: "Advanced",
-          enterprise: "Highly Customizable",
+          enterprise: "Custom",
         },
         {
-          name: "Industry compliance certifications",
-          starter: "SOC 2 Type 1",
-          professional: "SOC 2 Type 2, HIPAA",
-          enterprise: "SOC 2, HIPAA, GDPR, ISO 27001",
+          name: "Compliance certifications",
+          starter: "SOC 2",
+          professional: "SOC 2, HIPAA",
+          enterprise: "SOC 2, HIPAA, GDPR, Custom",
         },
       ],
     },
     {
       id: "integrations",
-      name: "Integrations & API Access",
+      name: "Integrations & API",
       features: [
         {
-          name: "Pre-built third-party integrations",
-          starter: "5 key integrations",
-          professional: "20+ integrations",
-          enterprise: "Unlimited & Custom",
+          name: "Pre-built integrations",
+          starter: "5",
+          professional: "20+",
+          enterprise: "All",
         },
         {
-          name: "Custom API access and development",
+          name: "Custom integrations",
           starter: false,
           professional: true,
           enterprise: true,
         },
         {
-          name: "Automated workflow customization",
+          name: "API access",
           starter: false,
-          professional: "Basic automation",
-          enterprise: "Advanced, AI-driven automation",
+          professional: true,
+          enterprise: true,
+        },
+        {
+          name: "Custom workflows",
+          starter: false,
+          professional: "Basic",
+          enterprise: "Advanced",
         },
       ],
     },
   ];
 
   return (
-    <div className="container mx-auto py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Detailed Plan Comparison</h2>
-        <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-          Explore the comprehensive features offered across our Starter, Professional, and Enterprise plans to find the perfect fit for your business's scale and ambition.
-        </p>
-      </div>
+    <div className="py-24 px-6 bg-neutral">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Compare Plans</h2>
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
+            See which plan has the features that are right for your business.
+          </p>
+        </motion.div>
 
-      <div className="space-y-6">
-        {featureSections.map((section) => (
-          <div key={section.id} className="collapse collapse-arrow bg-base-100 shadow-xl">
-            <input type="checkbox" />
-            <div className="collapse-title text-xl font-medium">
-              {section.name}
-            </div>
-            <div className="collapse-content overflow-x-auto">
-              <table className="table w-full">
-                <thead>
-                  <tr>
-                    <th>Feature</th>
-                    <th className="text-center">Starter</th>
-                    <th className="text-center">Professional</th>
-                    <th className="text-center">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {section.features.map((feature, idx) => (
-                    <tr key={idx}>
-                      <td>{feature.name}</td>
-                      <td className="text-center">
-                        {typeof feature.starter === "boolean" ? (
-                          feature.starter ? (
-                            <FaCheck className="mx-auto text-success" />
-                          ) : (
-                            <FaTimes className="mx-auto text-error" />
-                          )
-                        ) : (
-                          feature.starter
-                        )}
-                      </td>
-                      <td className="text-center">
-                        {typeof feature.professional === "boolean" ? (
-                          feature.professional ? (
-                            <FaCheck className="mx-auto text-success" />
-                          ) : (
-                            <FaTimes className="mx-auto text-error" />
-                          )
-                        ) : (
-                          feature.professional
-                        )}
-                      </td>
-                      <td className="text-center">
-                        {typeof feature.enterprise === "boolean" ? (
-                          feature.enterprise ? (
-                            <FaCheck className="mx-auto text-success" />
-                          ) : (
-                            <FaTimes className="mx-auto text-error" />
-                          )
-                        ) : (
-                          feature.enterprise
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        ))}
+        <div className="space-y-6">
+          {featureSections.map((section) => (
+            <motion.div
+              key={section.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="border border-neutral-focus rounded-xl overflow-hidden"
+            >
+              <button
+                onClick={() => toggleSection(section.id)}
+                className="w-full px-6 py-4 flex items-center justify-between bg-neutral hover:bg-neutral-focus transition-colors duration-300"
+              >
+                <h3 className="text-xl font-semibold">{section.name}</h3>
+                <motion.div
+                  animate={{ rotate: expandedSection === section.id ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaChevronDown />
+                </motion.div>
+              </button>
+
+              <motion.div
+                initial={false}
+                animate={{
+                  height: expandedSection === section.id ? "auto" : 0,
+                  opacity: expandedSection === section.id ? 1 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-neutral/50">
+                      <tr>
+                        <th className="py-4 px-6 text-left text-base-content/80 font-medium">
+                          Feature
+                        </th>
+                        <th className="py-4 px-6 text-center text-base-content/80 font-medium">
+                          Starter
+                        </th>
+                        <th className="py-4 px-6 text-center text-base-content/80 font-medium">
+                          Professional
+                        </th>
+                        <th className="py-4 px-6 text-center text-base-content/80 font-medium">
+                          Enterprise
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-neutral-focus">
+                      {section.features.map((feature, idx) => (
+                        <tr key={idx} className="hover:bg-neutral/30">
+                          <td className="py-4 px-6 text-left">
+                            {feature.name}
+                          </td>
+                          <td className="py-4 px-6 text-center">
+                            {typeof feature.starter === "boolean" ? (
+                              feature.starter ? (
+                                <FaCheck className="mx-auto text-success" />
+                              ) : (
+                                <FaTimes className="mx-auto text-base-content/70" />
+                              )
+                            ) : (
+                              <span className="text-base-content/80">
+                                {feature.starter}
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-4 px-6 text-center">
+                            {typeof feature.professional === "boolean" ? (
+                              feature.professional ? (
+                                <FaCheck className="mx-auto text-success" />
+                              ) : (
+                                <FaTimes className="mx-auto text-base-content/70" />
+                              )
+                            ) : (
+                              <span className="text-base-content/80">
+                                {feature.professional}
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-4 px-6 text-center">
+                            {typeof feature.enterprise === "boolean" ? (
+                              feature.enterprise ? (
+                                <FaCheck className="mx-auto text-success" />
+                              ) : (
+                                <FaTimes className="mx-auto text-base-content/70" />
+                              )
+                            ) : (
+                              <span className="text-base-content/80">
+                                {feature.enterprise}
+                              </span>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

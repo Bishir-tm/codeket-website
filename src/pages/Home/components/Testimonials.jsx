@@ -1,37 +1,75 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { testimonials } from "../../../utils/testimonials";
 
 const Testimonials = () => (
-  <div className="container mx-auto py-16">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold mb-4">What Our Valued Clients Say</h2>
-      <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-        Hear directly from businesses that have transformed their operations and
-        achieved remarkable success with Codeket's tailored software solutions.
-      </p>
-    </div>
+  <div className="py-24">
+    <motion.div
+      className="relative"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      {/* Background decoration */}
 
-    <div className="grid md:grid-cols-3 gap-8">
-      {testimonials.map((testimonial, index) => (
-        <div key={index} className="card bg-base-100 shadow-xl">
-          <div className="card-body items-center text-center">
-            <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
-            <div className="avatar">
-              <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img
-                  src={`https://i.pravatar.cc/150?img=${index + 1}`}
-                  alt="Avatar"
-                />
+      <div className="relative z-10 text-center mb-16">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Client Testimonials
+        </motion.h2>
+        <motion.p
+          className="text-base-content/80 text-lg md:text-xl max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Don't take our word for it. Here's what our clients have to say about
+          working with us.
+        </motion.p>
+      </div>
+
+      {/* Testimonial cards */}
+      <div className="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <motion.div
+            key={index}
+            className="bg-gradient-to-br from-neutral-focus to-neutral rounded-xl overflow-hidden border border-neutral p-6 relative"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            {/* Quotation mark */}
+            <div className="absolute top-4 right-4 text-5xl text-primary/20">
+              "
+            </div>
+
+            {/* Quote */}
+            <p className="text-base-content/80 mb-6 relative z-10">
+              {testimonial.quote}
+            </p>
+
+            {/* Author info */}
+            <div className="flex items-center mt-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xl font-bold text-base-content">
+                {testimonial.name.charAt(0)}
+              </div>
+              <div className="ml-4">
+                <h4 className="text-base-content font-bold">{testimonial.name}</h4>
+                <p className="text-base-content/70 text-sm">{testimonial.position}</p>
               </div>
             </div>
-            <h4 className="card-title mt-4">{testimonial.name}</h4>
-            <p className="text-sm text-base-content/70">
-              {testimonial.position}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
   </div>
 );
 

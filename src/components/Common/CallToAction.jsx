@@ -22,7 +22,7 @@ const CallToAction = () => {
           viewport={{ once: true }}
           className="text-xl text-base-content/80 mb-12 max-w-3xl mx-auto"
         >
-          Join the hundreds of organizations that have partnered with CodeKet to
+          Join the hundreds of organizations that have partnered with Codeket to
           drive innovation and achieve remarkable results.
         </motion.p>
         <motion.div
@@ -32,16 +32,10 @@ const CallToAction = () => {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
-          <Link
-            to="/contact"
-            className="btn btn-primary btn-lg"
-          >
+          <Link to="/contact" className="btn btn-primary btn-lg">
             Contact Us
           </Link>
-          <Link
-            to="/case-studies"
-            className="btn btn-outline btn-lg"
-          >
+          <Link to="/case-studies" className="btn btn-outline btn-lg">
             View Case Studies
           </Link>
         </motion.div>

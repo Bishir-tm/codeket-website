@@ -1,72 +1,91 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { teamMembers } from "../../../utils/teamMembers";
 
 const Team = () => {
   return (
-    <div className="container mx-auto py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Meet Our Exceptional Team</h2>
-        <p className="text-lg max-w-2xl mx-auto text-base-content/80">
-          Our diverse team of passionate experts is dedicated to delivering innovative software solutions and unparalleled client satisfaction.
-        </p>
-      </div>
+    <div className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Meet the Team</h2>
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
+            Our passionate team of experts combines technical expertise with
+            creative problem-solving to deliver exceptional results.
+          </p>
+        </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {teamMembers.map((member, index) => (
-          <div key={index} className="card bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-              <div className="avatar">
-                <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src={member.image} alt={member.name} />
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-neutral-focus rounded-xl overflow-hidden border border-neutral hover:transform hover:scale-105 transition-all duration-300"
+            >
+              <div className="relative group">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
               </div>
-            </figure>
-            <div className="card-body items-center text-center">
-              <h3 className="card-title text-2xl">{member.name}</h3>
-              <p className="text-primary text-lg">{member.role}</p>
-              <p className="text-base-content/70">{member.bio}</p>
-              <div className="card-actions justify-center mt-4">
-                {member.social.linkedin && (
+              <div className="p-6">
+                <h3 className="text-2xl font-bold">{member.name}</h3>
+                <p className="text-primary mt-1">{member.role}</p>
+                <p className="text-base-content/80 mt-4">{member.bio}</p>
+                <div className="flex space-x-4 mt-6">
                   <a
-                    href={member.social.linkedin}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-ghost btn-circle"
+                    href={member.social.linkedin}
+                    className="text-base-content/70 hover:text-primary transition-colors"
                   >
                     <FaLinkedin className="w-6 h-6" />
                   </a>
-                )}
-                {member.social.twitter && (
                   <a
-                    href={member.social.twitter}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-ghost btn-circle"
+                    href={member.social.twitter}
+                    className="text-base-content/70 hover:text-primary-focus transition-colors"
                   >
                     <FaTwitter className="w-6 h-6" />
                   </a>
-                )}
-                {member.social.github && (
                   <a
-                    href={member.social.github}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-ghost btn-circle"
+                    href={member.social.github}
+                    className="text-base-content/70 hover:text-base-content/80 transition-colors"
                   >
                     <FaGithub className="w-6 h-6" />
                   </a>
-                )}
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </div>
 
-      <div className="text-center mt-12">
-        <a href="/careers" className="btn btn-secondary btn-lg">
-          Join Our Growing Team
-        </a>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <a
+            target="_blank"
+            href="/careers"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 shadow-lg"
+          >
+            Join Our Team
+          </a>
+        </motion.div>
       </div>
     </div>
   );

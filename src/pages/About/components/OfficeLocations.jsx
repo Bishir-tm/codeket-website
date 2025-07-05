@@ -16,7 +16,7 @@ const OfficeLocations = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our Global Presence
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
             With offices across the globe, we're positioned to serve clients
             wherever they are.
           </p>
@@ -30,7 +30,7 @@ const OfficeLocations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
+              className="bg-neutral-focus rounded-xl overflow-hidden border border-neutral"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -41,7 +41,7 @@ const OfficeLocations = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold">{location.city}</h3>
-                <p className="text-gray-300 mt-4">{location.address}</p>
+                <p className="text-base-content/80 mt-4">{location.address}</p>
               </div>
             </motion.div>
           ))}

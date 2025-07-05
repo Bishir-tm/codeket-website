@@ -159,7 +159,7 @@ const CustomQuoteForm = () => {
   };
 
   return (
-    <div id="custom-quote" className="py-24 px-6 bg-base-200">
+    <div id="custom-quote" className="py-24 px-6 bg-neutral">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -168,7 +168,7 @@ const CustomQuoteForm = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
               Get a Custom Quote
             </h2>
             <p className="text-xl text-base-content/80 mb-8">
@@ -182,8 +182,10 @@ const CustomQuoteForm = () => {
                   <FaShieldAlt className="text-primary text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Enterprise Security</h3>
-                  <p className="text-base-content/70">
+                  <h3 className="text-xl font-bold mb-2">
+                    Enterprise Security
+                  </h3>
+                  <p className="text-base-content/80">
                     Advanced security features designed for enterprise
                     compliance requirements, including SSO, role-based access
                     controls, and encrypted data storage.
@@ -192,12 +194,12 @@ const CustomQuoteForm = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="mr-4 mt-1 bg-secondary/20 p-3 rounded-lg">
-                  <FaHeadset className="text-secondary text-xl" />
+                <div className="mr-4 mt-1 bg-accent/20 p-3 rounded-lg">
+                  <FaHeadset className="text-accent text-xl" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Dedicated Support</h3>
-                  <p className="text-base-content/70">
+                  <p className="text-base-content/80">
                     Get priority access to our expert support team with 24/7
                     availability and a dedicated account manager to ensure your
                     success.
@@ -206,12 +208,12 @@ const CustomQuoteForm = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="mr-4 mt-1 bg-accent/20 p-3 rounded-lg">
-                  <FaCode className="text-accent text-xl" />
+                <div className="mr-4 mt-1 bg-secondary/20 p-3 rounded-lg">
+                  <FaCode className="text-secondary text-xl" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Custom Development</h3>
-                  <p className="text-base-content/70">
+                  <p className="text-base-content/80">
                     Tailor our platform to your specific needs with custom
                     development services, integrations, and workflow
                     automations.
@@ -220,12 +222,12 @@ const CustomQuoteForm = () => {
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-base-100 rounded-xl shadow-lg">
+            <div className="mt-12 p-6 bg-primary/20 border border-primary/30 rounded-xl">
               <div className="flex items-center mb-4">
                 <FaCreditCard className="text-primary mr-3 text-xl" />
                 <h3 className="text-xl font-bold">No commitment required</h3>
               </div>
-              <p className="text-base-content/70">
+              <p className="text-base-content/80">
                 Our custom quotes come with no obligation. We'll work with you
                 to understand your needs and provide transparent pricing
                 options.
@@ -238,166 +240,221 @@ const CustomQuoteForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="card bg-base-100 shadow-xl p-8"
+            className="bg-neutral-focus rounded-xl p-8 border border-neutral"
           >
             {formStatus.submitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className={`alert ${
+                className={`${
                   formStatus.isError
-                    ? "alert-error"
-                    : "alert-success"
-                }`}
+                    ? "bg-error/30 border-error text-error-content"
+                    : "bg-success/30 border-success text-success-content"
+                } border rounded-lg p-6 text-center`}
               >
                 {formStatus.isError ? (
-                  <FaExclamationTriangle className="text-2xl" />
+                  <FaExclamationTriangle className="text-error text-5xl mx-auto mb-4" />
                 ) : (
-                  <FaCheckCircle className="text-2xl" />
+                  <FaCheckCircle className="text-success text-5xl mx-auto mb-4" />
                 )}
-                <span>{formStatus.message}</span>
-                <div>
-                  <button onClick={resetForm} className="btn btn-sm btn-primary">
-                    {formStatus.isError ? "Try Again" : "Send Another Message"}
+                <h3 className="text-2xl font-semibold mb-2">
+                  {formStatus.isError ? "Error" : "Message Sent!"}
+                </h3>
+                <p>{formStatus.message}</p>
+                {formStatus.isError && (
+                  <button
+                    onClick={resetForm}
+                    className="mt-4 px-6 py-2 bg-error text-white rounded-lg hover:bg-error-focus transition-colors"
+                  >
+                    Try Again
                   </button>
-                </div>
+                )}
+                {!formStatus.isError && (
+                  <button
+                    onClick={resetForm}
+                    className="mt-4 px-6 py-2 bg-success text-white rounded-lg hover:bg-success-focus transition-colors"
+                  >
+                    Send Another Message
+                  </button>
+                )}
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <label className="form-control w-full">
-                    <div className="label">
-                      <span className="label-text">Your Name <span className="text-error">*</span></span>
-                    </div>
+                  <div>
+                    <label htmlFor="name" className="block text-base-content/80 mb-2">
+                      Your Name <span className="text-error">*</span>
+                    </label>
                     <input
                       type="text"
+                      id="name"
                       name="name"
-                      placeholder="John Doe"
-                      className={`input input-bordered w-full ${
-                        formErrors.name ? "input-error" : ""
-                      }`}
+                      required
                       value={formData.name}
                       onChange={handleInputChange}
-                      required
+                      className={`w-full px-4 py-3 bg-neutral-focus border ${
+                        formErrors.name ? "border-error" : "border-neutral"
+                      } rounded-lg focus:outline-none focus:border-primary transition-colors`}
+                      placeholder="John Doe"
                     />
                     {formErrors.name && (
-                      <div className="label">
-                        <span className="label-text-alt text-error">{formErrors.name}</span>
-                      </div>
+                      <p className="text-error text-sm mt-1">
+                        {formErrors.name}
+                      </p>
                     )}
-                  </label>
-
-                  <label className="form-control w-full">
-                    <div className="label">
-                      <span className="label-text">Email Address <span className="text-error">*</span></span>
-                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-base-content/80 mb-2">
+                      Email Address <span className="text-error">*</span>
+                    </label>
                     <input
                       type="email"
+                      id="email"
                       name="email"
-                      placeholder="john@example.com"
-                      className={`input input-bordered w-full ${
-                        formErrors.email ? "input-error" : ""
-                      }`}
+                      required
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+                      className={`w-full px-4 py-3 bg-neutral-focus border ${
+                        formErrors.email ? "border-error" : "border-neutral"
+                      } rounded-lg focus:outline-none focus:border-primary transition-colors`}
+                      placeholder="john@example.com"
                     />
                     {formErrors.email && (
-                      <div className="label">
-                        <span className="label-text-alt text-error">{formErrors.email}</span>
-                      </div>
+                      <p className="text-error text-sm mt-1">
+                        {formErrors.email}
+                      </p>
                     )}
-                  </label>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <label className="form-control w-full">
-                    <div className="label">
-                      <span className="label-text">Company</span>
-                    </div>
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-base-content/80 mb-2"
+                    >
+                      Company
+                    </label>
                     <input
                       type="text"
+                      id="company"
                       name="company"
-                      placeholder="Your Company"
-                      className="input input-bordered w-full"
                       value={formData.company}
                       onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-neutral-focus border border-neutral rounded-lg focus:outline-none focus:border-primary transition-colors"
+                      placeholder="Your Company"
                     />
-                  </label>
-
-                  <label className="form-control w-full">
-                    <div className="label">
-                      <span className="label-text">Subject <span className="text-error">*</span></span>
-                    </div>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="subject"
+                      className="block text-base-content/80 mb-2"
+                    >
+                      Subject <span className="text-error">*</span>
+                    </label>
                     <input
                       type="text"
+                      id="subject"
                       name="subject"
-                      placeholder="Project Inquiry"
-                      className={`input input-bordered w-full ${
-                        formErrors.subject ? "input-error" : ""
-                      }`}
+                      required
                       value={formData.subject}
                       onChange={handleInputChange}
-                      required
+                      className={`w-full px-4 py-3 bg-neutral-focus border ${
+                        formErrors.subject
+                          ? "border-error"
+                          : "border-neutral"
+                      } rounded-lg focus:outline-none focus:border-primary transition-colors`}
+                      placeholder="Project Inquiry"
                     />
                     {formErrors.subject && (
-                      <div className="label">
-                        <span className="label-text-alt text-error">{formErrors.subject}</span>
-                      </div>
+                      <p className="text-error text-sm mt-1">
+                        {formErrors.subject}
+                      </p>
                     )}
-                  </label>
+                  </div>
                 </div>
 
                 <div className="mb-6">
-                  <label className="form-control">
-                    <div className="label">
-                      <span className="label-text">Services You're Interested In</span>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {serviceOptions.map((service, index) => (
-                        <label key={index} className="label cursor-pointer">
-                          <span className="label-text">{service}</span>
-                          <input
-                            type="checkbox"
-                            checked={formData.services.includes(service)}
-                            onChange={() => handleCheckboxChange(service)}
-                            className="checkbox checkbox-primary"
-                          />
-                        </label>
-                      ))}
-                    </div>
+                  <label className="block text-base-content/80 mb-2">
+                    Services You're Interested In
                   </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {serviceOptions.map((service, index) => (
+                      <div key={index} className="flex items-center">
+                        <input
+                          type="checkbox"
+                          id={`service-${index}`}
+                          checked={formData.services.includes(service)}
+                          onChange={() => handleCheckboxChange(service)}
+                          className="w-4 h-4 mr-2 accent-primary"
+                        />
+                        <label
+                          htmlFor={`service-${index}`}
+                          className="text-base-content/80 text-sm"
+                        >
+                          {service}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <label className="form-control w-full mb-6">
-                  <div className="label">
-                    <span className="label-text">Your Message <span className="text-error">*</span></span>
-                  </div>
+                <div className="mb-6">
+                  <label htmlFor="message" className="block text-base-content/80 mb-2">
+                    Your Message <span className="text-error">*</span>
+                  </label>
                   <textarea
+                    id="message"
                     name="message"
+                    required
                     rows="5"
-                    placeholder="Tell us about your project or inquiry..."
-                    className={`textarea textarea-bordered h-24 ${
-                      formErrors.message ? "textarea-error" : ""
-                    }`}
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
+                    className={`w-full px-4 py-3 bg-neutral-focus border ${
+                      formErrors.message ? "border-error" : "border-neutral"
+                    } rounded-lg focus:outline-none focus:border-primary transition-colors resize-none`}
+                    placeholder="Tell us about your project or inquiry..."
                   ></textarea>
                   {formErrors.message && (
-                    <div className="label">
-                      <span className="label-text-alt text-error">{formErrors.message}</span>
-                    </div>
+                    <p className="text-error text-sm mt-1">
+                      {formErrors.message}
+                    </p>
                   )}
-                </label>
+                </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn btn-primary w-full"
+                  className={`w-full py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-lg transition-all duration-300 shadow-lg ${
+                    isSubmitting
+                      ? "opacity-70 cursor-not-allowed"
+                      : "hover:from-primary-focus hover:to-accent-focus"
+                  }`}
                 >
                   {isSubmitting ? (
-                    <span className="loading loading-spinner"></span>
+                    <span className="flex items-center justify-center">
+                      <svg
+                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-base-content"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Sending...
+                    </span>
                   ) : (
                     "Send Message"
                   )}

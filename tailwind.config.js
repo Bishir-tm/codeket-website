@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     extend: {
@@ -62,4 +59,3 @@ module.exports = {
     darkTheme: "codeketdark",
   },
 };
-// i want us to now focus on turning everything in the styling to use daisy ui and its themes especially for the light and dark mode, as i have defined in the tailwind config file. I want a world class premium feel and LockOpen. Also some of the copy is too minimal even though i know you are following the positioning.md file, but we can make it clearer - u dont have to follow it strictly

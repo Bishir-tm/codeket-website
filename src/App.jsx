@@ -3,8 +3,6 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 import Home from "./pages/Home";
 import NotFound from "./components/NotFound";
-import HMStest from "./components/HMStest";
-import LMStest from "./components/LMStest";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
@@ -40,8 +38,6 @@ function App() {
         <Routes>
           {/* Pages */}
           <Route path="/" element={<Home />} />
-          <Route path="/hms" element={<HMStest />} />
-          <Route path="/lms" element={<LMStest />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />

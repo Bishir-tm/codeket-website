@@ -19,7 +19,7 @@ const ClientLogos = () => {
   ];
 
   return (
-    <div className="py-24 px-6 bg-base-200">
+    <div className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ const ClientLogos = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-base-content/80 max-w-3xl mx-auto">
-            Join thousands of companies that rely on CodeKet for their
+            Join thousands of companies that rely on Codeket for their
             technology needs.
           </p>
         </motion.div>
@@ -45,7 +45,7 @@ const ClientLogos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center p-3 object-fill bg-base-100 rounded-xl border border-base-300 hover:border-primary transition-all duration-300"
+              className="flex items-center justify-center p-3 object-fill bg-neutral-focus rounded-xl border border-neutral hover:border-primary transition-all duration-300"
             >
               {client.logo}
             </motion.div>

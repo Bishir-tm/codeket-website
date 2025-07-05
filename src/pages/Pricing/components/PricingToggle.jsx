@@ -7,17 +7,17 @@ const PricingToggle = ({ isAnnual, setIsAnnual }) => {
     <div className="flex items-center justify-center gap-4 mb-16">
       <span
         className={`text-lg font-medium ${
-          !isAnnual ? "text-white" : "text-gray-400"
+          !isAnnual ? "text-base-content" : "text-base-content/70"
         }`}
       >
         Monthly
       </span>
       <button
         onClick={() => setIsAnnual(!isAnnual)}
-        className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-300"
+        className="relative w-16 h-8 bg-neutral-focus rounded-full p-1 transition-colors duration-300"
       >
         <motion.div
-          className="w-6 h-6 bg-blue-500 rounded-full"
+          className="w-6 h-6 bg-primary rounded-full"
           animate={{ x: isAnnual ? 32 : 0 }}
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
         />
@@ -25,12 +25,12 @@ const PricingToggle = ({ isAnnual, setIsAnnual }) => {
       <div className="flex items-center">
         <span
           className={`text-lg font-medium ${
-            isAnnual ? "text-white" : "text-gray-400"
+            isAnnual ? "text-base-content" : "text-base-content/70"
           }`}
         >
           Annual
         </span>
-        <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+        <span className="ml-2 bg-success text-base-content text-xs px-2 py-1 rounded-full">
           Save 20%
         </span>
       </div>

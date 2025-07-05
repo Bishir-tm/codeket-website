@@ -5,7 +5,7 @@ import { FaCheck, FaCode, FaUserClock, FaHandshake } from "react-icons/fa";
 // Guarantee Section
 const Guarantee = () => {
   return (
-    <div className="py-24 px-6 bg-base-200">
+    <div className="py-24 px-6 bg-gradient-to-r from-primary/30 to-accent/30">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -14,7 +14,7 @@ const Guarantee = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
               The Codeket Guarantee
             </h2>
             <p className="text-xl text-base-content/80 mb-8">
@@ -29,7 +29,7 @@ const Guarantee = () => {
                 </div>
                 <div>
                   <p className="text-base-content font-medium">Quality Assurance</p>
-                  <p className="text-base-content/70">
+                  <p className="text-base-content/80">
                     Rigorous testing before deployment ensures your software
                     works flawlessly
                   </p>
@@ -41,7 +41,7 @@ const Guarantee = () => {
                 </div>
                 <div>
                   <p className="text-base-content font-medium">Timely Delivery</p>
-                  <p className="text-base-content/70">
+                  <p className="text-base-content/80">
                     We respect your timelines and deliver on schedule, every
                     time
                   </p>
@@ -55,7 +55,7 @@ const Guarantee = () => {
                   <p className="text-base-content font-medium">
                     30-Day Support Promise
                   </p>
-                  <p className="text-base-content/70">
+                  <p className="text-base-content/80">
                     Free support and bug fixes for 30 days after project
                     completion
                   </p>
@@ -65,7 +65,7 @@ const Guarantee = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               href="#pricing-plans"
-              className="btn btn-primary btn-lg mt-10"
+              className="inline-block mt-10 px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full shadow-lg hover:shadow-primary/30 transition-all duration-300"
             >
               Choose Your Solution
             </motion.a>
@@ -108,8 +108,8 @@ const Guarantee = () => {
                     y2="387"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stopColor="#3B82F6" />
-                    <stop offset="1" stopColor="#8B5CF6" />
+                    <stop stopColor="var(--p)" />
+                    <stop offset="1" stopColor="var(--a)" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear"
@@ -119,13 +119,13 @@ const Guarantee = () => {
                     y2="186"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stopColor="#3B82F6" />
-                    <stop offset="1" stopColor="#8B5CF6" />
+                    <stop stopColor="var(--p)" />
+                    <stop offset="1" stopColor="var(--a)" />
                   </linearGradient>
                 </defs>
               </svg>
 
-              <div className="absolute -bottom-8 right-0 card bg-base-100 shadow-xl p-6 max-w-sm">
+              <div className="absolute -bottom-8 right-0 bg-neutral-focus rounded-xl border border-neutral p-6 shadow-xl max-w-sm">
                 <div className="flex items-start mb-4">
                   <div className="bg-success/20 p-2 rounded-full mr-4">
                     <FaCheck className="text-success" />

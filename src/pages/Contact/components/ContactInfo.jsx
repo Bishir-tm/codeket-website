@@ -5,75 +5,74 @@ import {
   FaClock,
   FaLinkedin,
   FaTwitter,
+  FaGithub,
+  FaInstagram,
 } from "react-icons/fa";
 
 const ContactInfo = () => {
   return (
-    <div className="card bg-base-100 shadow-xl p-8">
-      <h2 className="card-title text-3xl mb-6">Get in Touch</h2>
-      <div className="space-y-6">
-        <div className="flex items-center space-x-4">
-          <div className="text-primary text-3xl">
-            <FaEnvelope />
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">Email Us</h3>
-            <a
-              href="mailto:contact@codeket.com"
-              className="link link-hover text-base-content/80"
-            >
-              contact@codeket.com
-            </a>
-          </div>
+    <div className="space-y-8" id="contact-info">
+      <div className="flex items-start space-x-4">
+        <div className="bg-primary p-3 rounded-lg">
+          <FaEnvelope className="text-base-content text-xl" />
         </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-1">Email Us</h3>
 
-        <div className="flex items-center space-x-4">
-          <div className="text-secondary text-3xl">
-            <FaPhoneAlt />
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">Call Us</h3>
-            <a
-              href="tel:+2349068149540"
-              className="link link-hover text-base-content/80"
-            >
-              +(234) 9068-149-540
-            </a>
-          </div>
-        </div>
-
-        <div className="flex items-center space-x-4">
-          <div className="text-accent text-3xl">
-            <FaClock />
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">Business Hours</h3>
-            <p className="text-base-content/80">
-              Monday - Friday: 9 AM - 5 PM (WAT)
-            </p>
-            <p className="text-base-content/80">Saturday: 10 AM - 2 PM (WAT)</p>
-          </div>
+          <a
+            href="mailto:contact@codeket.com"
+            className="text-primary hover:text-primary-focus transition-colors"
+          >
+            contact@codeket.com
+          </a>
         </div>
       </div>
 
-      <div className="mt-8">
-        <h3 className="text-2xl font-semibold mb-4">Connect With Us</h3>
+      <div className="flex items-start space-x-4">
+        <div className="bg-accent p-3 rounded-lg">
+          <FaPhoneAlt className="text-base-content text-xl" />
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-1">Call Us</h3>
+          <p className="text-base-content/80 mb-2">Main Office:</p>
+          <a
+            href="tel:+2349068149540"
+            className="text-primary hover:text-primary-focus transition-colors"
+          >
+            +(234) 9068-149-540
+          </a>
+          <p className="text-gray-300 mt-2 mb-2">Support Hotline (24/7)</p>
+        </div>
+      </div>
+
+      <div className="flex items-start space-x-4">
+        <div className="bg-success p-3 rounded-lg">
+          <FaClock className="text-base-content text-xl" />
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-1">Business Hours</h3>
+          <p className="text-base-content/80">
+            Monday - Friday: 9AM - 6PM (Local Time)
+          </p>
+          <p className="text-base-content/80">Saturday: 10AM - 2PM (By Appointment)</p>
+          <p className="text-base-content/80">Support Team: 24/7</p>
+        </div>
+      </div>
+
+      <div className="pt-6">
+        <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
         <div className="flex space-x-4">
           <a
             href="https://linkedin.com/company/codeket"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-ghost btn-circle text-primary"
+            className="bg-neutral-focus hover:bg-primary p-3 rounded-lg transition-colors"
           >
-            <FaLinkedin className="w-6 h-6" />
+            <FaLinkedin className="text-base-content text-xl" />
           </a>
           <a
             href="https://twitter.com/codeketofficial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-ghost btn-circle text-secondary"
+            className="bg-neutral-focus hover:bg-primary-focus p-3 rounded-lg transition-colors"
           >
-            <FaTwitter className="w-6 h-6" />
+            <FaTwitter className="text-base-content text-xl" />
           </a>
         </div>
       </div>
