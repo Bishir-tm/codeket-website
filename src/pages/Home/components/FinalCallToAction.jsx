@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const FinalCallToAction = () => {
   return (
-    <div className="py-24">
+    <div className="my-8 p-8">
       <motion.div
         className="bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-3xl border border-primary/20 p-12 text-center relative overflow-hidden"
         initial={{ opacity: 0, y: 30 }}
@@ -43,7 +43,7 @@ const FinalCallToAction = () => {
           >
             <Link
               to="/consultation"
-              className="px-10 py-5 cursor-pointer bg-gradient-to-r from-primary to-accent text-white text-xl font-medium rounded-xl shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+              className="px-10 py-5 cursor-pointer bg-gradient-to-r from-secondary to-accent text-white text-xl font-medium rounded-xl shadow-lg hover:shadow-secondary/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
             >
               <span>Get a Custom Solution</span>
               <svg

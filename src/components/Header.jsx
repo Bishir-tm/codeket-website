@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Sun, Moon } from "lucide-react";
 
 const Header = ({ theme, toggleTheme }) => {
   return (
-    <div className="navbar bg-base-100 shadow-xl sticky top-0 z-[999]">
+    <div className="navbar bg-base-100/50 backdrop-blur-md shadow-xl sticky top-0 z-[999]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +49,7 @@ const Header = ({ theme, toggleTheme }) => {
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
           <img
-            src="./images/logo.png"
+            src={theme === "codeketdark" ? "./images/logo-white.png" : "./images/logo.png"}
             alt="codeket-logo"
             className="w-[130px] h-auto"
           />
@@ -76,12 +77,12 @@ const Header = ({ theme, toggleTheme }) => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end gap-4">
         <button
           onClick={toggleTheme}
           className="btn btn-ghost btn-circle hover:bg-base-200/50"
         >
-          {theme === "codeketdark" ? "🌙" : "☀️"}
+          {theme === "codeketdark" ? <Moon size={20} /> : <Sun size={20} />}
         </button>
         <Link to="/pricing" className="btn btn-primary">
           Get Quote

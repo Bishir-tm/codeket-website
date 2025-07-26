@@ -36,7 +36,7 @@ const processes = [
 
 const Process = () => {
   return (
-    <div className="py-24">
+    <div className="my-8 p-8 bg-gradient-to-b from-neutral to-base-100 rounded-xl">
       <div className="text-center mb-16">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary mb-4"
@@ -78,7 +78,7 @@ const Process = () => {
             )}
 
             {/* Timeline node */}
-            <div className="relative z-10 flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg">
+            <div className="relative z-10 flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent shadow-2xl">
               <span className="text-xl">{step.icon}</span>
             </div>
 

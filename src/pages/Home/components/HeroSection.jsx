@@ -37,7 +37,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-accent">
               Software Development
             </span>
             <span className="block text-base-content mt-2">
@@ -160,7 +160,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
             ].map((client, i) => (
               <div
                 key={i}
-                className="text-base-content/50 font-semibold text-lg flex items-center"
+                className="text-base-content/80 font-semibold text-lg flex items-center"
               >
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 {client}
@@ -177,12 +177,12 @@ const Hero = ({ mousePosition, isLoaded }) => {
         transition={{ delay: 0.6, duration: 0.8 }}
         className=" h-full w-full object-cover xl:relative xl:  top-32"
       >
-        <div className="bg-neutral/30 backdrop-blur-xl rounded-xl border border-primary/20 overflow-hidden shadow-2xl relative w-full ">
+        <div className="bg-neutral/30 backdrop-blur-xl rounded-xl border border-primary/20 overflow-hidden shadow-2xl relative w-full shadow-primary/20">
           {/* Glowing corner accents */}
           <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary rounded-tl-xl"></div>
-          <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-accent rounded-tr-xl"></div>
-          <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-secondary rounded-bl-xl"></div>
-          <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-accent rounded-br-xl"></div>
+          <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-secondary rounded-tr-xl"></div>
+          <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-accent rounded-bl-xl"></div>
+          <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-primary rounded-br-xl"></div>
 
           {/* Feature Tabs */}
           <div className="grid grid-cols-4 gap-1 p-1 border-b-2 border-primary ">

@@ -50,7 +50,7 @@ const integrationPartners = [
 
 const IntegrationPartners = () => {
   return (
-    <div className="py-24">
+    <div className="my-8 p-8 bg-gradient-to-b from-base-100 to-neutral rounded-xl">
       <div className="text-center mb-16">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary mb-4"
@@ -84,7 +84,7 @@ const IntegrationPartners = () => {
             transition={{ duration: 0.4, delay: index * 0.05 }}
             whileHover={{
               y: -5,
-              boxShadow: "0 5px 20px rgba(var(--p), 0.1)",
+              boxShadow: "0 10px 30px rgba(var(--p), 0.2)",
             }}
           >
             <div className="text-base-content text-lg font-semibold">

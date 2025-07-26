@@ -49,19 +49,20 @@ const quickLinks = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ theme }) => {
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <>
+      <footer className="footer p-10 bg-neutral text-base-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-t border-primary pt-16">
       <nav className="flex flex-col items-start">
-        <h6 className="footer-title">Company</h6>
+        <h6 className="footer-title text-lg font-bold text-primary mb-4">Company</h6>
         <Link to="/" className="link link-hover mb-4">
           <img
-            src="./images/logo-silver-bg.png"
-            className="max-w-[250px] md:max-w-[300px] h-auto"
+            src={theme === "codeketdark" ? "./images/logo-white.png" : "./images/logo.png"}
+            className="w-[150px] h-auto mb-4"
             alt="Codeket Logo"
           />
         </Link>
-        <p className=" border-y py-4 mb-6 text-center max-w-md">
+        <p className="mb-6 max-w-md">
           Complex Challenges. Elegant Solutions. <br /> Limitless Potential.
         </p>
         <div className="grid grid-flow-col gap-4">
@@ -71,7 +72,7 @@ const Footer = () => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-ghost btn-circle hover:bg-primary"
+              className="btn btn-ghost btn-circle hover:bg-primary/20 text-base-content/80"
               aria-label={social.name}
             >
               {social.icon}
@@ -82,12 +83,12 @@ const Footer = () => {
 
       {quickLinks.map((column, index) => (
         <nav key={index} className="flex flex-col items-start">
-          <h6 className="footer-title">{column.title}</h6>
+          <h6 className="footer-title text-lg font-bold text-primary mb-4">{column.title}</h6>
           {column.links.map((link, i) => (
             <Link
               key={i}
               to={link.to}
-              className="link link-hover text-base-content hover:text-primary transition-colors"
+              className="link link-hover text-base-content/80 hover:text-primary transition-colors mb-2"
             >
               {link.name}
             </Link>
@@ -96,12 +97,12 @@ const Footer = () => {
       ))}
 
       <nav className="flex flex-col items-start">
-        <h6 className="footer-title">Legal</h6>
+        <h6 className="footer-title text-lg font-bold text-primary mb-4">Legal</h6>
         {legals.map((item, i) => (
           <Link
             key={i}
             to={item.link}
-            className="link link-hover text-base-content hover:text-primary transition-colors"
+            className="link link-hover text-base-content/80 hover:text-primary transition-colors mb-2"
           >
             {item.name}
           </Link>
@@ -109,24 +110,30 @@ const Footer = () => {
       </nav>
 
       <nav className="flex flex-col items-start">
-        <h6 className="footer-title">Contact Us</h6>
+        <h6 className="footer-title text-lg font-bold text-primary mb-4">Contact Us</h6>
         <a
           href="mailto:contact@codeket.com"
-          className="text-base-content flex items-center gap-2 mb-2"
+          className="text-base-content/80 flex items-center gap-2 mb-2"
         >
           <FaEnvelope className="text-primary" /> contact@codeket.com
         </a>
         <a
           href="tel:+2349068149540"
-          className="text-base-content flex items-center gap-2 mb-2"
+          className="text-base-content/80 flex items-center gap-2 mb-2"
         >
           <FaPhoneAlt className="text-primary" /> +234 906 814 9540
         </a>
-        <p className="text-base-content flex items-center gap-2">
+        <p className="text-base-content/80 flex items-center gap-2">
           <FaClock className="text-primary" /> Mon - Fri: 9 AM - 5 PM
         </p>
       </nav>
     </footer>
+    <div className="footer footer-center p-4 bg-base-300 text-base-content">
+      <aside>
+        <p>Copyright © {new Date().getFullYear()} - All right reserved by Codeket</p>
+      </aside>
+    </div>
+    </>
   );
 };
 

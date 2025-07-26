@@ -1,15 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import HeroSection from "./components/HeroSection";
-import CodeShowcase from "./components/CodeShowcase";
+import HeroSectionMinimalInteractive from "./components/HeroSectionMinimalInteractive";
 import ProjectShowcase from "./components/ProjectShowcase";
 import Testimonials from "./components/Testimonials";
 import FinalCallToAction from "./components/FinalCallToAction";
 import IntegrationPartners from "./components/IntegrationPartners";
 import Process from "./components/Process";
-import codeSnippets from "../../utils/codeSnippets";
 import { testimonials } from "../../utils/testimonials";
-import { projectShowcase } from "../../utils/projectShowcase";
 
 const Home = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -67,12 +63,12 @@ const Home = () => {
   return (
     <div
       ref={heroRef}
-      className="relative w-full min-h-screen bg-gradient-to-b from-base-100 via-neutral to-accent"
+      className="relative w-full min-h-screen bg-gradient-to-b from-base-100 via-base-300 to-neutral"
     >
       <div className="sticky top-0 z-[1000]"></div>
+      <HeroSectionMinimalInteractive />
       <div className="container  px-6 relative mx-auto z-30 min-h-screen flex flex-col">
-        <HeroSection mousePosition={mousePosition} isLoaded={isLoaded} />
-        <ProjectShowcase projectShowcase={projectShowcase} />
+        <ProjectShowcase />
         <Testimonials testimonials={testimonials} />
         <IntegrationPartners />
         <Process />

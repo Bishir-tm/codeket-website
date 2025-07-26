@@ -18,7 +18,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
-  const [theme, setTheme] = useState("codeketdark"); // Default to dark theme
+  const [theme, setTheme] = useState(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'codeketdark';
+    } else {
+      return 'codeketlight';
+    }
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -53,7 +59,7 @@ function App() {
           {/* 404 Page */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <Footer theme={theme} />
       </div>
     </Router>
   );

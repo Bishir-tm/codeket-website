@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { testimonials } from "../../../utils/testimonials";
 
 const Testimonials = () => (
-  <div className="py-24">
+  <div className="my-8 p-8 bg-gradient-to-b from-base-100 to-neutral rounded-xl">
     <motion.div
       className="relative"
       initial={{ opacity: 0 }}
@@ -40,14 +40,14 @@ const Testimonials = () => (
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="bg-gradient-to-br from-neutral-focus to-neutral rounded-xl overflow-hidden border border-neutral p-6 relative"
+            className="bg-gradient-to-br from-neutral-focus to-neutral rounded-xl overflow-hidden border border-neutral p-6 relative shadow-2xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             {/* Quotation mark */}
-            <div className="absolute top-4 right-4 text-5xl text-primary/20">
+            <div className="absolute top-4 right-4 text-5xl text-primary/40">
               "
             </div>
 

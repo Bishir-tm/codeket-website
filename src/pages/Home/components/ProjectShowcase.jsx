@@ -15,7 +15,7 @@ const projectShowcase = [
       "Internal Tools & Dashboards",
       "API Development & Integration",
     ],
-    color: "from-blue-600 to-indigo-700",
+    color: "from-primary to-secondary",
   },
   {
     title: "Mobile App Development",
@@ -29,7 +29,7 @@ const projectShowcase = [
       "App Store Optimization",
     ],
 
-    color: "from-emerald-600 to-green-700",
+    color: "from-secondary to-accent",
   },
   {
     title: "Business Process Automation",
@@ -42,13 +42,13 @@ const projectShowcase = [
       "Document Processing Automation",
       "Business Process Modeling",
     ],
-    color: "from-red-600 to-pink-700",
+    color: "from-accent to-primary",
   },
 ];
 
 const ProjectShowcase = () => {
   return (
-    <div className="py-24">
+    <div className="my-8 p-8">
       <div className="text-center mb-16">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-4 h-[100%]"
