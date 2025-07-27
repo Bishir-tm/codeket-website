@@ -77,7 +77,7 @@ const Header = ({ theme, toggleTheme }) => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end gap-4">
+      <div className="navbar-end ">
         <button
           onClick={toggleTheme}
           className="btn btn-ghost btn-circle hover:bg-base-200/50"

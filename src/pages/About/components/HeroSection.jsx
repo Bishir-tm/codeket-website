@@ -10,11 +10,11 @@ const HeroSection = () => {
       {/* <div className="absolute inset-0 bg-grid-pattern opacity-5"></div> */}
 
       {/* Background gradient animation */}
-      {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute -top-[30%] -left-[10%] w-[80%] h-[80%] bg-blue-600 rounded-full filter blur-[120px] opacity-20 animate-blob"></div>
         <div className="absolute top-[20%] -right-[10%] w-[70%] h-[70%] bg-purple-600 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-[10%] left-[20%] w-[60%] h-[60%] bg-teal-600 rounded-full filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
-      </div> */}
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -23,8 +23,8 @@ const HeroSection = () => {
         className="relative z-10 text-center px-6"
       >
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
-          <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            About Codeket
+          <span className="bg-gradient-to-r from-primary via-accent to-info bg-clip-text text-transparent">
+              About Codeket
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-base-content/80 mt-6 max-w-3xl mx-auto">

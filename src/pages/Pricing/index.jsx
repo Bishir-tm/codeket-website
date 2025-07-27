@@ -24,7 +24,7 @@ const Pricing = () => {
 
   return (
     <div className="bg-base-100 text-base-content">
-      <div className="-mt-20">
+      <div className="">
         {/* Adjust for header height */}
         <HeroSection />
         <PricingPlans setSelectedPlan={setSelectedPlan} />

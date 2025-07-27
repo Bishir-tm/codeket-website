@@ -98,7 +98,7 @@ const Hero = ({ mousePosition, isLoaded }) => {
         >
           <Link
             to="consultation"
-            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-medium rounded-lg shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+            className="px-8 py-4 bg-gradient-to-r from-primary to-warning text-white font-medium rounded-lg shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
           >
             <span>Get Started</span>
             <svg

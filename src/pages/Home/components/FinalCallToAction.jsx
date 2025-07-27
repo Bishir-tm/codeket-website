@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const FinalCallToAction = () => {
   return (
-    <div className="my-8 p-8">
+    <div className="my-8 ">
       <motion.div
         className="bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-3xl border border-primary/20 p-12 text-center relative overflow-hidden"
         initial={{ opacity: 0, y: 30 }}

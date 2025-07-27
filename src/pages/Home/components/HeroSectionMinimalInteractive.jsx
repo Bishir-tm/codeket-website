@@ -90,8 +90,8 @@ const HeroSectionMinimalInteractive = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Software Development</span>
-          <span className="block mt-4">At Lightspeed, Powered by AI</span>
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-codeket-electricBlue">Software Development</span>
+          <span className="block mt-4 text-transparent bg-clip-text bg-gradient-to-r from-codeket-midnightNavy to-accent">At Lightspeed, Powered by AI</span>
         </motion.h1>
 
         <motion.p

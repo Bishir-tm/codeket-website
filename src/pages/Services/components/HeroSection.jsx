@@ -26,11 +26,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
-            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-accent to-info bg-clip-text text-transparent">
               Enterprise Solutions
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl  mt-6 max-w-3xl mx-auto">
             Transforming businesses through cutting-edge technology, innovative
             automation, and strategic digital transformation.
           </p>
@@ -44,7 +44,7 @@ const HeroSection = () => {
         >
           <button
             onClick={() => scrollToSection("services")}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mr-4"
+            className="inline-block px-8 py-4 bg-gradient-to-r from- to-accent text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mr-4"
           >
             Explore Services
           </button>
