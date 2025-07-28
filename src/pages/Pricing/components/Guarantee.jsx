@@ -65,7 +65,7 @@ const Guarantee = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               href="#pricing-plans"
-              className="inline-block mt-10 px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full shadow-lg hover:shadow-primary/30 transition-all duration-300"
+              className="inline-block mt-10 px-8 py-4 bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral font-semibold rounded-full shadow-lg hover:shadow-primary/30 transition-all duration-300"
             >
               Choose Your Solution
             </motion.a>
@@ -125,7 +125,7 @@ const Guarantee = () => {
                 </defs>
               </svg>
 
-              <div className="absolute -bottom-8 right-0 bg-neutral-focus rounded-xl border border-neutral p-6 shadow-xl max-w-sm">
+              <div className="absolute -bottom-8 right-0 bg-neutral bg-opacity-60 backdrop-blur-sm rounded-xl border border-neutral p-6 shadow-xl max-w-sm">
                 <div className="flex items-start mb-4">
                   <div className="bg-success/20 p-2 rounded-full mr-4">
                     <FaCheck className="text-success" />
@@ -134,7 +134,7 @@ const Guarantee = () => {
                     <h4 className="font-bold text-lg mb-1">
                       Satisfaction Guarantee
                     </h4>
-                    <p className="text-base-content/70 text-sm">
+                    <p className="text-base-content text-sm">
                       If you're not completely satisfied with our deliverables,
                       we'll work with you until you are.
                     </p>

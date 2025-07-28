@@ -320,8 +320,8 @@ const PricingPlans = ({ setSelectedPlan }) => {
             onClick={() => setServiceType("development")}
             className={`px-6 py-3 rounded-full transition-all ${
               serviceType === "development"
-                ? "bg-gradient-to-r from-primary to-accent text-base-content"
-                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+                ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral"
+                : "bg-neutral-focus text-base-content/80 hover:border"
             }`}
           >
             <span className="flex items-center">
@@ -332,8 +332,8 @@ const PricingPlans = ({ setSelectedPlan }) => {
             onClick={() => setServiceType("mobile")}
             className={`px-6 py-3 rounded-full transition-all ${
               serviceType === "mobile"
-                ? "bg-gradient-to-r from-primary to-accent text-base-content"
-                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+                ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral"
+                : "bg-neutral-focus text-base-content/80 hover:border"
             }`}
           >
             <span className="flex items-center">
@@ -344,8 +344,8 @@ const PricingPlans = ({ setSelectedPlan }) => {
             onClick={() => setServiceType("ai")}
             className={`px-6 py-3 rounded-full transition-all ${
               serviceType === "ai"
-                ? "bg-gradient-to-r from-primary to-accent text-base-content"
-                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+                ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral"
+                : "bg-neutral-focus text-base-content/80 hover:border"
             }`}
           >
             <span className="flex items-center">
@@ -356,8 +356,8 @@ const PricingPlans = ({ setSelectedPlan }) => {
             onClick={() => setServiceType("security")}
             className={`px-6 py-3 rounded-full transition-all ${
               serviceType === "security"
-                ? "bg-gradient-to-r from-primary to-accent text-base-content"
-                : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+                ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral"
+                : "bg-neutral-focus text-base-content/80 hover:border"
             }`}
           >
             <span className="flex items-center">
@@ -394,8 +394,8 @@ const PricingPlans = ({ setSelectedPlan }) => {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
-              href="#free-consultation"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+              href="/consultation"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral font-semibold rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
             >
               Schedule Free Consultation
             </a>

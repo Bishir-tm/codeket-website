@@ -44,13 +44,13 @@ const HeroSection = () => {
         >
           <button
             onClick={() => scrollToSection("pricing-plans")}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mr-4"
+            className="inline-block btn-lg bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mr-4"
           >
             Explore Solutions
           </button>
           <button
             onClick={() => scrollToSection("custom-quote")}
-            className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+            className="btn btn-lg rounded-full btn-accent btn-outline  transition-all duration-300"
           >
             Get Custom Quote
           </button>

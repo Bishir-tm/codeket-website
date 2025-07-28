@@ -4,23 +4,15 @@ import HeroSection from "./components/HeroSection";
 import PricingPlans from "./components/PricingPlans";
 import FAQ from "./components/FAQ";
 import ComparisonTable from "./components/ComparisonTable";
-import CustomQuoteForm from "./components/CustomQuoteForm";
+import Consultation from "../Consultation";
 import PaymentOptions from "./components/PaymentOptions";
 import Guarantee from "./components/Guarantee";
 import ClientLogos from "./components/ClientLogos";
+import PricingModal from "./components/PricingModal";
 
 // Main Pricing Component
 const Pricing = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
-
-  useEffect(() => {
-    if (selectedPlan) {
-      // Scroll to contact form or show modal
-      document
-        .getElementById("custom-quote")
-        .scrollIntoView({ behavior: "smooth" });
-    }
-  }, [selectedPlan]);
 
   return (
     <div className="bg-base-100 text-base-content">
@@ -33,8 +25,11 @@ const Pricing = () => {
         <PaymentOptions />
         <ClientLogos />
         <FAQ />
-        <CustomQuoteForm />
+        <Consultation />
         <CallToAction />
+        {selectedPlan && (
+          <PricingModal plan={selectedPlan} onClose={() => setSelectedPlan(null)} />
+        )}
       </div>
     </div>
   );

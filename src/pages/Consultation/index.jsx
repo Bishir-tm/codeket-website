@@ -69,7 +69,7 @@ const index = () => {
   return (
     <div className="bg-base-100 text-base-content ">
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <ContactInfo />
           <ContactForm />
         </div>

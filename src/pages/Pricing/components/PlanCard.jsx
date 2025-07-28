@@ -26,7 +26,7 @@ const PlanCard = ({ plan, isPopular, setSelectedPlan }) => {
       }`}
     >
       {isPopular && (
-        <div className="absolute top-0 right-0 bg-gradient-to-r from-primary to-accent text-base-content text-sm font-bold py-1 px-4 rounded-bl-lg">
+        <div className="absolute top-0 right-0 bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral text-sm font-bold py-1 px-4 rounded-bl-lg">
           Most Popular
         </div>
       )}
@@ -53,8 +53,8 @@ const PlanCard = ({ plan, isPopular, setSelectedPlan }) => {
           onClick={() => setSelectedPlan(plan)}
           className={`w-full py-3 px-6 rounded-lg font-medium mb-8 transition-all duration-300 flex items-center justify-center ${
             isPopular
-              ? "bg-gradient-to-r from-primary to-accent text-base-content hover:shadow-lg hover:shadow-primary/30"
-              : "bg-base-100/10 text-base-content hover:bg-base-100/20"
+              ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral hover:shadow-lg hover:shadow-codeket-electricBlue/30"
+              : "btn btn-outline "
           }`}
         >
           Get Started <FaArrowRight className="ml-2" />

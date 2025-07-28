@@ -1,10 +1,10 @@
-import React from "react"
+import React, {useState} from "react";
 import emailjs from "@emailjs/browser";
 import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
@@ -13,14 +13,14 @@ const ContactForm = () => {
     message: "",
   });
 
-  const [formStatus, setFormStatus] = React.useState({
+  const [formStatus, setFormStatus] = useState({
     submitted: false,
     isError: false,
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [formErrors, setFormErrors] = React.useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const serviceOptions = [
     "Custom Software Development",
