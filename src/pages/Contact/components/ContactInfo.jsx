@@ -14,7 +14,7 @@ const ContactInfo = () => {
     <div className="space-y-8" id="contact-info">
       <div className="flex items-start space-x-4">
         <div className="bg-primary p-3 rounded-lg">
-          <FaEnvelope className="text-base-content text-xl" />
+          <FaEnvelope className="text-neutral text-xl" />
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-1">Email Us</h3>
@@ -30,7 +30,7 @@ const ContactInfo = () => {
 
       <div className="flex items-start space-x-4">
         <div className="bg-accent p-3 rounded-lg">
-          <FaPhoneAlt className="text-base-content text-xl" />
+          <FaPhoneAlt className="text-neutral text-xl" />
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-1">Call Us</h3>
@@ -41,13 +41,13 @@ const ContactInfo = () => {
           >
             +(234) 9068-149-540
           </a>
-          <p className="text-gray-300 mt-2 mb-2">Support Hotline (24/7)</p>
+          <p className="text-base-content/80 mt-2 mb-2">Support Hotline (24/7)</p>
         </div>
       </div>
 
       <div className="flex items-start space-x-4">
         <div className="bg-success p-3 rounded-lg">
-          <FaClock className="text-base-content text-xl" />
+          <FaClock className="text-neutral text-xl" />
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-1">Business Hours</h3>
@@ -66,13 +66,13 @@ const ContactInfo = () => {
             href="https://linkedin.com/company/codeket"
             className="bg-neutral-focus hover:bg-primary p-3 rounded-lg transition-colors"
           >
-            <FaLinkedin className="text-base-content text-xl" />
+            <FaLinkedin className="text-base-content/80 text-xl" />
           </a>
           <a
             href="https://twitter.com/codeketofficial"
             className="bg-neutral-focus hover:bg-primary-focus p-3 rounded-lg transition-colors"
           >
-            <FaTwitter className="text-base-content text-xl" />
+            <FaTwitter className="text-base-content/80 text-xl" />
           </a>
         </div>
       </div>

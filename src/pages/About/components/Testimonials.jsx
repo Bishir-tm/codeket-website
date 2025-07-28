@@ -32,11 +32,9 @@ const Testimonials = ({ activeTestimonial, setActiveTestimonial }) => {
 
                 <div className="flex flex-col md:flex-row md:items-center">
                   <div className="md:w-1/4 flex justify-center mb-6 md:mb-0">
-                    <img
-                      src={testimonials[activeTestimonial].image}
-                      alt={testimonials[activeTestimonial].name}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-neutral"
-                    />
+                    <div className="w-24 h-24 rounded-full object-cover border-4 border-neutral bg-gradient-to-br from-codeket-electricBlue to-accent flex items-center justify-center text-6xl font-bold text-base-content text-white">
+                {testimonials[activeTestimonial].name.charAt(0)}
+              </div>
                   </div>
                   <div className="md:w-3/4 md:pl-8">
                     <p className="text-xl text-base-content/80 italic mb-6">

@@ -91,7 +91,7 @@ const HeroSectionMinimalInteractive = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-codeket-electricBlue">Software Development</span>
-          <span className="block mt-4 text-transparent bg-clip-text bg-gradient-to-r from-codeket-midnightNavy to-accent">At Lightspeed, Powered by AI</span>
+          <span className="block mt-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">At Lightspeed, Powered by AI</span>
         </motion.h1>
 
         <motion.p
@@ -111,7 +111,7 @@ const HeroSectionMinimalInteractive = () => {
         >
           <Link
             to="consultation"
-            className="px-10 py-5 bg-gradient-to-r from-primary to-accent text-white text-xl font-medium rounded-full shadow-lg hover:shadow-primary/40 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
+            className="px-10 py-5 bg-gradient-to-r from-codeket-electricBlue to-accent text-white text-xl font-medium rounded-full shadow-lg hover:shadow-primary/40 hover:scale-105 transition-all duration-300 flex items-center justify-center group"
           >
             <span>Get Started</span>
             <svg

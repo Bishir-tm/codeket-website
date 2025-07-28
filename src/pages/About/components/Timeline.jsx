@@ -49,7 +49,7 @@ const Timeline = () => {
                   </div>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-xl font-bold border-4 border-neutral">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-codeket-electricBlue to-primary text-white rounded-full flex items-center justify-center text-xl font-bold border-4 border-neutral">
                   {index + 1}
                 </div>
               </motion.div>

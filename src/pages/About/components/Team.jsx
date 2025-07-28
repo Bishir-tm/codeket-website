@@ -81,7 +81,7 @@ const Team = () => {
           <a
             target="_blank"
             href="/careers"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 shadow-lg"
+            className="btn btn-lg bg-gradient-to-r from-codeket-electricBlue to-accent text-white text-base-content font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 shadow-lg hover:px-8 "
           >
             Join Our Team
           </a>

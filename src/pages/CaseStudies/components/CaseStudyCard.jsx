@@ -64,7 +64,7 @@ const CaseStudyCard = ({
 
           <motion.button
             onClick={() => setActiveCaseStudy(caseStudy)}
-            className={`mt-auto w-full py-3 px-4 rounded-lg bg-${caseStudy.accentColor}/30 hover:bg-${caseStudy.accentColor}/50 border border-${caseStudy.accentColor}/30 text-${caseStudy.accentColor} font-medium transition-all duration-300 flex items-center justify-center`}
+            className={`mt-auto w-full py-3 px-4 rounded-lg hover:bg-${caseStudy.accentColor}/50 border border-${caseStudy.accentColor}/30 text-primary font-medium transition-all duration-300 flex items-center justify-center`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

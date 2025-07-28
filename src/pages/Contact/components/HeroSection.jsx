@@ -30,7 +30,7 @@ const HeroSection = ({ y }) => {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#contact-info"
-            className="px-8 py-4 mb-3 bg-gradient-to-r border-0 from-primary to-accent text-base-content font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 hover:bg-base-100/10"
+            className="px-8 py-4 mb-3 bg-gradient-to-r border-0 from-codeket-electricBlue to-accent text-neutral  font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 hover:bg-base-100/10"
           >
             Get in Touch
           </a>

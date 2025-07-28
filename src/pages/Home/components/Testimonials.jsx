@@ -58,7 +58,7 @@ const Testimonials = () => (
 
             {/* Author info */}
             <div className="flex items-center mt-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xl font-bold text-base-content">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-codeket-electricBlue to-accent flex items-center justify-center text-xl font-bold text-base-content text-white">
                 {testimonial.name.charAt(0)}
               </div>
               <div className="ml-4">

@@ -25,8 +25,8 @@ const Filters = ({
               onClick={() => setSelectedIndustry(industry.id)}
               className={`px-4 py-2 rounded-full transition-all duration-300 text-sm ${
                 selectedIndustry === industry.id
-                  ? "bg-gradient-to-r from-primary to-accent text-base-content"
-                  : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+                  ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-white"
+                  : "bg-neutral-focus text-base-content/80 hover:bg-neutral border"
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
@@ -49,8 +49,8 @@ const Filters = ({
               onClick={() => setSelectedService(service.id)}
               className={`px-4 py-2 rounded-full transition-all duration-300 text-sm ${
                 selectedService === service.id
-                  ? "bg-gradient-to-r from-primary to-accent text-base-content"
-                  : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
+                  ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-white"
+                  : "bg-neutral-focus text-base-content/80 hover:bg-neutral border"
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}

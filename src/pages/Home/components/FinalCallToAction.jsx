@@ -6,7 +6,7 @@ const FinalCallToAction = () => {
   return (
     <div className="my-8 ">
       <motion.div
-        className="bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-3xl border border-primary/20 p-12 text-center relative overflow-hidden"
+        className="bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-3xl border border-primary/20 p-8 lg:p-12 text-center relative overflow-hidden"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

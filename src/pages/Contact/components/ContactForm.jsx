@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import emailjs from "@emailjs/browser";
 import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -101,23 +102,12 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      console.log("Form data before sending:", formData);
-      // Send email via API endpoint
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      console.log("Response from server:", response);
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Failed to send email");
-      }
+      await emailjs.send(
+        "service_iwxa8rc",
+        "template_rwyciy9",
+        formData,
+        "IUJbFrZ9oGYqVff3D"
+      );
 
       // Successfully sent
       setFormStatus({
@@ -207,7 +197,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} noValidate>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label htmlFor="name" className="block text-base-content/80 mb-2">
+              <label htmlFor="name" className="block  mb-2">
                 Your Name <span className="text-error">*</span>
               </label>
               <input
@@ -217,8 +207,8 @@ const ContactForm = () => {
                 required
                 value={formData.name}
                 onChange={handleInputChange}
-                className={`w-full px-4 py-3 bg-neutral-focus border ${
-                  formErrors.name ? "border-error" : "border-neutral"
+                className={`w-full px-4 py-3 bg-neutral-focus text-primary border ${
+                  formErrors.name ? "border-error" : "border-primary"
                 } rounded-lg focus:outline-none focus:border-primary transition-colors`}
                 placeholder="John Doe"
               />
@@ -227,7 +217,7 @@ const ContactForm = () => {
               )}
             </div>
             <div>
-              <label htmlFor="email" className="block text-base-content/80 mb-2">
+              <label htmlFor="email" className="block  mb-2">
                 Email Address <span className="text-error">*</span>
               </label>
               <input
@@ -237,8 +227,8 @@ const ContactForm = () => {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className={`w-full px-4 py-3 bg-neutral-focus border ${
-                  formErrors.email ? "border-error" : "border-neutral"
+                className={`w-full px-4 py-3 bg-neutral-focus text-primary border ${
+                  formErrors.email ? "border-error" : "border-primary"
                 } rounded-lg focus:outline-none focus:border-primary transition-colors`}
                 placeholder="john@example.com"
               />
@@ -250,7 +240,7 @@ const ContactForm = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label htmlFor="company" className="block text-base-content/80 mb-2">
+              <label htmlFor="company" className="block  mb-2">
                 Company
               </label>
               <input
@@ -259,12 +249,12 @@ const ContactForm = () => {
                 name="company"
                 value={formData.company}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-neutral-focus border border-neutral rounded-lg focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-4 py-3 bg-neutral-focus text-primary border border-primary rounded-lg focus:outline-none focus:border-primary transition-colors"
                 placeholder="Your Company"
               />
             </div>
             <div>
-              <label htmlFor="subject" className="block text-base-content/80 mb-2">
+              <label htmlFor="subject" className="block  mb-2">
                 Subject <span className="text-error">*</span>
               </label>
               <input
@@ -274,8 +264,8 @@ const ContactForm = () => {
                 required
                 value={formData.subject}
                 onChange={handleInputChange}
-                className={`w-full px-4 py-3 bg-neutral-focus border ${
-                  formErrors.subject ? "border-error" : "border-neutral"
+                className={`w-full px-4 py-3 bg-neutral-focus text-primary border ${
+                  formErrors.subject ? "border-error" : "border-primary"
                 } rounded-lg focus:outline-none focus:border-primary transition-colors`}
                 placeholder="Project Inquiry"
               />
@@ -288,7 +278,7 @@ const ContactForm = () => {
           </div>
 
           <div className="mb-6">
-            <label className="block text-base-content/80 mb-2">
+            <label className="block  mb-2">
               Services You're Interested In
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -303,7 +293,7 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor={`service-${index}`}
-                    className="text-base-content/80 text-sm"
+                    className=" text-sm"
                   >
                     {service}
                   </label>
@@ -313,7 +303,7 @@ const ContactForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="message" className="block text-base-content/80 mb-2">
+            <label htmlFor="message" className="block  mb-2">
               Your Message <span className="text-error">*</span>
             </label>
             <textarea
@@ -323,8 +313,8 @@ const ContactForm = () => {
               rows="5"
               value={formData.message}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 bg-neutral-focus border ${
-                formErrors.message ? "border-error" : "border-neutral"
+              className={`w-full px-4 py-3 bg-neutral-focus text-primary border ${
+                formErrors.message ? "border-error" : "border-primary"
               } rounded-lg focus:outline-none focus:border-primary transition-colors resize-none`}
               placeholder="Tell us about your project or inquiry..."
             ></textarea>
@@ -336,7 +326,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-lg transition-all duration-300 shadow-lg ${
+            className={`w-full py-4 bg-gradient-to-r from-codeket-electricBlue to-accent text-neutral font-semibold rounded-lg transition-all duration-300 shadow-lg ${
               isSubmitting
                 ? "opacity-70 cursor-not-allowed"
                 : "hover:from-primary-focus hover:to-accent-focus"

@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSection";
 import ContactInfo from "./components/ContactInfo";
 import ContactForm from "./components/ContactForm";
 import OfficeLocations from "./components/OfficeLocations";
-import CallToAction from "./components/CallToAction";
+import CallToAction from "../../components/common/CallToAction";
 import FAQSection from "./components/FAQSection";
 
 const Contact = () => {

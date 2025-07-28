@@ -78,7 +78,7 @@ const Process = () => {
             )}
 
             {/* Timeline node */}
-            <div className="relative z-10 flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent shadow-2xl">
+            <div className="relative z-10 flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-accent shadow-2xl">
               <span className="text-xl">{step.icon}</span>
             </div>
 

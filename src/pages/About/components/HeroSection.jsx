@@ -40,7 +40,7 @@ const HeroSection = () => {
         >
           <button
             onClick={() => scrollToSection("our-story")}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-accent text-base-content font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 shadow-lg"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-codeket-electricBlue to-accent text-white text-base-content font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 shadow-lg hover:px-10"
           >
             Discover Our Story
           </button>

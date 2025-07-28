@@ -120,7 +120,7 @@ const ProjectShowcase = () => {
       {/* CTA Button */}
       <div className=" text-center mt-12">
         <motion.button
-          className="px-8 py-3 bg-gradient-to-r from-primary to-accent text-white font-medium rounded-lg shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto"
+          className="px-10 py-5 bg-gradient-to-r from-codeket-electricBlue to-accent text-white font-medium rounded-full shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto "
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
