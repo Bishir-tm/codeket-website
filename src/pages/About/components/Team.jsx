@@ -44,27 +44,33 @@ const Team = () => {
                 <p className="text-primary mt-1">{member.role}</p>
                 <p className="text-base-content/80 mt-4">{member.bio}</p>
                 <div className="flex space-x-4 mt-6">
-                  <a
-                    target="_blank"
-                    href={member.social.linkedin}
-                    className="text-base-content/70 hover:text-primary transition-colors"
-                  >
-                    <FaLinkedin className="w-6 h-6" />
-                  </a>
-                  <a
-                    target="_blank"
-                    href={member.social.twitter}
-                    className="text-base-content/70 hover:text-primary-focus transition-colors"
-                  >
-                    <FaTwitter className="w-6 h-6" />
-                  </a>
-                  <a
-                    target="_blank"
-                    href={member.social.github}
-                    className="text-base-content/70 hover:text-base-content/80 transition-colors"
-                  >
-                    <FaGithub className="w-6 h-6" />
-                  </a>
+                  {member.social.linkedin && (
+                    <a
+                      target="_blank"
+                      href={member.social.linkedin}
+                      className="text-base-content/70 hover:text-primary transition-colors"
+                    >
+                      <FaLinkedin className="w-6 h-6" />
+                    </a>
+                  )}
+                  {member.social.twitter && (
+                    <a
+                      target="_blank"
+                      href={member.social.twitter}
+                      className="text-base-content/70 hover:text-primary-focus transition-colors"
+                    >
+                      <FaTwitter className="w-6 h-6" />
+                    </a>
+                  )}
+                  {member.social.github && (
+                    <a
+                      target="_blank"
+                      href={member.social.github}
+                      className="text-base-content/70 hover:text-base-content/80 transition-colors"
+                    >
+                      <FaGithub className="w-6 h-6" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

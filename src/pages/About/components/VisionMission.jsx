@@ -37,12 +37,12 @@ const VisionMission = () => {
           >
             <video
               ref={videoRef}
-              className="w-full h-auto rounded-xl shadow-2xl border border-neutral-focus"
+              className="w-full h-auto rounded-2xl shadow-2xl border border-neutral-focus"
               autoPlay
               loop
               muted
               playsInline
-              poster="/images/office2.jpg"
+              poster="/images/team-client.png"
             >
               <source src="/videos/about-us.mp4" type="video/mp4" />
               Your browser does not support the video tag.

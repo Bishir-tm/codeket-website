@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "Bishir TM",
     role: "Founder & CEO",
-    image: "/images/team/bishir-tm.png",
+    image: "/images/team/bishir-tijjani.jpg",
     bio: "Focused on building practical software that solves real business problems.",
     social: {
       linkedin: "https://linkedin.com/in/bishir",
@@ -27,8 +27,6 @@ export const teamMembers = [
     bio: "Dedicated to creating intuitive and user-friendly experiences for our clients.",
     social: {
       linkedin: "https://linkedin.com/in/comfort",
-      twitter: "https://twitter.com",
-      github: "https://github.com",
     },
   },
   {
@@ -65,4 +63,3 @@ export const teamMembers = [
     },
   },
 ];
-

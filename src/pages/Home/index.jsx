@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import HeroSectionMinimalInteractive from "./components/HeroSectionMinimalInteractive";
+import HeroSection from "./components/HeroSection";
 import ProjectShowcase from "./components/ProjectShowcase";
 import Testimonials from "./components/Testimonials";
 import FinalCallToAction from "./components/FinalCallToAction";
@@ -66,7 +66,7 @@ const Home = () => {
       className="relative w-full min-h-screen bg-gradient-to-b from-base-100 via-base-300 to-neutral"
     >
       <div className="sticky top-0 z-[1000]"></div>
-      <HeroSectionMinimalInteractive />
+      <HeroSection />
       <div className="container  px-6 relative mx-auto z-30 min-h-screen flex flex-col">
         <ProjectShowcase />
         <Testimonials testimonials={testimonials} />
