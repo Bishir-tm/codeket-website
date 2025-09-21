@@ -33,9 +33,7 @@ const Header = ({ theme, toggleTheme }) => {
             <li>
               <Link to="/services">Services</Link>
             </li>
-            <li>
-              <Link to="/pricing">Pricing</Link>
-            </li>
+            {/* <li><Link to="/pricing">Pricing</Link></li> */}
             <li>
               <Link to="/case-studies">Case Studies</Link>
             </li>
@@ -49,7 +47,11 @@ const Header = ({ theme, toggleTheme }) => {
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
           <img
-            src={theme === "codeketdark" ? "./images/logo-white.png" : "./images/logo.png"}
+            src={
+              theme === "codeketdark"
+                ? "./images/logo-white.png"
+                : "./images/logo.png"
+            }
             alt="codeket-logo"
             className="w-[130px] h-auto"
           />
@@ -63,9 +65,7 @@ const Header = ({ theme, toggleTheme }) => {
           <li>
             <Link to="/services">Services</Link>
           </li>
-          <li>
-            <Link to="/pricing">Pricing</Link>
-          </li>
+          {/* <li><Link to="/pricing">Pricing</Link></li> */}
           <li>
             <Link to="/case-studies">Case Studies</Link>
           </li>
@@ -84,7 +84,7 @@ const Header = ({ theme, toggleTheme }) => {
         >
           {theme === "codeketdark" ? <Moon size={20} /> : <Sun size={20} />}
         </button>
-        <Link to="/pricing" className="btn btn-primary">
+        <Link to="/consultation" className="btn btn-primary">
           Get Quote
         </Link>
       </div>

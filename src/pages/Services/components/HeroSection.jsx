@@ -44,13 +44,13 @@ const HeroSection = () => {
         >
           <button
             onClick={() => scrollToSection("services")}
-            className="inline-block px-8 py-4 bg-gradient-to-r from- to-accent text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mr-4"
+            className="btn bg-gradient-to-r from-codeket-electricBlue to-accent text-white font-semibold rounded-full shadow-lg m-3"
           >
             Explore Services
           </button>
           <button
             onClick={() => scrollToSection("contact-form")}
-            className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+            className="btn btn-accent btn-outline font-semibold rounded-full m-3 "
           >
             Get in Touch
           </button>

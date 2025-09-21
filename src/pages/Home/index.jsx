@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import HeroSection from "./components/HeroSection";
+import ProductsSection from "./components/ProductsSection";
 import ProjectShowcase from "./components/ProjectShowcase";
 import Testimonials from "./components/Testimonials";
 import FinalCallToAction from "./components/FinalCallToAction";
@@ -68,6 +69,7 @@ const Home = () => {
       <div className="sticky top-0 z-[1000]"></div>
       <HeroSection />
       <div className="container  px-6 relative mx-auto z-30 min-h-screen flex flex-col">
+        <ProductsSection />
         <ProjectShowcase />
         <Testimonials testimonials={testimonials} />
         <IntegrationPartners />
