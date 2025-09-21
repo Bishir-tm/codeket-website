@@ -398,9 +398,7 @@ const ServicesSection = () => {
                   <ul className="mb-6 space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <span
-                          className={`text-${service.accentColor} mr-2`}
-                        >
+                        <span className={`text-${service.accentColor} mr-2`}>
                           •
                         </span>
                         <span className="text-base-content/80">{feature}</span>
