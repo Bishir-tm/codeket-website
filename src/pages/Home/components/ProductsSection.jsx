@@ -91,12 +91,24 @@ export default function SoftwareSuiteShowcase() {
   // Auto-scroll navigation to active item on mobile
   useEffect(() => {
     if (navigationRef.current) {
-      const activeCard = navigationRef.current.children[activeIndex];
+      const container = navigationRef.current;
+      const activeCard = container.children[activeIndex];
       if (activeCard) {
-        activeCard.scrollIntoView({
+        const containerRect = container.getBoundingClientRect();
+        const cardRect = activeCard.getBoundingClientRect();
+        const cardOffsetLeft = activeCard.offsetLeft;
+        const cardWidth = activeCard.offsetWidth;
+        const containerWidth = container.offsetWidth;
+        const scrollLeft = container.scrollLeft;
+
+        // Calculate the position to center the active card
+        const targetScrollLeft =
+          cardOffsetLeft - containerWidth / 2 + cardWidth / 2;
+
+        // Smooth scroll to the target position
+        container.scrollTo({
+          left: targetScrollLeft,
           behavior: "smooth",
-          block: "nearest",
-          inline: "center",
         });
       }
     }
