@@ -19,10 +19,10 @@ import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'codeketdark';
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+      return "codeketdark";
     } else {
-      return 'codeketlight';
+      return "codeketlight";
     }
   });
 
