@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 import scrollToSection from "../../../utils/scrollToSection";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative h-screen -top-10 flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
@@ -49,7 +52,7 @@ const HeroSection = () => {
             Explore Services
           </button>
           <button
-            onClick={() => scrollToSection("contact-form")}
+            onClick={() => navigate("/consultation")}
             className="btn btn-accent btn-outline font-semibold rounded-full m-3 "
           >
             Get in Touch

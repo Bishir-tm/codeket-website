@@ -68,7 +68,10 @@ const index = () => {
 
   return (
     <div className="bg-base-100 text-base-content ">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <h1 className="my-12 font-bold text-center text-4xl lg:text-5xl">
+        We reply within 2 minutes
+      </h1>
+      <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <ContactInfo />
           <ContactForm />

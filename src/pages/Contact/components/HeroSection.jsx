@@ -20,8 +20,8 @@ const HeroSection = ({ y }) => {
       >
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
           <span className="bg-gradient-to-r from-primary via-accent to-info bg-clip-text text-transparent">
-          Let's Connect
-         </span>
+            Let's Connect
+          </span>
         </h1>
         <p className="text-xl md:text-2xl text-base-content/80 mb-10">
           Ready to transform your ideas into reality? Reach out to our team of
@@ -29,7 +29,7 @@ const HeroSection = ({ y }) => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="#contact-info"
+            href="/consultation"
             className="px-8 py-4 mb-3 bg-gradient-to-r border-0 from-codeket-electricBlue to-accent text-neutral  font-semibold rounded-full hover:from-primary-focus hover:to-accent-focus transition-all duration-300 hover:bg-base-100/10"
           >
             Get in Touch

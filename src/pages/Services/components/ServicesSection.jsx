@@ -363,7 +363,7 @@ const ServicesSection = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? "bg-gradient-to-r from-primary to-accent text-base-content"
+                  ? "bg-gradient-to-r from-codeket-electricBlue to-accent text-white"
                   : "bg-neutral-focus text-base-content/80 hover:bg-neutral"
               }`}
               whileHover={{ scale: 1.05 }}
